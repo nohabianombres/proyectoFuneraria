@@ -387,7 +387,7 @@ class VentanasAdmin ():
 
     def funcion_modificar_poliza(self):
         poliza = Polizas()
-        ret_con_pol = poliza.consultar_poliza_socio(self.ui.LSocModPol.text())
+        ret_con_pol = poliza.consultar_poliza_socio_mod(self.ui.LSocModPol.text())
         if isinstance(ret_con_pol, str):
             self.crear_ventana_retorno(ret_con_pol)
         else:
@@ -1024,11 +1024,7 @@ class VentanasAdmin ():
         self.clear_line_edits(self.ui.menu_generar_liquidacion)
 
     def venta_liquidacion_generada (self, ret_gen_liq):
-        print(ret_gen_liq)
         self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.liquidacion_generada)
-        self.valores_liquidacion(ret_gen_liq)
-
-    def valores_liquidacion(self, ret_gen_liq):
         self.ui.LGasJef1Tot.setText(str(ret_gen_liq[0]))
         self.ui.LGasJef2Tot.setText(str(ret_gen_liq[1]))
         self.ui.LSalJef1Tot.setText(str(ret_gen_liq[2]))

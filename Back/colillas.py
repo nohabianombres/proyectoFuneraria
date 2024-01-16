@@ -117,7 +117,7 @@ class Colillas ():
                                             cursor.execute(consulta,
                                                            (poliza[-5], hasta_fecha, 'pepito', self.fecha_actual, socio))
                                         conexion.commit()
-                                        pdf_colilla(self.fecha_actual, socio, valor_total, poliza[-5] , hasta_fecha, usuario_encargado )
+                                        pdf_colilla(self.fecha_actual, socio, valor_total, poliza[-5] , hasta_fecha, usuario_encargado,poliza[1][0],poliza[2][0])
                                         print("Todos los datos de la colilla se han cambiado correctamente")
                                         return "Todos los datos de la colilla se han cambiado correctamente"
                                     except psycopg2.Error as e:

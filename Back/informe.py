@@ -8,7 +8,6 @@ conexion= basedatos.conectar()
 class Informes ():
 
     def mostrar_ultimo_saldo(self):
-
         try:
             with conexion.cursor() as cursor:
                 cursor.execute("""SELECT id_saldo, socio, gasto, descripciones, valor, funeraria, fecha FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")

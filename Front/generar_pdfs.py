@@ -3,18 +3,23 @@ import win32api
 from jinja2 import Template
 import win32print
 import os
-
+import pdfkit
+from jinja2 import Template
+import os
 def print_file(file):
     win32api.ShellExecute(0,'print', file,win32print.GetDefaultPrinter(),'.',0)
 
-
-def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, recibio):
+def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, recibio, nombre_titular, cedula_titular):
     html_style = """
-    <p style="text-align: center;"><strong>COLILLA</strong></p>
+    <p style="text-align: center;"><strong>FUNERARIA LA ASCENSI&Oacute;N</strong></p>
+    <p style="text-align: center;"><strong>NIT: 39.191.604</strong></p>
+    <p style="text-align: center;"><strong>COLILLA DE PAGO SERVICIO PROEXEQUIAL</strong></p>
     <p style="text-align: center;"><strong>__________________________________________________</strong></p>
     <p style="text-align: center;"><strong>FECHA:&nbsp;</strong>{{fecha_actual}}</p>
-    <p style="text-align: center;"><strong>SOCIO: </strong>{{socio}}<strong><br /></strong></p>
-    <p style="text-align: center;"><strong>VALOR: </strong>{{valor_total}}<strong><br /></strong></p>
+    <h2 style="text-align: center;"><strong>SOCIO: </strong>{{socio}}<strong><br /></strong></h2>
+    <p style="text-align: center;"><strong>NOMBRE TITULAR: </strong>{{nombre_titular}}</p>
+    <p style="text-align: center;"><strong>C&Eacute;DULA TITULAR:</strong> {{cedula_titular}}</p>
+    <h2 style="text-align: center;"><strong>VALOR: </strong>{{valor_total}}<strong><br /></strong></h2>
     <p style="text-align: center;"><strong>DESDE: </strong>{{fecha_hasta_anterior}}<strong><br /></strong></p>
     <p style="text-align: center;"><strong>HASTA: </strong>{{feche_hasta}}<strong><br /></strong></p>
     <p style="text-align: center;"><strong>RECIBIO: </strong>{{usuario_encargado}}<strong><br /></strong></p>
@@ -26,6 +31,8 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
     context = {
         'fecha_actual': fecha_actual,
         'socio': str(socio),
+        'nombre_titular':str(nombre_titular),
+        'cedula_titular':str(cedula_titular),
         'valor_total': str(valor_total),
         'fecha_hasta_anterior': fecha_desde,
         'feche_hasta': fecha_hasta,
@@ -36,9 +43,16 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
     template = Template(html_style)
     rendered_html = template.render(context)
 
-    # Configuración de PDFKit
+    # Configuración de PDFKit con tamaño de página A4 (por ejemplo)
     config = pdfkit.configuration(wkhtmltopdf='C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe')
-    nombre_pdf = str(socio)+'.pdf'
+    options = {'page-width': '80mm',
+        'page-height': '140mm',
+        'margin-top': '0',
+        'margin-right': '0',
+        'margin-bottom': '0',
+        'margin-left': '0',
+    }
+    nombre_pdf = str(socio) + '.pdf'
     print(nombre_pdf)
 
     colillas_path = r"C:\Users\Jose\OneDrive - UCO\Desktop\proyecto funeraria\colillas"
@@ -46,8 +60,12 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
     # Ruta completa del archivo PDF
     pdf_path = os.path.join(colillas_path, nombre_pdf)
 
-    # Generar el PDF
-    pdfkit.from_string(rendered_html, pdf_path, configuration=config)
+    # Generar el PDF con opciones de tamaño de página
+    pdfkit.from_string(rendered_html, pdf_path, configuration=config, options=options)
+
+    print_file(pdf_path)
+
+
 
 def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,descripcion, valor_restanate , valor_abonado):
     html_style = """
@@ -91,7 +109,7 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,de
     nombre_pdf = 'caja' +' '+ nombre_coprador + '.pdf'
     print(nombre_pdf)
 
-    adicioanles_path = r"C:\Users\Jose\OneDrive - UCO\Desktop\proyecto funeraria\facturas caja"
+    adicioanles_path = r"C:\Users\Ascension\Desktop\proyecto_funeraria\proyecto funeraria\facturas caja"
 
     # Ruta completa del archivo PDF
     pdf_path = os.path.join(adicioanles_path, nombre_pdf)

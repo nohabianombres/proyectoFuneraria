@@ -424,8 +424,7 @@ class Polizas ():
                                                 int(ultimo_dato_insertado[11]) + valor_total, False))
                                             conexion.commit()
                                         print("Saldo cambiado")
-                                        pdf_colilla(datetime.now().date(), socio, valor_total, fecha_desde, hasta_fecha,
-                                                    usuario_encargado)
+                                        pdf_colilla(datetime.now().date(), socio, valor_total, fecha_desde.date(), hasta_fecha.date(), usuario_encargado, nombres[0], documentos[0])
                                         return "Todo generado con exito"
                                     except psycopg2.Error as e:
                                         return ("Ocurrió un error al crear el ultimo saldo:" + str(e))

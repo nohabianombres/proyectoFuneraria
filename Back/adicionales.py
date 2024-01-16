@@ -24,7 +24,7 @@ class Adicionales ():
                 cursor.execute(consulta, (ciudad, fecha_actual, nombre_comprador, int(documento_comprador), nombre_vendedor, descripciones, cantidades_int, valores_unitarios_int, valor_total, valor_total))
             conexion.commit()
             print('Fac creada')
-            pdf_factura_caja(ciudad, fecha_actual, usuario_encargado,nombre_comprador, descripciones, 0, valor_total)
+            pdf_factura_caja(ciudad, fecha_actual, usuario_encargado,nombre_comprador, descripciones,valor_total,0)
             return ("Factura de caja creada")
         except psycopg2.Error as e:
             return ("Ocurrió un error al crear la factura de caja:" + str(e))
@@ -99,6 +99,8 @@ class Adicionales ():
                                         ultimo_dato_insertado[11] + int(valor_abonado), False))
                                     conexion.commit()
                                     print("Saldo cambiado")
+                                    pdf_factura_caja(factura_caja[1], fecha_actual, usuario_encargado, factura_caja[3],
+                                                     factura_caja[6], valor_saldo-valor_abonado, valor_abonado)
                                     return 'El abono y lo demás a sido generado con exito'
                                 except psycopg2.Error as e:
                                     return ("Ocurrió un error al crear el ultimo saldo:")
