@@ -10,7 +10,7 @@ conexion= basedatos.conectar()
 class Liquidacion ():
 
     def generar_liquidacion(self, id_jef1, con_jef1, id_jef2, con_jef2):
-        try:
+        '''try:
             with conexion.cursor() as cursor:
                 cursor.execute(
                     """SELECT * FROM usuario WHERE id_usuario = %s""", int(id_jef1))
@@ -26,7 +26,7 @@ class Liquidacion ():
                 datos_jefe1 = cursor.fetchone()
                 print(datos_jefe1)
         except psycopg2.Error as e:
-            print ("Ocurrió un error al seleccionar el jefe 2:" + str(e))
+            print ("Ocurrió un error al seleccionar el jefe 2:" + str(e))'''
 
 
 
