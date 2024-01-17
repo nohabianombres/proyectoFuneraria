@@ -11,88 +11,90 @@ conexion= basedatos.conectar()
 class Polizas ():
 
     def crear_poliza (self, socio, nombres, documentos, fechas_nacimiento, parentesco_titular, valor_mes, numero_meses, usuario_encargado):
-        if socio.isdigit() and valor_mes.isdigit() and numero_meses.isdigit():
-            print('llegue crear poliza')
-            fecha_afiliacion = datetime.now().date()
-            print(fecha_afiliacion)
-            hora_actual = datetime.now().strftime('%H:%M:%S')
-            print(hora_actual)
-            hasta_fecha = fecha_afiliacion + relativedelta(months=int(numero_meses))
-            print(hasta_fecha)
-            valor_total = int(valor_mes) * int(numero_meses)
-            print(valor_total)
-            print(documentos)
-            documentos_int = []
+            if socio.isdigit() and valor_mes.isdigit() and numero_meses.isdigit():
+                print('llegue crear poliza')
+                fecha_afiliacion = datetime.now().date()
+                print(fecha_afiliacion)
+                hora_actual = datetime.now().strftime('%H:%M:%S')
+                print(hora_actual)
+                hasta_fecha = fecha_afiliacion + relativedelta(months=int(numero_meses))
+                print(hasta_fecha)
+                valor_total = int(valor_mes) * int(numero_meses)
+                print(valor_total)
+                print(documentos)
 
-            for elemento in documentos:
-                # Verificar si el elemento es de tipo texto (str) y no está vacío
-                if isinstance(elemento, str) and elemento.strip():  # Verificar que no esté vacío
-                    # Si es de tipo texto y no está vacío, convertir el elemento a entero y agregar a la lista documentos_int
-                    documentos_int.append(int(elemento))
-                else:
-                    # Si es de tipo texto y está vacío, agregar 000 a la lista documentos_int como entero
-                    documentos_int.append(000)
+                documentos_int = []
 
-            print(documentos_int)
-            print(fechas_nacimiento)
-            print(fecha_afiliacion)
-            fechas_nacimiento_int = [datetime.strptime(elemento, "%d/%m/%Y").date() for elemento in fechas_nacimiento]
-            fechas_afiliacion = [datetime.now().date() for _ in range(len(documentos_int))]
-            print(fechas_afiliacion)
-            print(fechas_nacimiento_int)
-            mayor_70 = []
-            for fecha_nacimiento, fecha_afiliacion in zip(fechas_nacimiento_int, fechas_afiliacion):
-                diferencia = fecha_afiliacion - fecha_nacimiento
-                edad = diferencia.days // 365  # Aproximación de la edad en años
+                for elemento in documentos:
+                    # Verificar si el elemento es de tipo texto (str) y no está vacío
+                    if isinstance(elemento, str) and elemento.strip():  # Verificar que no esté vacío
+                        # Si es de tipo texto y no está vacío, convertir el elemento a entero y agregar a la lista documentos_int
+                        documentos_int.append(int(elemento))
+                    else:
+                        # Si es de tipo texto y está vacío, agregar 000 a la lista documentos_int como entero
+                        documentos_int.append(000)
 
-                if edad >= 70:
-                    mayor_70.append(True)
-                else:
-                    mayor_70.append(False)
+                print(documentos_int)
+                print(fechas_nacimiento)
+                print(fecha_afiliacion)
+                fechas_nacimiento_int = [datetime.strptime(elemento, "%d/%m/%Y").date() for elemento in fechas_nacimiento]
+                fechas_afiliacion = [datetime.now().date() for _ in range(len(documentos_int))]
+                print(fechas_afiliacion)
+                print(fechas_nacimiento_int)
+                mayor_70 = []
+                for fecha_nacimiento, fecha_afiliacion in zip(fechas_nacimiento_int, fechas_afiliacion):
+                    diferencia = fecha_afiliacion - fecha_nacimiento
+                    edad = diferencia.days // 365  # Aproximación de la edad en años
 
-            # Imprime la lista mayor_70
-            print(mayor_70)
+                    if edad >= 70:
+                        mayor_70.append(True)
+                    else:
+                        mayor_70.append(False)
 
-            try:
-                with conexion.cursor() as cursor:
-                    consulta = "INSERT INTO polizas(socio, nombres, documentos, fechas_nacimiento, parentesco_titular, fecha_afiliacion, mayor_70, estado, valor_mes, usuario_creacion, usuario_ultimo_pago, fecha_ultimo_pago, fecha_desde, fecha_hasta) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                    cursor.execute(consulta, (int(socio), nombres, documentos_int, fechas_nacimiento_int, parentesco_titular, fechas_afiliacion, mayor_70, True, int(valor_total), usuario_encargado, usuario_encargado, fecha_afiliacion,fecha_afiliacion, hasta_fecha ))
-                conexion.commit()
-                print("Poliza ingresada")
+                # Imprime la lista mayor_70
+                print(mayor_70)
+
                 try:
                     with conexion.cursor() as cursor:
-                        consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                        cursor.execute(consulta, (int(valor_mes), fecha_afiliacion, hasta_fecha, fecha_afiliacion, hora_actual, usuario_encargado, documentos_int, nombres, int(socio), False))
+                        consulta = "INSERT INTO polizas(socio, nombres, documentos, fechas_nacimiento, parentesco_titular, fecha_afiliacion, mayor_70, estado, valor_mes, usuario_creacion, usuario_ultimo_pago, fecha_ultimo_pago, fecha_desde, fecha_hasta) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                        cursor.execute(consulta, (int(socio), nombres, documentos_int, fechas_nacimiento_int, parentesco_titular, fechas_afiliacion, mayor_70, True, int(valor_total), usuario_encargado, usuario_encargado, fecha_afiliacion,fecha_afiliacion, hasta_fecha ))
                     conexion.commit()
-                    print("Colilla creada")
-
+                    print("Poliza ingresada")
                     try:
                         with conexion.cursor() as cursor:
-                            cursor.execute(
-                                """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
-                            ultimo_dato_insertado = cursor.fetchone()
-                            print(ultimo_dato_insertado)
-
+                            consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                            cursor.execute(consulta, (int(valor_mes), fecha_afiliacion, hasta_fecha, fecha_afiliacion, hora_actual, usuario_encargado, documentos_int, nombres, int(socio), False))
+                        conexion.commit()
+                        print("Colilla creada")
 
                         try:
                             with conexion.cursor() as cursor:
-                                consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                cursor.execute(consulta, (socio, valor_total, fecha_afiliacion, ultimo_dato_insertado[6], ultimo_dato_insertado[7], ultimo_dato_insertado[8], int(ultimo_dato_insertado[9]) + (int(valor_total)/2), int(ultimo_dato_insertado[10]) + ((valor_total)/2), int(ultimo_dato_insertado[11]) + valor_total, False))
-                                conexion.commit()
-                            print("Saldo cambiado")
-                            pdf_colilla(datetime.now().date(),socio, valor_total, datetime.now().date(), hasta_fecha, 'pepito' )
-                            return "Todo generado con exito"
+                                cursor.execute(
+                                    """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
+                                ultimo_dato_insertado = cursor.fetchone()
+                                print(ultimo_dato_insertado)
 
+
+                            try:
+                                with conexion.cursor() as cursor:
+                                    consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                    cursor.execute(consulta, (socio, valor_total, fecha_afiliacion, ultimo_dato_insertado[6], ultimo_dato_insertado[7], ultimo_dato_insertado[8], int(ultimo_dato_insertado[9]) + (int(valor_total)/2), int(ultimo_dato_insertado[10]) + ((valor_total)/2), int(ultimo_dato_insertado[11]) + valor_total, False))
+                                    conexion.commit()
+                                print("Saldo cambiado")
+                                pdf_colilla(datetime.now().date(),socio, valor_total, datetime.now().date(), hasta_fecha, usuario_encargado, nombres[0],documentos[0] )
+                                return "Todo generado con exito"
+
+                            except psycopg2.Error as e:
+                                return ("Ocurrió un error al crear el ultimo saldo:"+  str(e))
                         except psycopg2.Error as e:
-                            return ("Ocurrió un error al crear el ultimo saldo:"+  str(e))
+                                return ("Ocurrió un error al seleccionar el ultimo:"+  str(e))
                     except psycopg2.Error as e:
-                            return ("Ocurrió un error al seleccionar el ultimo:"+  str(e))
+                        return ("Ocurrió un error al crear la colilla"+  str(e))
                 except psycopg2.Error as e:
-                    return ("Ocurrió un error al crear la colilla"+  str(e))
-            except psycopg2.Error as e:
-                return "Ocurrió un error al crear la poliza" + str(e)
-        else:
-            return "No es un número de socio, valor o numero de meses correcto"
+                    return "Ocurrió un error al crear la poliza" + str(e)
+
+            else:
+                return "No es un número de socio, valor o numero de meses correcto"
 
     def eliminar_persona (self, socio, nombre_par, documento_par, fecha_nacimiento_par,parentesco_par):
         try:
@@ -256,6 +258,23 @@ class Polizas ():
             try:
                 with conexion.cursor() as cursor:
                     cursor.execute("SELECT valor_mes, fecha_desde, fecha_hasta, nombres, documentos, fechas_nacimiento, mayor_70 FROM polizas WHERE socio=" + str(socio))
+                    poliza = cursor.fetchone()
+                    print(poliza)
+                    if poliza != None:
+
+                        return poliza
+                    else:
+                        return 'No se encuentra ninguna poliza'
+            except psycopg2.Error as e:
+                return ("Ocurrió un error al consultar:", e)
+        else:
+            return "No es un número de socio correcto"
+
+    def consultar_poliza_socio_mod(self, socio):
+        if socio.isdigit():
+            try:
+                with conexion.cursor() as cursor:
+                    cursor.execute("SELECT valor_mes, fecha_desde, fecha_hasta, nombres, documentos, fechas_nacimiento, parentesco_titular FROM polizas WHERE socio=" + str(socio))
                     poliza = cursor.fetchone()
                     print(poliza)
                     if poliza != None:
