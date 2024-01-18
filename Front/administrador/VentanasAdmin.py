@@ -1067,13 +1067,14 @@ class VentanasAdmin ():
             self.ui.tabInfSal.setRowCount(len(ret_con_inf_sal))
             for elementos in ret_con_inf_sal:
                 print(elementos)
-                self.ui.tabInfSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(elementos[0])))
-                self.ui.tabInfSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[1])))
-                self.ui.tabInfSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[2])))
-                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((elementos[3])))
+                self.ui.tabInfSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(elementos[3].strftime("%Y-%m-%d")))
+                self.ui.tabInfSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[0])))
+                self.ui.tabInfSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[1])))
+                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((elementos[2])))
                 self.ui.tabInfSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[4])))
                 self.ui.tabInfSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[5])))
-                self.ui.tabInfSal.setItem(fila, 6, QtWidgets.QTableWidgetItem((elementos[6].strftime("%Y-%m-%d"))))
+                self.ui.tabInfSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[6])))
+                self.ui.tabInfSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(elementos[7])))
                 fila = fila + 1
         else:
             print('no encontre')
@@ -1116,11 +1117,11 @@ class VentanasAdmin ():
             for elementos in ret_con_inf_fac:
                 print(elementos)
                 self.ui.tabFac.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(elementos[0])))
-                self.ui.tabFac.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[1])))
-                self.ui.tabFac.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[2])))
-                self.ui.tabFac.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[3])))
-                self.ui.tabFac.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[4])))
-                self.ui.tabFac.setItem(fila, 5, QtWidgets.QTableWidgetItem((elementos[5].strftime("%Y-%m-%d"))))
+                self.ui.tabFac.setItem(fila, 1, QtWidgets.QTableWidgetItem((elementos[5]).strftime("%Y-%m-%d")))
+                self.ui.tabFac.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[1])))
+                self.ui.tabFac.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[2])))
+                self.ui.tabFac.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[3])))
+                self.ui.tabFac.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[4])))
 
                 fila = fila + 1
         else:
@@ -1160,13 +1161,14 @@ class VentanasAdmin ():
         if ret_fun_con_ult_sal is not None:
             print('voy a imprimir')
             fila = 0
-            self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[0])))
-            self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[1])))
-            self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[2])))
-            self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[3])))
+            self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
+            self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[0])))
+            self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[1])))
+            self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[2])))
             self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[4])))
             self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[5])))
-            self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[6].strftime("%Y-%m-%d"))))
+            self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[6])))
+            self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[7])))
         else:
             print('No se encontró ninguna póliza')
 

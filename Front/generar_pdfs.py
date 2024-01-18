@@ -66,7 +66,6 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
     print_file(pdf_path)
 
 
-
 def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,descripcion, valor_restanate , valor_abonado):
     html_style = """
        <p style="text-align: center;"><strong>LA UNION:</strong> 3104718651 - 3146774935&nbsp; &nbsp;<strong>SONS&Oacute;N:</strong> 8694654&nbsp;</p>
@@ -109,7 +108,7 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,de
     nombre_pdf = 'caja' +' '+ nombre_coprador + '.pdf'
     print(nombre_pdf)
 
-    adicioanles_path = r"C:\Users\Ascension\Desktop\proyecto_funeraria\proyecto funeraria\facturas caja"
+    adicioanles_path = r"C:\Users\Jose\OneDrive - UCO\Desktop\proyecto funeraria\facturas caja"
 
     # Ruta completa del archivo PDF
     pdf_path = os.path.join(adicioanles_path, nombre_pdf)
