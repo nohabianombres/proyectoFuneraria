@@ -66,26 +66,25 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
     print_file(pdf_path)
 
 
-def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,descripcion, valor_restanate , valor_abonado):
+def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,documento_comprador,descripcion, valor_restanate , valor_abonado):
     html_style = """
-       <p style="text-align: center;"><strong>LA UNION:</strong> 3104718651 - 3146774935&nbsp; &nbsp;<strong>SONS&Oacute;N:</strong> 8694654&nbsp;</p>
+<p style="text-align: center;"><strong>LA UNIÓN:</strong> 3104718651 - 3146774935&nbsp; &nbsp;<strong>SONS&Oacute;N:</strong> 8694654&nbsp;</p>
 <p style="text-align: center;"><strong>ABEJORRAL:</strong> 8647631&nbsp; &nbsp;<strong>LA CEJA:</strong> 5532434</p>
 <p style="text-align: center;"><strong>NARI&Ntilde;O:</strong> 3105462139</p>
 <h2 style="text-align: center;"><strong>RECIBOS DE CAJA</strong></h2>
 <p style="text-align: center;">_____________________________________________________</p>
 <p style="text-align: center;"><strong>CIUDAD: </strong>{{ciudad}}</p>
 <p style="text-align: center;"><strong>FECHA: </strong>{{fecha_actual}}</p>
-<p style="text-align: center;"><strong>RECIBIMOS DE: </strong>{{nombre_comprador}}</p>
-<p style="text-align: center;"><strong>RECIBIO: </strong>{{usuario_encargado}}</p>
+<p style="text-align: center;"><strong>NOMBRE COMPRADOR: </strong>{{nombre_comprador}}</p>
+<p style="text-align: center;"><strong>DOCUMENTO COMPRADOR: </strong>{{documento_comprador}}</p>
 <p style="text-align: center;"><strong>POR CONCEPTO DE: </strong>{{descripcion}}</p>
 <p style="text-align: center;"><strong>VALOR ABONADO: </strong>{{valor_abonado}}</p>
 <p style="text-align: center;"><strong>RESTA: </strong>{{valor_restante}}</p>
+<p style="text-align: center;"><strong>RECIBIO: </strong>{{usuario_encargado}}</p>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;"><strong>FIRMA:_________________________________________</strong></p>
 <p style="text-align: center;">&nbsp;</p>
 <p>&nbsp;</p>
-
-
         """
 
     # Datos de contexto
@@ -96,7 +95,8 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,de
         'nombre_comprador': str(nombre_coprador),
         'descripcion': descripcion,
         'valor_abonado': str(valor_abonado),
-        'valor_restante': str(valor_restanate)
+        'valor_restante': str(valor_restanate),
+        'documento_comprador': str(documento_comprador)
     }
 
     # Renderizar el HTML con los datos de contexto

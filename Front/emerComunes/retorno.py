@@ -15,6 +15,9 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(598, 300)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../ico.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Dialog.setWindowIcon(icon)
         Dialog.setStyleSheet("background-color:  rgb(149, 149, 149);")
         self.botAceRet = QtWidgets.QPushButton(Dialog)
         self.botAceRet.setGeometry(QtCore.QRect(240, 220, 128, 38))
@@ -80,9 +83,9 @@ class Ui_Dialog(object):
         self.botAceRet.setStyleSheet(" background-color: rgb(147, 0, 0);\n"
 "\n"
 "")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../../SEMESTRE 4/centrodeestetica/Downloads/uco/POO/entornoVirtual/_92127008_thinkstockphotos-615094882.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.botAceRet.setIcon(icon)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("../../../SEMESTRE 4/centrodeestetica/Downloads/uco/POO/entornoVirtual/_92127008_thinkstockphotos-615094882.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.botAceRet.setIcon(icon1)
         self.botAceRet.setIconSize(QtCore.QSize(35, 30))
         self.botAceRet.setObjectName("botAceRet")
         self.Title_4 = QtWidgets.QLabel(Dialog)
@@ -157,10 +160,9 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "Funeraria La Ascensión"))
         self.botAceRet.setText(_translate("Dialog", "Aceptar"))
         self.Title_4.setText(_translate("Dialog", "Información"))
-
 
 
 if __name__ == "__main__":

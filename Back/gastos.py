@@ -4,6 +4,7 @@ from dateutil.relativedelta import relativedelta
 
 basedatos = Database("postgres", "87b3d9baf", "localhost")
 conexion= basedatos.conectar()
+
 class Gastos ():
 
     def gasto_jefe1 (self, gasto, valor, nombre_usuario):
@@ -22,9 +23,9 @@ class Gastos ():
                         print(ultimo_dato_insertado)
 
                     try:
-                        saldo_jefe1 = (ultimo_dato_insertado[9] - int(ultimo_dato_insertado[-7]) - int(valor))
+                        saldo_jefe1 = (ultimo_dato_insertado[9]- int(valor))
                         print('este es el saldo 1',saldo_jefe1)
-                        saldo_jefe2 = (ultimo_dato_insertado[10] - int(ultimo_dato_insertado[-6]))
+                        saldo_jefe2 = (ultimo_dato_insertado[10] )
                         print(saldo_jefe2)
                         print(ultimo_dato_insertado[-7])
                         with conexion.cursor() as cursor:
@@ -59,9 +60,9 @@ class Gastos ():
                         ultimo_dato_insertado = cursor.fetchone()
                         print(ultimo_dato_insertado)
                     try:
-                        saldo_jefe1 = (ultimo_dato_insertado[9] - int(ultimo_dato_insertado[-7]))
+                        saldo_jefe1 = (ultimo_dato_insertado[9] )
                         print('este es ', saldo_jefe1)
-                        saldo_jefe2 = (ultimo_dato_insertado[10] - int(ultimo_dato_insertado[-6]) - int(valor))
+                        saldo_jefe2 = (ultimo_dato_insertado[10] -  int(valor))
 
 
                         print(saldo_jefe2)
@@ -115,19 +116,19 @@ class Gastos ():
                 return ("Ocurrió un error al asentar el gasto:")
         else:
             return "No es un valor correcto"
+
     def gastos_sin_revisar(self):
         print('llegue a la funcion gastos_sin_revisar')
         try:
             with conexion.cursor() as cursor:
                 cursor.execute(
-                    "SELECT id_gasto, gasto, valor, nombre_usuario, fecha, jefe1, jefe2, funeraria, revisado FROM gastos WHERE revisado = False;")
+                    "SELECT id_gasto, gasto, valor, nombre_usuario, fecha, jefe1, jefe2, funeraria, revisado FROM gastos WHERE revisado = False ORDER BY id_gasto ASC;")
                 gastos_sin_revisar = cursor.fetchall()
                 for gasto_sin_revisar in gastos_sin_revisar:
                     print(gasto_sin_revisar)
                 return gastos_sin_revisar
         except psycopg2.Error as e:
             return "Ocurrió un error al consultar:"
-
 
     def revisar_gastos (self, id_gasto):
         try:
