@@ -55,6 +55,12 @@ class VentanasAdmin2 ():
         self.ui.tabla_gastos.setVisible(False)
         self.ui.botRevGas.setVisible(False)
 
+        # Establece la página que deseas mostrar
+        self.ui.stackedWidget_4.setCurrentWidget(self.ui.revisar_gastos)
+
+        # Luego, oculta la página
+        self.ui.revisar_gastos.setVisible(False)
+
         self.ui.menu_admin1.setCurrentWidget(self.ui.polizas)
         self.ui.botCol.clicked.connect(self.ventana_colillas)
         self.ui.botPol.clicked.connect(self.ventana_polizas)
@@ -109,10 +115,6 @@ class VentanasAdmin2 ():
         self.ui.botUltPagSoc.clicked.connect(self.ventana_ultimo_pago_socio)
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
-        self.ui.botCreColSin.clicked.connect(self.ventana_crear_colilla_sin)
-        self.ui.botAceCreColSin.clicked.connect(self.funcion_crear_colilla_sin)
-
-        self.ui.botRevGas.clicked.connect(self.venta_revisar_gastos)
 
         self.ui.botCreUsu.clicked.connect(self.venta_crear_usuario)
         self.ui.botEliUsu.clicked.connect(self.venta_eliminar_usuario)
@@ -723,19 +725,6 @@ class VentanasAdmin2 ():
         self.clear_line_edits(self.ui.stackedWidget_3)
         self.crear_ventana_retorno(self.fun_cre_col)
 
-    def ventana_crear_colilla_sin(self):
-        self.ui.stackedWidget_3.setCurrentWidget(self.ui.crear_colilla_sin)
-
-    def funcion_crear_colilla_sin(self):
-        colilla = Colillas()
-        self.fun_cre_col_sin = colilla.crear_colilla_socio_sin(self.ui.LSocCreColSin.text(),
-                                                               self.ui.LValCreColSin.text(),
-                                                               self.ui.LDesCreColSin.text(),
-                                                               self.ui.LNumCreColSin.text(), self.usuario[2])
-        del colilla
-        self.clear_line_edits(self.ui.stackedWidget_3)
-        self.crear_ventana_retorno(self.fun_cre_col_sin)
-
     def venta_gasto_jefe1(self):
         self.ui.stackedWidget_4.setCurrentWidget(self.ui.gasto_jefe1)
 
@@ -767,7 +756,7 @@ class VentanasAdmin2 ():
         self.clear_line_edits(self.ui.stackedWidget_4)
         self.crear_ventana_retorno(ret_fun_gas_fun)
 
-    def venta_revisar_gastos(self):
+    '''def venta_revisar_gastos(self):
         self.ui.stackedWidget_4.setCurrentWidget(self.ui.revisar_gastos)
         self.funcion_revisar_gastos()
 
@@ -827,7 +816,7 @@ class VentanasAdmin2 ():
             button.clicked.connect(functools.partial(self.handle_button_clicked, fila))
 
         # Actualizar el número de filas en la tabla
-        self.ui.tabla_gastos.setRowCount(len(self.ret_gas_rev_copy))
+        self.ui.tabla_gastos.setRowCount(len(self.ret_gas_rev_copy))'''
 
     def venta_crear_usuario(self):
         self.ui.stackedWidget_5.setCurrentWidget(self.ui.crear_usuario)
@@ -994,13 +983,14 @@ class VentanasAdmin2 ():
             self.ui.tabInfSal.setRowCount(len(ret_con_inf_sal))
             for elementos in ret_con_inf_sal:
                 print(elementos)
-                self.ui.tabInfSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(elementos[0])))
-                self.ui.tabInfSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[1])))
-                self.ui.tabInfSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[2])))
-                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((elementos[3])))
+                self.ui.tabInfSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(elementos[3].strftime("%Y-%m-%d")))
+                self.ui.tabInfSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[0])))
+                self.ui.tabInfSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[1])))
+                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((elementos[2])))
                 self.ui.tabInfSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[4])))
                 self.ui.tabInfSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[5])))
-                self.ui.tabInfSal.setItem(fila, 6, QtWidgets.QTableWidgetItem((elementos[6].strftime("%Y-%m-%d"))))
+                self.ui.tabInfSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[6])))
+                self.ui.tabInfSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(elementos[7])))
                 fila = fila + 1
         else:
             print('no encontre')
@@ -1043,11 +1033,11 @@ class VentanasAdmin2 ():
             for elementos in ret_con_inf_fac:
                 print(elementos)
                 self.ui.tabFac.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(elementos[0])))
-                self.ui.tabFac.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[1])))
-                self.ui.tabFac.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[2])))
-                self.ui.tabFac.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[3])))
-                self.ui.tabFac.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[4])))
-                self.ui.tabFac.setItem(fila, 5, QtWidgets.QTableWidgetItem((elementos[5].strftime("%Y-%m-%d"))))
+                self.ui.tabFac.setItem(fila, 1, QtWidgets.QTableWidgetItem((elementos[5]).strftime("%Y-%m-%d")))
+                self.ui.tabFac.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[1])))
+                self.ui.tabFac.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[2])))
+                self.ui.tabFac.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[3])))
+                self.ui.tabFac.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[4])))
 
                 fila = fila + 1
         else:
@@ -1087,14 +1077,14 @@ class VentanasAdmin2 ():
         if ret_fun_con_ult_sal is not None:
             print('voy a imprimir')
             fila = 0
-            self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[0])))
-            self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[1])))
-            self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[2])))
-            self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[3])))
+            self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
+            self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[0])))
+            self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[1])))
+            self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[2])))
             self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[4])))
             self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[5])))
-            self.ui.tabUltSal.setItem(fila, 6,
-                                      QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[6].strftime("%Y-%m-%d"))))
+            self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[6])))
+            self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[7])))
         else:
             print('No se encontró ninguna póliza')
 

@@ -3,7 +3,8 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from Front.generar_pdfs import pdf_colilla
 import psycopg2.extras
-
+from itertools import zip_longest
+from array import array
 
 basedatos = Database("postgres", "87b3d9baf", "localhost")
 conexion= basedatos.conectar()
@@ -11,7 +12,17 @@ conexion= basedatos.conectar()
 class Polizas ():
 
     def crear_poliza (self, socio, nombres, documentos, fechas_nacimiento, parentesco_titular, valor_mes, numero_meses, usuario_encargado):
-            if socio.isdigit() and valor_mes.isdigit() and numero_meses.isdigit():
+        valor_por_defecto = ' '
+
+        # Combina las listas usando zip_longest
+        zipped_data = zip_longest(nombres, documentos, fechas_nacimiento, parentesco_titular,
+                                  fillvalue=valor_por_defecto)
+
+
+        # Desempaqueta las listas combinadas
+        nombres, documentos, fechas_nacimiento, parentesco_titular = zip(*zipped_data)
+
+        if socio.isdigit() and valor_mes.isdigit() and numero_meses.isdigit():
                 print('llegue crear poliza')
                 fecha_afiliacion = datetime.now().date()
                 print(fecha_afiliacion)
@@ -93,72 +104,53 @@ class Polizas ():
                 except psycopg2.Error as e:
                     return "Ocurrió un error al crear la poliza" + str(e)
 
-            else:
-                return "No es un número de socio, valor o numero de meses correcto"
+        else:
+            return "No es un número de socio, valor o numero de meses correcto"
 
-    def eliminar_persona (self, socio, nombre_par, documento_par, fecha_nacimiento_par,parentesco_par):
+    def eliminar_persona(self, socio, nombre_par, documento_par, fecha_nacimiento_par, parentesco_par):
         try:
             with conexion.cursor() as cursor:
                 cursor.execute("SELECT * FROM polizas WHERE socio=" + str(socio))
                 poliza = cursor.fetchone()
-                documentos_poliza = poliza[2]
-                nombres_poliza = poliza[1]
-                fechas_nacimiento = poliza[3]
-                parentesco_titular = poliza[4]
-                fecha_afiliacion = poliza[5]
-                mayor_70 = poliza[6]
 
-                if documentos_poliza:
-                    print(documentos_poliza)
+                if poliza:
+                    documentos_poliza = poliza[2] or []
+                    nombres_poliza = poliza[1] or []
+                    fechas_nacimiento = poliza[3] or []
+                    parentesco_titular = poliza[4] or []
+                    fecha_afiliacion = poliza[5]
+                    mayor_70 = poliza[6] or []
 
-                    # Verificar si el documento existe en la lista
                     if int(documento_par) in documentos_poliza and nombre_par in nombres_poliza:
-                        # Obtener la posición del documento en la lista
-                        posicion = nombres_poliza.index(nombre_par)
-                        print(posicion)
+                        # Filtrar por coincidencia de documento y nombre
+                        documentos_poliza = [doc for doc, nombre in zip(documentos_poliza, nombres_poliza) if
+                                             doc != int(documento_par) or nombre != nombre_par]
+                        nombres_poliza = [nombre for nombre in nombres_poliza if nombre != nombre_par]
+                        fechas_nacimiento = [fecha for fecha, nombre in zip(fechas_nacimiento, nombres_poliza) if
+                                             nombre != nombre_par]
+                        parentesco_titular = [parentesco for parentesco, nombre in
+                                              zip(parentesco_titular, nombres_poliza)
+                                              if nombre != nombre_par]
+                        fecha_afiliacion = [fecha for fecha, nombre in zip(fecha_afiliacion, nombres_poliza) if
+                                            nombre != nombre_par]
+                        mayor_70 = [mayor for mayor, nombre in zip(mayor_70, nombres_poliza) if nombre != nombre_par]
 
-                        documentos_poliza.pop(posicion)
-                        print(documentos_poliza)
-                        nombres_poliza.pop(posicion)
-                        print(nombres_poliza)
-                        fechas_nacimiento.pop(posicion)
-                        parentesco_titular.pop(posicion)
-                        print(parentesco_titular)
-                        fecha_afiliacion.pop(posicion)
-                        mayor_70.pop(posicion)
+                        # Actualizar la base de datos
                         actualizacion = "UPDATE polizas SET documentos=%s, nombres=%s, fechas_nacimiento=%s, parentesco_titular=%s ,fecha_afiliacion=%s, mayor_70=%s WHERE socio=%s"
-                        cursor.execute(actualizacion,
-                                       (documentos_poliza, nombres_poliza, fechas_nacimiento, parentesco_titular,
-                                        fecha_afiliacion, mayor_70, int(socio)))
+                        cursor.execute(actualizacion, (
+                            documentos_poliza, nombres_poliza, fechas_nacimiento, parentesco_titular, fecha_afiliacion,
+                            mayor_70, int(socio)))
                         conexion.commit()
 
-                        return ("El documento y los datos correspondientes han sido eliminados correctamente.")
+                        return "El documento y los datos correspondientes han sido eliminados correctamente."
 
-                    elif nombre_par in nombres_poliza:
-                        posicion = nombres_poliza.index(nombre_par)
-                        print(posicion)
-
-                        documentos_poliza.pop(posicion)
-                        print(documentos_poliza)
-                        nombres_poliza.pop(posicion)
-                        print(nombres_poliza)
-                        fechas_nacimiento.pop(posicion)
-                        parentesco_titular.pop(posicion)
-                        print(parentesco_titular)
-                        fecha_afiliacion.pop(posicion)
-                        mayor_70.pop(posicion)
-                        actualizacion = "UPDATE polizas SET documentos=%s, nombres=%s, fechas_nacimiento=%s, parentesco_titular=%s ,fecha_afiliacion=%s, mayor_70=%s WHERE socio=%s"
-                        cursor.execute(actualizacion,
-                                       (documentos_poliza, nombres_poliza, fechas_nacimiento, parentesco_titular, fecha_afiliacion, mayor_70,int(socio)))
-                        conexion.commit()
-
-                        return ("El documento y los datos correspondientes han sido eliminados correctamente.")
                     else:
-                        return ("El documento no se encontraba en la lista")
+                        return "El documento no se encontraba en la lista."
                 else:
-                    return ("La póliza no existe")
+                    return "La póliza no existe."
+
         except psycopg2.Error as e:
-            return ("Ocurrió un error al consultar:", e)
+            return "Ocurrió un error al consultar: {}".format(e)
 
     def agregar_persona_poliza(self, socio, nuevo_documentor, nuevo_nombre, nueva_fecha_nacimiento, parentesco_titular,
                                nuevo_valor):
@@ -348,18 +340,28 @@ class Polizas ():
             return "Ocurrió un error al modificar la póliza: " + str(e)
 
     def crear_poliza_antigua (self, socio, nombres, documentos, fechas_nacimiento, parentesco_titular, valor_mes, numero_meses, usuario_encargado,  fecha_desdef, fecha_afiliacion):
+
+        valor_por_defecto = ' '
+
+        # Encuentra la longitud máxima entre las listas
+        max_length = max(len(nombres), len(documentos), len(fechas_nacimiento), len(parentesco_titular))
+
+        # Rellena o recorta las listas para que tengan la misma longitud
+        nombres = list(nombres) + [valor_por_defecto] * (max_length - len(nombres))
+        documentos = list(documentos) + [valor_por_defecto] * (max_length - len(documentos))
+        fechas_nacimiento = list(fechas_nacimiento) + [valor_por_defecto] * (max_length - len(fechas_nacimiento))
+        parentesco_titular = list(parentesco_titular) + [valor_por_defecto] * (max_length - len(parentesco_titular))
+
         print(valor_mes, numero_meses)
         if valor_mes.isdigit() and numero_meses.isdigit():
-            print(valor_mes, numero_meses, )
-            print('llegue crear poliza')
+
             hora_actual = datetime.now().strftime('%H:%M:%S')
-            print(hora_actual)
+
             fecha_desde = datetime.strptime(fecha_desdef, '%d/%m/%Y')
             hasta_fecha = fecha_desde + relativedelta(months=int(numero_meses))
-            print(hasta_fecha)
+
             valor_total = int(valor_mes) * int(numero_meses)
-            print(valor_total)
-            print(documentos)
+
             documentos_int = []
 
             for elemento in documentos:
@@ -376,13 +378,17 @@ class Polizas ():
                     # Si es de tipo texto y está vacío, agregar 000 a la lista documentos_int como entero
                     documentos_int.append(000)
 
-            print(documentos_int)
-            print(fechas_nacimiento)
-            print(fecha_afiliacion)
+            nombres_str = '{{{}}}'.format(
+                ','.join(filter(None, map(lambda x: 'NULL' if x == valor_por_defecto else x, nombres))))
+            parentesco_titular_str = '{{{}}}'.format(
+                ','.join(filter(None, map(lambda x: 'NULL' if x == valor_por_defecto else x, parentesco_titular))))
+
+            fechas_nacimiento = ['01/01/2000' if fecha == valor_por_defecto else fecha for fecha in fechas_nacimiento]
+
+            # Convierte las fechas a objetos datetime
             fechas_nacimiento_int = [datetime.strptime(elemento, "%d/%m/%Y").date() for elemento in fechas_nacimiento]
             fechas_afiliacion_str = [fecha_afiliacion for _ in range(len(documentos_int))]
-            print(fechas_afiliacion_str)
-            print(fechas_nacimiento_int)
+
             mayor_70 = []
             fechas_afiliacion = [datetime.strptime(fecha, '%d/%m/%Y').date() for fecha in fechas_afiliacion_str]
             for fecha_nacimiento, fecha_afiliacion in zip(fechas_nacimiento_int, fechas_afiliacion):
@@ -410,7 +416,7 @@ class Polizas ():
                             with conexion.cursor() as cursor:
                                 consulta = "INSERT INTO polizas(socio, nombres, documentos, fechas_nacimiento, parentesco_titular, fecha_afiliacion, mayor_70, estado, valor_mes, usuario_creacion, usuario_ultimo_pago, fecha_ultimo_pago, fecha_desde, fecha_hasta) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
                                 cursor.execute(consulta, (
-                                    int(socio), nombres, documentos_int, fechas_nacimiento_int, parentesco_titular,
+                                    int(socio), nombres_str, documentos_int, fechas_nacimiento_int, parentesco_titular_str,
                                     fechas_afiliacion, mayor_70, True, valor_mes, usuario_encargado, usuario_encargado,
                                     fecha_actual, fecha_desde, hasta_fecha))
                             conexion.commit()
@@ -421,7 +427,7 @@ class Polizas ():
                                     cursor.execute(consulta, (
                                         int(valor_mes), fecha_desde, hasta_fecha, fecha_actual, hora_actual,
                                         usuario_encargado,
-                                        documentos_int, nombres, int(socio), False))
+                                        documentos_int, nombres_str, int(socio), False))
                                 conexion.commit()
                                 print("Colilla creada")
 
@@ -436,7 +442,7 @@ class Polizas ():
                                         with conexion.cursor() as cursor:
                                             consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
                                             cursor.execute(consulta, (
-                                                socio, valor_total, fecha_afiliacion, ultimo_dato_insertado[6],
+                                                socio, valor_total, fecha_actual, ultimo_dato_insertado[6],
                                                 ultimo_dato_insertado[7], ultimo_dato_insertado[8],
                                                 int(ultimo_dato_insertado[9]) + (int(valor_total) / 2),
                                                 int(ultimo_dato_insertado[10]) + ((valor_total) / 2),

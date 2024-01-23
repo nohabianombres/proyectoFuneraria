@@ -122,13 +122,13 @@ class Gastos ():
         try:
             with conexion.cursor() as cursor:
                 cursor.execute(
-                    "SELECT id_gasto, gasto, valor, nombre_usuario, fecha, jefe1, jefe2, funeraria, revisado FROM gastos WHERE revisado = False ORDER BY id_gasto ASC;")
-                gastos_sin_revisar = cursor.fetchall()
-                for gasto_sin_revisar in gastos_sin_revisar:
-                    print(gasto_sin_revisar)
-                return gastos_sin_revisar
+                    "SELECT id_gasto, gasto, valor, nombre_usuario, fecha, jefe1, jefe2, funeraria, revisado, liquidado FROM gastos WHERE revisado = False AND liquidado = False ORDER BY id_gasto ASC;")
+                gastos_sin_revisar_y_sin_liquidar = cursor.fetchall()
+                for gasto in gastos_sin_revisar_y_sin_liquidar:
+                    print(gasto)
+                return gastos_sin_revisar_y_sin_liquidar
         except psycopg2.Error as e:
-            return "Ocurrió un error al consultar:"
+            return "Ocurrió un error al consultar: {}".format(e)
 
     def revisar_gastos (self, id_gasto):
         try:

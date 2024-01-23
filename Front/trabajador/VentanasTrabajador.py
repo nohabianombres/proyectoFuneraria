@@ -78,7 +78,7 @@ class VentanasTrabajador ():
         self.ui.agrPar.clicked.connect(self.agregar_lista_parentescos)
         self.ui.botAceCrePol.clicked.connect(self.funcion_crear_poliza)
         self.ui.botAceAgrPer.clicked.connect(self.funcion_agregar_persona)
-        self.ui.botAceEliPer.clicked.connect(self.funcion_eliminar_persona)
+
         self.ui.botAceModPol.clicked.connect(self.funcion_modificar_poliza)
         self.ui.botEliPerDat.clicked.connect(self.funcion_eliminar_persona_poliza)
 
@@ -104,9 +104,6 @@ class VentanasTrabajador ():
         self.ui.botUltPagSoc.clicked.connect(self.ventana_ultimo_pago_socio)
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
-        self.ui.botCreColSin.clicked.connect(self.ventana_crear_colilla_sin)
-        self.ui.botAceCreColSin.clicked.connect(self.funcion_crear_colilla_sin)
-
 
         self.ui.botCreFac.clicked.connect(self.venta_crear_factura)
         self.ui.agrDes.clicked.connect(self.agregar_lista_descripciones)
@@ -163,7 +160,6 @@ class VentanasTrabajador ():
         self.ui.botCanConPolDoc.clicked.connect(lambda: self.clear_list_edits(self.ui.stackedWidget_2))
         self.ui.botCanConPolSoc.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_2))
         self.ui.botCanConPolSoc.clicked.connect(lambda: self.clear_list_edits(self.ui.stackedWidget_2))
-        self.ui.botCanEliPer.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_2))
         self.ui.botCanAgrPer.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_2))
         self.ui.botCanCrePol.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_2))
         self.ui.botCanCrePol.clicked.connect(lambda: self.clear_list_edits(self.ui.stackedWidget_2))
@@ -278,9 +274,6 @@ class VentanasTrabajador ():
     def ventana_gastos (self):
         self.ui.menu_admin1.setCurrentWidget(self.ui.gastos)
 
-    def ventana_usuarios (self):
-        self.ui.menu_admin1.setCurrentWidget(self.ui.usuarios)
-
     def ventana_facturas (self):
         self.ui.menu_admin1.setCurrentWidget(self.ui.facturas_caja)
 
@@ -359,15 +352,6 @@ class VentanasTrabajador ():
         del poliza
         self.crear_ventana_retorno(self.fun_agr_per)
 
-    def ventana_eliminar_persona(self):
-        self.ui.stackedWidget_2.setCurrentWidget(self.ui.eliminar_persona)
-
-    def funcion_eliminar_persona (self):
-        poliza = Polizas()
-        self.fun_eli_per = poliza.eliminar_persona(self.ui.LSocEliPer.text(), self.ui.LDocEliPer.text(), self.ui.LValEliPer.text())
-        del poliza
-        self.clear_line_edits(self.ui.stackedWidget_2)
-        self.crear_ventana_retorno(self.fun_eli_per)
 
     def ventana_modificar_poliza(self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.modificar_poliza)
@@ -750,16 +734,6 @@ class VentanasTrabajador ():
         del colilla
         self.clear_line_edits(self.ui.stackedWidget_3)
         self.crear_ventana_retorno(self.fun_cre_col)
-
-    def ventana_crear_colilla_sin(self):
-        self.ui.stackedWidget_3.setCurrentWidget(self.ui.crear_colilla_sin)
-
-    def funcion_crear_colilla_sin (self):
-        colilla = Colillas()
-        self.fun_cre_col_sin = colilla.crear_colilla_socio_sin(self.ui.LSocCreColSin.text(),self.ui.LValCreColSin.text(), self.ui.LDesCreColSin.text(),self.ui.LNumCreColSin.text(), self.usuario[2])
-        del colilla
-        self.clear_line_edits(self.ui.stackedWidget_3)
-        self.crear_ventana_retorno(self.fun_cre_col_sin)
 
 
 

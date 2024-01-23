@@ -107,8 +107,6 @@ class VentanasAdmin ():
         self.ui.botUltPagSoc.clicked.connect(self.ventana_ultimo_pago_socio)
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
-        self.ui.botCreColSin.clicked.connect(self.ventana_crear_colilla_sin)
-        self.ui.botAceCreColSin.clicked.connect(self.funcion_crear_colilla_sin)
 
 
         self.ui.botRevGas.clicked.connect(self.venta_revisar_gastos)
@@ -785,15 +783,6 @@ class VentanasAdmin ():
         self.clear_line_edits(self.ui.stackedWidget_3)
         self.crear_ventana_retorno(self.fun_cre_col)
 
-    def ventana_crear_colilla_sin(self):
-        self.ui.stackedWidget_3.setCurrentWidget(self.ui.crear_colilla_sin)
-
-    def funcion_crear_colilla_sin (self):
-        colilla = Colillas()
-        self.fun_cre_col_sin = colilla.crear_colilla_socio_sin(self.ui.LSocCreColSin.text(),self.ui.LValCreColSin.text(), self.ui.LDesCreColSin.text(),self.ui.LNumCreColSin.text(), self.usuario[2])
-        del colilla
-        self.clear_line_edits(self.ui.stackedWidget_3)
-        self.crear_ventana_retorno(self.fun_cre_col_sin)
 
 
 
