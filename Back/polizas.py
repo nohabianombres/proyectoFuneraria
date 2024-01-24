@@ -12,15 +12,21 @@ conexion= basedatos.conectar()
 class Polizas ():
 
     def crear_poliza (self, socio, nombres, documentos, fechas_nacimiento, parentesco_titular, valor_mes, numero_meses, usuario_encargado):
-        valor_por_defecto = ' '
+        valor_por_defecto = ''
+        print(nombres)
 
-        # Combina las listas usando zip_longest
-        zipped_data = zip_longest(nombres, documentos, fechas_nacimiento, parentesco_titular,
-                                  fillvalue=valor_por_defecto)
+        # Encuentra la longitud máxima entre las listas
+        max_length = max(len(nombres), len(documentos), len(fechas_nacimiento), len(parentesco_titular))
 
+        print(parentesco_titular)
+        print(nombres)
 
-        # Desempaqueta las listas combinadas
-        nombres, documentos, fechas_nacimiento, parentesco_titular = zip(*zipped_data)
+        # Rellena o recorta las listas para que tengan la misma longitud
+        nombres = list(nombres) + [valor_por_defecto] * (max_length - len(nombres))
+        print(nombres)
+        documentos = list(documentos) + [valor_por_defecto] * (max_length - len(documentos))
+        fechas_nacimiento = list(fechas_nacimiento) + [valor_por_defecto] * (max_length - len(fechas_nacimiento))
+        parentesco_titular = list(parentesco_titular) + [valor_por_defecto] * (max_length - len(parentesco_titular))
 
         if socio.isdigit() and valor_mes.isdigit() and numero_meses.isdigit():
                 print('llegue crear poliza')
@@ -35,6 +41,8 @@ class Polizas ():
                 print(documentos)
 
                 documentos_int = []
+                nombres_int = []
+                parentesco_int=[]
 
                 for elemento in documentos:
                     # Verificar si el elemento es de tipo texto (str) y no está vacío
@@ -45,9 +53,14 @@ class Polizas ():
                         # Si es de tipo texto y está vacío, agregar 000 a la lista documentos_int como entero
                         documentos_int.append(000)
 
-                print(documentos_int)
-                print(fechas_nacimiento)
-                print(fecha_afiliacion)
+                nombres_str = '{{{}}}'.format(
+                    ','.join(filter(None, map(lambda x: 'NULL' if x == valor_por_defecto else x, nombres))))
+                parentesco_titular_str = '{{{}}}'.format(
+                    ','.join(filter(None, map(lambda x: 'NULL' if x == valor_por_defecto else x, parentesco_titular))))
+
+                fechas_nacimiento = ['01/01/2000' if fecha == valor_por_defecto else fecha for fecha in
+                                     fechas_nacimiento]
+
                 fechas_nacimiento_int = [datetime.strptime(elemento, "%d/%m/%Y").date() for elemento in fechas_nacimiento]
                 fechas_afiliacion = [datetime.now().date() for _ in range(len(documentos_int))]
                 print(fechas_afiliacion)
@@ -68,13 +81,13 @@ class Polizas ():
                 try:
                     with conexion.cursor() as cursor:
                         consulta = "INSERT INTO polizas(socio, nombres, documentos, fechas_nacimiento, parentesco_titular, fecha_afiliacion, mayor_70, estado, valor_mes, usuario_creacion, usuario_ultimo_pago, fecha_ultimo_pago, fecha_desde, fecha_hasta) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                        cursor.execute(consulta, (int(socio), nombres, documentos_int, fechas_nacimiento_int, parentesco_titular, fechas_afiliacion, mayor_70, True, int(valor_total), usuario_encargado, usuario_encargado, fecha_afiliacion,fecha_afiliacion, hasta_fecha ))
+                        cursor.execute(consulta, (int(socio), nombres_str, documentos_int, fechas_nacimiento_int, parentesco_titular_str, fechas_afiliacion, mayor_70, True, int(valor_total), usuario_encargado, usuario_encargado, fecha_afiliacion,fecha_afiliacion, hasta_fecha ))
                     conexion.commit()
                     print("Poliza ingresada")
                     try:
                         with conexion.cursor() as cursor:
                             consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                            cursor.execute(consulta, (int(valor_mes), fecha_afiliacion, hasta_fecha, fecha_afiliacion, hora_actual, usuario_encargado, documentos_int, nombres, int(socio), False))
+                            cursor.execute(consulta, (int(valor_mes), fecha_afiliacion, hasta_fecha, fecha_afiliacion, hora_actual, usuario_encargado, documentos_int, nombres_str, int(socio), False))
                         conexion.commit()
                         print("Colilla creada")
 
@@ -341,7 +354,7 @@ class Polizas ():
 
     def crear_poliza_antigua (self, socio, nombres, documentos, fechas_nacimiento, parentesco_titular, valor_mes, numero_meses, usuario_encargado,  fecha_desdef, fecha_afiliacion):
 
-        valor_por_defecto = ' '
+        valor_por_defecto = ''
 
         # Encuentra la longitud máxima entre las listas
         max_length = max(len(nombres), len(documentos), len(fechas_nacimiento), len(parentesco_titular))
