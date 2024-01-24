@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 basedatos = Database("postgres", "87b3d9baf", "localhost")
 conexion = basedatos.conectar()
 
-valor_por_defecto = 0
+valor_por_defecto = ''
 
 try:
     with conexion.cursor() as cursor:
