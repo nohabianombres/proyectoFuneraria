@@ -132,7 +132,7 @@ class VentanasAdmin2 ():
         self.ui.botConEliFac.clicked.connect(self.venta_consultar_factura)
         self.ui.botAceConFac.clicked.connect(self.funcion_consultar_factura_caja)
 
-        states_cities = ['Funeraria', 'Jefe 1', 'Jefe 2']
+        states_cities = ['Funeraria', 'Julio', 'Armando']
 
         menu = QMenu()
         menu.triggered.connect(lambda x: print(self.escoger_ventana_gastos(x.text())))
@@ -325,6 +325,7 @@ class VentanasAdmin2 ():
                 self.agregar_lista_fechas_consultar(ret_con_pol_doc[0][5])
                 self.agregar_lista_mayor70_consultar(ret_con_pol_doc[0][6])
                 self.ui.LSocConPol.setText(str(ret_con_pol_doc[0][7]))
+                self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol_doc[0][8])
             else:
                 socios = [sublista[7] for sublista in ret_con_pol_doc]
                 self.crear_ventana_retorno(socios)
@@ -342,6 +343,11 @@ class VentanasAdmin2 ():
             self.agregar_lista_documentos_consultar(ret_con_pol[4])
             self.agregar_lista_fechas_consultar(ret_con_pol[5])
             self.agregar_lista_mayor70_consultar(ret_con_pol[6])
+            self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol[7])
+
+    def agregar_lista_fecha_afiliacion_consultar(self, fechas_afi):
+        for fecha_afi in fechas_afi:
+            self.ui.lisFecAfi.addItem(str(fecha_afi))
 
     def agregar_lista_nombres_consultar(self, nombres):
         for nombre in nombres:
@@ -756,67 +762,7 @@ class VentanasAdmin2 ():
         self.clear_line_edits(self.ui.stackedWidget_4)
         self.crear_ventana_retorno(ret_fun_gas_fun)
 
-    '''def venta_revisar_gastos(self):
-        self.ui.stackedWidget_4.setCurrentWidget(self.ui.revisar_gastos)
-        self.funcion_revisar_gastos()
 
-    def funcion_revisar_gastos(self):
-        gastos = Gastos()
-        ret_gas_rev = gastos.gastos_sin_revisar()
-
-        self.ui.tabla_gastos.clearContents()
-        self.ui.tabla_gastos.show()
-
-        if ret_gas_rev is not None:
-            self.ui.tabla_gastos.setRowCount(len(ret_gas_rev))
-
-            for fila, elementos in enumerate(ret_gas_rev):
-                self.ui.tabla_gastos.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(elementos[0])))
-                self.ui.tabla_gastos.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[1])))
-                self.ui.tabla_gastos.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[2])))
-                self.ui.tabla_gastos.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[3])))
-                self.ui.tabla_gastos.setItem(fila, 4,
-                                             QtWidgets.QTableWidgetItem(str(elementos[4].strftime("%Y-%m-%d"))))
-                self.ui.tabla_gastos.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[5])))
-                self.ui.tabla_gastos.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[6])))
-                self.ui.tabla_gastos.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(elementos[7])))
-                self.ui.tabla_gastos.setItem(fila, 8, QtWidgets.QTableWidgetItem(str(elementos[8])))
-
-                button = QtWidgets.QPushButton("Revisar")
-                self.ui.tabla_gastos.setCellWidget(fila, 9, button)
-
-                self.ret_gas_rev_copy = copy.deepcopy(ret_gas_rev)
-
-                # Conectar la señal clicked del botón a una función lambda para capturar el valor actual de fila
-                button.clicked.connect(functools.partial(self.handle_button_clicked, fila))
-        else:
-            print('no encontré')
-
-    def handle_button_clicked(self, fila):
-
-        valor = self.ui.tabla_gastos.item(fila, 0).text()
-        gasto = Gastos()
-        print(valor)
-        print(fila)
-        gasto.revisar_gastos(int(valor))
-        print('hice el gasto')
-
-        # Eliminar la fila correspondiente
-        self.ui.tabla_gastos.removeRow(fila)
-        self.ret_gas_rev_copy.pop(fila)
-
-        # Actualizar el número de fila en todos los botones "Revisar" restantes
-        for fila, elementos in enumerate(self.ret_gas_rev_copy):
-            # ...
-
-            button = QtWidgets.QPushButton("Revisar")
-            self.ui.tabla_gastos.setCellWidget(fila, 9, button)
-
-            # Conectar la señal clicked del botón usando functools.partial para pasar la fila como argumento adicional
-            button.clicked.connect(functools.partial(self.handle_button_clicked, fila))
-
-        # Actualizar el número de filas en la tabla
-        self.ui.tabla_gastos.setRowCount(len(self.ret_gas_rev_copy))'''
 
     def venta_crear_usuario(self):
         self.ui.stackedWidget_5.setCurrentWidget(self.ui.crear_usuario)
@@ -1093,7 +1039,6 @@ class VentanasAdmin2 ():
         self.ui.Nombre_usuario_2.setText(str(datos_usuario[2]))
         self.ui.Documento.setText(str(datos_usuario[3]))
         self.ui.conexion.setText('conexion exitosa')
-
 
     def cerrar_sesion(self):
         self.ventanaAdmin.close()

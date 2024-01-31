@@ -127,7 +127,7 @@ class VentanasAdmin ():
         self.ui.botConEliFac.clicked.connect(self.venta_consultar_factura)
         self.ui.botAceConFac.clicked.connect(self.funcion_consultar_factura_caja)
 
-        states_cities = ['Funeraria', 'Jefe 1', 'Jefe 2']
+        states_cities = ['Funeraria', 'Julio', 'Armando']
 
         menu = QMenu()
         menu.triggered.connect(lambda x: print(self.escoger_ventana_gastos(x.text())))
@@ -187,6 +187,8 @@ class VentanasAdmin ():
 
         self.ui.botCanModPol.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_2))
         self.ui.botCanModPol.clicked.connect(lambda: self.clear_list_edits(self.ui.stackedWidget_2))
+
+
     def clear_line_edits(self, stacked_widget):
         # Obtener el índice de la página actual
         current_index = stacked_widget.currentIndex()
@@ -327,6 +329,7 @@ class VentanasAdmin ():
                 self.agregar_lista_fechas_consultar(ret_con_pol_doc[0][5])
                 self.agregar_lista_mayor70_consultar(ret_con_pol_doc[0][6])
                 self.ui.LSocConPol.setText(str(ret_con_pol_doc[0][7]))
+                self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol_doc[0][8])
             else:
                 socios = [sublista[7] for sublista in ret_con_pol_doc]
                 self.crear_ventana_retorno(socios)
@@ -344,7 +347,11 @@ class VentanasAdmin ():
             self.agregar_lista_documentos_consultar(ret_con_pol[4])
             self.agregar_lista_fechas_consultar(ret_con_pol[5])
             self.agregar_lista_mayor70_consultar(ret_con_pol[6])
+            self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol[7])
 
+    def agregar_lista_fecha_afiliacion_consultar (self, fechas_afi):
+        for fecha_afi in fechas_afi:
+            self.ui.lisFecAfi.addItem(str(fecha_afi))
 
     def agregar_lista_nombres_consultar (self, nombres):
         for nombre in nombres:

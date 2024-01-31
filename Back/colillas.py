@@ -9,6 +9,7 @@ conexion= basedatos.conectar()
 
 
 class Colillas ():
+
     def crear_colilla_socio_sin (self, socio, valor_mes, fecha_desdeg, numero_meses , usuario_encargado):
         if socio.isdigit() and numero_meses.isdigit() and valor_mes.isdigit():
             self.hora_actual = datetime.now().strftime('%H:%M:%S')
@@ -69,9 +70,6 @@ class Colillas ():
         else:
             return "No es un número de documento correcto"
 
-
-
-
     def crear_colilla_socio(self, socio, numero_meses, usuario_encargado):
         if socio.isdigit() and numero_meses.isdigit():
 
@@ -115,7 +113,7 @@ class Colillas ():
                                         with conexion.cursor() as cursor:
                                             consulta = "UPDATE polizas SET fecha_desde = %s, fecha_hasta = %s, usuario_ultimo_pago = %s, fecha_ultimo_pago = %s WHERE socio = %s"
                                             cursor.execute(consulta,
-                                                           (poliza[-5], hasta_fecha, 'pepito', self.fecha_actual, socio))
+                                                           (poliza[-5], hasta_fecha, usuario_encargado, self.fecha_actual, socio))
                                         conexion.commit()
                                         pdf_colilla(self.fecha_actual, socio, valor_total, poliza[-5] , hasta_fecha, usuario_encargado,poliza[1][0],poliza[2][0])
                                         print("Todos los datos de la colilla se han cambiado correctamente")
@@ -134,7 +132,6 @@ class Colillas ():
                 return "Ocurrio un error al consultar: "+str(e)
         else:
             return "No es un número de documento correcto"
-
 
     def consultar_colilla_documento(self, documento):
         print(documento)
@@ -176,7 +173,7 @@ class Colillas ():
             try:
                 with conexion.cursor() as cursor:
                     cursor.execute(
-                        "SELECT socio, valor_mes, desde_fecha, hasta_fecha, usuario, fecha_pago FROM colillas WHERE socio=%s ORDER BY numero_colilla DESC LIMIT 1",
+                        "SELECT socio, valor_mes, fecha_desde, fecha_hasta, usuario_ultimo_pago, fecha_ultimo_pago FROM colillas WHERE socio=%s ",
                         (socio,))
                     ultima_colilla = cursor.fetchone()
                     if ultima_colilla:

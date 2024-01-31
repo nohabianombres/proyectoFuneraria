@@ -262,7 +262,7 @@ class Polizas ():
         if socio.isdigit():
             try:
                 with conexion.cursor() as cursor:
-                    cursor.execute("SELECT valor_mes, fecha_desde, fecha_hasta, nombres, documentos, fechas_nacimiento, mayor_70 FROM polizas WHERE socio=" + str(socio))
+                    cursor.execute("SELECT valor_mes, fecha_desde, fecha_hasta, nombres, documentos, fechas_nacimiento, mayor_70, fecha_afiliacion FROM polizas WHERE socio=" + str(socio))
                     poliza = cursor.fetchone()
                     print(poliza)
                     if poliza != None:
@@ -437,10 +437,8 @@ class Polizas ():
                             try:
                                 with conexion.cursor() as cursor:
                                     consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                    cursor.execute(consulta, (
-                                        int(valor_mes), fecha_desde, hasta_fecha, fecha_actual, hora_actual,
-                                        usuario_encargado,
-                                        documentos_int, nombres_str, int(socio), False))
+                                    cursor.execute(consulta, (int(valor_mes), fecha_desde, hasta_fecha, fecha_actual, hora_actual,
+                                        usuario_encargado,documentos_int, nombres_str, int(socio), False))
                                 conexion.commit()
                                 print("Colilla creada")
 
