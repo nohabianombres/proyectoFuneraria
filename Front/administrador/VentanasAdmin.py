@@ -949,7 +949,7 @@ class VentanasAdmin ():
         lis_can = [self.ui.lisCan.item(index).text() for index in range(self.ui.lisCan.count())]
         lis_val = [self.ui.lisVal.item(index).text() for index in range(self.ui.lisVal.count())]
         factura = Adicionales ()
-        ret_fun_cre_fac = factura.crear_factura_caja(self.ui.LCiuCreFac.text(), self.ui.LNomCreFac.text(), self.ui.LDocCreFac.text(), self.ui.LNomCreFac.text(), lis_des, lis_can, lis_val, self.usuario[2])
+        ret_fun_cre_fac = factura.crear_factura_caja(self.ui.LCiuCreFac.text(), self.ui.LNomCreFac.text(), self.ui.LDocCreFac.text(), self.ui.LNomCreFac.text(), lis_des, lis_can, lis_val, self.usuario[2], self.ui.LValAboCreFac.text())
         del factura
         self.clear_line_edits(self.ui.stackedWidget_6)
         self.clear_list_edits(self.ui.stackedWidget_6)
@@ -959,14 +959,17 @@ class VentanasAdmin ():
     def agregar_lista_descripciones(self):
         des = QListWidgetItem(str(self.ui.LDesCreFac.text()))
         self.ui.lisDes.addItem(des)
+        self.ui.LDesCreFac.clear()
 
     def agregar_lista_cantidades(self):
         can = QListWidgetItem(self.ui.LCanCreFac.text())
         self.ui.lisCan.addItem(can)
+        self.ui.LCanCreFac.clear()
 
     def agregar_lista_valores(self):
         val = QListWidgetItem(self.ui.LValCreFac.text())
         self.ui.lisVal.addItem(val)
+        self.ui.LValCreFac.clear()
 
 
 

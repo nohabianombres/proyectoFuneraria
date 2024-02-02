@@ -45,7 +45,7 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
 
     # Configuración de PDFKit con tamaño de página A4 (por ejemplo)
     config = pdfkit.configuration(wkhtmltopdf='C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe')
-    options = {'page-width': '80mm',
+    options = {'page-width': '72mm',
         'page-height': '140mm',
         'margin-top': '0',
         'margin-right': '0',
@@ -66,9 +66,9 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
     print_file(pdf_path)
 
 
-def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,documento_comprador,descripcion, valor_restanate , valor_abonado):
+def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,documento_comprador,descripcion, valor_restanate , valor_abonado, valor_total):
     html_style = """
-<p style="text-align: center;"><strong>LA UNIÓN:</strong> 3104718651 - 3146774935&nbsp; &nbsp;<strong>SONS&Oacute;N:</strong> 8694654&nbsp;</p>
+<p style="text-align: center;"><strong>LA UNI&Oacute;N:</strong> 3104718651 - 3146774935&nbsp; &nbsp;<strong>SONS&Oacute;N:</strong> 8694654&nbsp;</p>
 <p style="text-align: center;"><strong>ABEJORRAL:</strong> 8647631&nbsp; &nbsp;<strong>LA CEJA:</strong> 5532434</p>
 <p style="text-align: center;"><strong>NARI&Ntilde;O:</strong> 3105462139</p>
 <h2 style="text-align: center;"><strong>RECIBOS DE CAJA</strong></h2>
@@ -78,14 +78,14 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,do
 <p style="text-align: center;"><strong>NOMBRE COMPRADOR: </strong>{{nombre_comprador}}</p>
 <p style="text-align: center;"><strong>DOCUMENTO COMPRADOR: </strong>{{documento_comprador}}</p>
 <p style="text-align: center;"><strong>POR CONCEPTO DE: </strong>{{descripcion}}</p>
+<p style="text-align: center;"><strong>VALOR TOTAL: </strong>{{valor_total}}</p>
 <p style="text-align: center;"><strong>VALOR ABONADO: </strong>{{valor_abonado}}</p>
 <p style="text-align: center;"><strong>RESTA: </strong>{{valor_restante}}</p>
 <p style="text-align: center;"><strong>RECIBIO: </strong>{{usuario_encargado}}</p>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;"><strong>FIRMA:_________________________________________</strong></p>
 <p style="text-align: center;">&nbsp;</p>
-<p>&nbsp;</p>
-        """
+<p>&nbsp;</p>        """
 
     # Datos de contexto
     context = {
@@ -96,7 +96,8 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,do
         'descripcion': descripcion,
         'valor_abonado': str(valor_abonado),
         'valor_restante': str(valor_restanate),
-        'documento_comprador': str(documento_comprador)
+        'documento_comprador': str(documento_comprador),
+        'valor_total':str(valor_total)
     }
 
     # Renderizar el HTML con los datos de contexto
@@ -105,6 +106,13 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,do
 
     # Configuración de PDFKit
     config = pdfkit.configuration(wkhtmltopdf='C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe')
+    options = {'page-width': '72mm',
+               'page-height': '200mm',
+               'margin-top': '0',
+               'margin-right': '0',
+               'margin-bottom': '0',
+               'margin-left': '0',
+               }
     nombre_pdf = 'caja' +' '+ nombre_coprador + '.pdf'
     print(nombre_pdf)
 
@@ -114,7 +122,7 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,do
     pdf_path = os.path.join(adicioanles_path, nombre_pdf)
 
     # Generar el PDF
-    pdfkit.from_string(rendered_html, pdf_path, configuration=config)
+    pdfkit.from_string(rendered_html, pdf_path, configuration=config, options=options)
 
     print_file(pdf_path)
 

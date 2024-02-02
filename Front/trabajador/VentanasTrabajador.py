@@ -749,7 +749,7 @@ class VentanasTrabajador ():
         factura = Adicionales()
         ret_fun_cre_fac = factura.crear_factura_caja(self.ui.LCiuCreFac.text(), self.ui.LNomCreFac.text(),
                                                      self.ui.LDocCreFac.text(), self.ui.LNomCreFac.text(), lis_des,
-                                                     lis_can, lis_val, self.usuario[2])
+                                                     lis_can, lis_val, self.usuario[2],self.ui.LValAboCreFac.text())
         del factura
         self.clear_line_edits(self.ui.stackedWidget_6)
         self.clear_list_edits(self.ui.stackedWidget_6)

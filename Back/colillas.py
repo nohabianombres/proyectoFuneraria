@@ -10,66 +10,6 @@ conexion= basedatos.conectar()
 
 class Colillas ():
 
-    def crear_colilla_socio_sin (self, socio, valor_mes, fecha_desdeg, numero_meses , usuario_encargado):
-        if socio.isdigit() and numero_meses.isdigit() and valor_mes.isdigit():
-            self.hora_actual = datetime.now().strftime('%H:%M:%S')
-            self.fecha_actual = datetime.now().date()
-            print(numero_meses)
-            fecha_inicial = datetime.strptime(fecha_desdeg, "%d/%m/%Y")
-            # Sumar el número de meses utilizando relativedelta
-            fecha_resultante = fecha_inicial + relativedelta(months=int(numero_meses))
-
-            # Formatear la fecha resultante
-            hasta_fecha = fecha_resultante.strftime("%d/%m/%Y")
-
-            print(hasta_fecha)
-
-            try:
-                with conexion.cursor() as cursor:
-                    consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, socio, liquidado, documentos, nombres) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                    cursor.execute(consulta, (valor_mes, fecha_inicial, hasta_fecha, self.fecha_actual, self.hora_actual,usuario_encargado, int(socio), False, [],[]))
-                conexion.commit()
-                print("Colilla creada")
-
-                try:
-                    with conexion.cursor() as cursor:
-                        cursor.execute(
-                            """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
-                        ultimo_dato_insertado = cursor.fetchone()
-                        print(ultimo_dato_insertado)
-                    try:
-                        valor_total = int(valor_mes) * int(numero_meses)
-                        with conexion.cursor() as cursor:
-                            consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                            cursor.execute(consulta, (
-                                socio, valor_total, self.fecha_actual, ultimo_dato_insertado[6],
-                                ultimo_dato_insertado[7], ultimo_dato_insertado[8],
-                                ultimo_dato_insertado[9] + ((valor_total) / 2),
-                                ultimo_dato_insertado[10] + (valor_total / 2),
-                                ultimo_dato_insertado[11] + valor_total, False))
-                        conexion.commit()
-                        print("Saldo cambiado")
-
-                        try:
-                            with conexion.cursor() as cursor:
-                                consulta = "INSERT INTO polizas(socio, nombres, documentos, fechas_nacimiento, parentesco_titular, fecha_afiliacion, mayor_70, estado, valor_mes, usuario_creacion, usuario_ultimo_pago, fecha_ultimo_pago, fecha_desde, fecha_hasta) VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                cursor.execute(consulta, (
-                                    int(socio),[],[],[],[],[],[], True, int(valor_total), usuario_encargado,
-                                    usuario_encargado, self.fecha_actual, fecha_inicial, hasta_fecha))
-                            conexion.commit()
-                            print("Poliza ingresada")
-                            return "Todos los datos de la colilla se han cambiado correctamente"
-                        except psycopg2.Error as e:
-                            return "Ocurrió un error al editar: " + str(e)
-                    except psycopg2.Error as e:
-                        return ("Ocurrió un error al crear el ultimo saldo:" + str(e))
-                except psycopg2.Error as e:
-                    return ("Ocurrió un error al seleccionar el ultimo:" + str(e))
-            except psycopg2.Error as e:
-                return ("Ocurrió un error al crear la colilla" + str(e))
-        else:
-            return "No es un número de documento correcto"
-
     def crear_colilla_socio(self, socio, numero_meses, usuario_encargado):
         if socio.isdigit() and numero_meses.isdigit():
 
@@ -131,7 +71,7 @@ class Colillas ():
             except psycopg2.Error as e:
                 return "Ocurrio un error al consultar: "+str(e)
         else:
-            return "No es un número de documento correcto"
+            return "El socio y número de meses deben ser unicamente números"
 
     def consultar_colilla_documento(self, documento):
         print(documento)
@@ -152,7 +92,7 @@ class Colillas ():
                 return "Ocurrió un error al consultar: " + str(e)
         else:
             print(documento)
-            return "No es un número de documento correcto"
+            return "El documento debe ser un número"
 
     def leer_colillas_dias (self, numero_dias):
         fecha_actual = datetime.now().date()
@@ -173,7 +113,7 @@ class Colillas ():
             try:
                 with conexion.cursor() as cursor:
                     cursor.execute(
-                        "SELECT socio, valor_mes, fecha_desde, fecha_hasta, usuario_ultimo_pago, fecha_ultimo_pago FROM colillas WHERE socio=%s ",
+                        "SELECT socio, valor_mes, desde_fecha, hasta_fecha, usuario, fecha_pago FROM colillas WHERE socio=%s ORDER BY numero_colilla DESC LIMIT 1",
                         (socio,))
                     ultima_colilla = cursor.fetchone()
                     if ultima_colilla:

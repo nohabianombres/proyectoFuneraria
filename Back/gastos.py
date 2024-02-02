@@ -42,7 +42,7 @@ class Gastos ():
             except psycopg2.Error as e:
                 return ( "Ocurrió un error al asentar el gasto:")
         else:
-            return "No es un valor correcto"
+            return "El valor debe ser un número"
 
     def gasto_jefe2(self, gasto, valor, nombre_usuario):
         if valor.isdigit():
@@ -79,7 +79,7 @@ class Gastos ():
             except psycopg2.Error as e:
                 return ("Ocurrió un error al asentar el gasto:", e)
         else:
-            return "No es un valor correcto"
+            return "El valor debe ser un número"
 
     def gasto_funeraria (self, gasto, valor, nombre_usuario):
         if valor.isdigit():
@@ -115,7 +115,7 @@ class Gastos ():
             except psycopg2.Error as e:
                 return ("Ocurrió un error al asentar el gasto:")
         else:
-            return "No es un valor correcto"
+            return "El valor debe ser un número"
 
     def gastos_sin_revisar(self):
         print('llegue a la funcion gastos_sin_revisar')

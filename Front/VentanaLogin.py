@@ -5,10 +5,28 @@ from BD.Conexion import *
 from Front.administrador.VentanasAdmin2 import VentanasAdmin2, EmerRetorno2
 
 from Front.trabajador.VentanasTrabajador import VentanasTrabajador
+from Front.emerComunes.retorno import Ui_Dialog
 
 
 basedatos = Database("postgres", "87b3d9baf", "localhost")
 conexion = basedatos.conectar()
+
+class EmerRetorno():
+
+    def __init__(self):
+        self.emerRetorno = QMainWindow()
+        self.ui = Ui_Dialog()
+        self.ui.setupUi(self.emerRetorno)
+
+        self.ui.botAceRet.clicked.connect(self.cerrar_ventana)
+
+    def imprimir_retorno(self, retorno_emer):
+        self.ui.LRetorno.setText(retorno_emer)
+
+    def cerrar_ventana(self):
+        self.emerRetorno.close()
+
+
 
 def validacion(id_usuario, contrasena):
     print('llegue', id_usuario, contrasena)
@@ -40,37 +58,48 @@ class Login():
         self.ui.botCanLog.clicked.connect(self.cancelar_logear)
         self.ui.botAceLog.clicked.connect(self.aceptar_logear)
 
-    def cancelar_logear(self, stacked_widget):
 
-        pass
+    def cancelar_logear(self):
+
+        self.ui.LIdUsu.clear()
+        self.ui.LConUsu.clear()
+
+    def crear_ventana_retorno(self, retorno):
+        print('llegue a crear ventana')
+        self.ventana_emergente = EmerRetorno()
+        self.ventana_emergente.emerRetorno.show()
+        self.ventana_emergente.imprimir_retorno(str(retorno))
 
     def aceptar_logear(self):
         ret_val = validacion(self.ui.LIdUsu.text(), self.ui.LConUsu.text())
         print(ret_val)
-        if ret_val[4] == 'Trabajador':
-            print(ret_val)
-            self.login.close()
-            admin = VentanasTrabajador ()
-            admin.recibir_datos(ret_val)
-            admin.show()
-        elif ret_val[4] == 'Administrador':
-            print(ret_val)
-            self.login.close()
-            admin = VentanasAdmin()
-            admin.recibir_datos(ret_val)
-            admin.show()
-        elif ret_val[4] == 'Administrador2':
-            print(ret_val)
-            self.login.close()
-            admin = VentanasAdmin2()
-            admin.recibir_datos(ret_val)
-            admin.show()
-        elif ret_val[4] == 'Visualizador':
-            print(ret_val)
-            self.login.close()
-            admin = VentanasTrabajador()
-            admin.recibir_datos(ret_val)
-            admin.show()
+        if isinstance(ret_val, str):
+            self.crear_ventana_retorno(str(ret_val))
         else:
-            print('puse algo malo')
+            if ret_val[4] == 'Trabajador':
+                print(ret_val)
+                self.login.close()
+                admin = VentanasTrabajador ()
+                admin.recibir_datos(ret_val)
+                admin.show()
+            elif ret_val[4] == 'Administrador':
+                print(ret_val)
+                self.login.close()
+                admin = VentanasAdmin()
+                admin.recibir_datos(ret_val)
+                admin.show()
+            elif ret_val[4] == 'Administrador2':
+                print(ret_val)
+                self.login.close()
+                admin = VentanasAdmin2()
+                admin.recibir_datos(ret_val)
+                admin.show()
+            elif ret_val[4] == 'Visualizador':
+                print(ret_val)
+                self.login.close()
+                admin = VentanasTrabajador()
+                admin.recibir_datos(ret_val)
+                admin.show()
+            else:
+                print('puse algo malo')
 
