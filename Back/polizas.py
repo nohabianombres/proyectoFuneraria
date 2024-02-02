@@ -12,7 +12,7 @@ conexion= basedatos.conectar()
 class Polizas ():
 
     def crear_poliza (self, socio, nombres, documentos, fechas_nacimiento, parentesco_titular, valor_mes, numero_meses, usuario_encargado):
-        if all(x.isdigit() for x in documentos) :
+
             valor_por_defecto = ''
             print(nombres)
 
@@ -120,8 +120,7 @@ class Polizas ():
 
             else:
                 return "El socio, el valor del mes y el número de meses, deben ser unicamente números"
-        else:
-            return "Las listas de docuemntos deben contener solo números"
+
 
     def eliminar_persona(self, socio, nombre_par, documento_par, fecha_nacimiento_par, parentesco_par):
         try:
@@ -326,7 +325,7 @@ class Polizas ():
             return "Los documentos, el valor del mes y el socio deben ser números"
 
     def crear_poliza_antigua (self, socio, nombres, documentos, fechas_nacimiento, parentesco_titular, valor_mes, numero_meses, usuario_encargado,  fecha_desdef, fecha_afiliacion):
-        if all(x.isdigit() for x in documentos):
+
             valor_por_defecto = ''
 
             # Encuentra la longitud máxima entre las listas
@@ -448,8 +447,6 @@ class Polizas ():
                     print(f"Error: {e}")
             else:
                 return "El valor del mes, y el número de meses deben ser unicamente números"
-        else:
-            return "Las listas de docuemntos deben contener solo números"
 
 
 

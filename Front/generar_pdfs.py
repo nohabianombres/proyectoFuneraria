@@ -45,7 +45,7 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
 
     # Configuración de PDFKit con tamaño de página A4 (por ejemplo)
     config = pdfkit.configuration(wkhtmltopdf='C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe')
-    options = {'page-width': '72mm',
+    options = {'page-width': '80mm',
         'page-height': '140mm',
         'margin-top': '0',
         'margin-right': '0',
@@ -105,7 +105,7 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,do
 
     # Configuración de PDFKit
     config = pdfkit.configuration(wkhtmltopdf='C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe')
-    options = {'page-width': '72mm',
+    options = {'page-width': '80mm',
                'page-height': '200mm',
                'margin-top': '0',
                'margin-right': '0',
