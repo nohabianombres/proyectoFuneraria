@@ -32,12 +32,36 @@ class Adicionales ():
                             descripciones, cantidades_int, valores_unitarios_int, valor_total, valor_total-int(valor_abonar)))
                         conexion.commit()
                         print('Fac creada')
-                        pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador, documento_comprador,
-                                         descripciones, valor_total-int(valor_abonar), valor_abonar, valor_total)
-                        return "Factura de caja creada"
+
+
+                        try:
+                                with conexion.cursor() as cursor:
+                                    cursor.execute(
+                                        """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
+                                    ultimo_dato_insertado = cursor.fetchone()
+                                    print(ultimo_dato_insertado)
+                                try:
+                                    with conexion.cursor() as cursor:
+                                        consulta = "INSERT INTO saldo(valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                        cursor.execute(consulta, (
+                                            int(valor_abonar), fecha_actual, ultimo_dato_insertado[6],
+                                            ultimo_dato_insertado[7], ultimo_dato_insertado[8],
+                                            ultimo_dato_insertado[9] + (int(valor_abonar) / 2),
+                                            ultimo_dato_insertado[10] + (int(valor_abonar) / 2),
+                                            ultimo_dato_insertado[11] + int(valor_abonar), False))
+                                    conexion.commit()
+                                    print("Saldo cambiado")
+                                    pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador,
+                                                     documento_comprador,
+                                                     descripciones, valor_total - int(valor_abonar), valor_abonar,
+                                                     valor_total)
+                                    return "Factura de caja creada"
+                                except psycopg2.Error as e:
+                                    return ("Ocurrió un error al crear el ultimo saldo:")
+                        except psycopg2.Error as e:
+                                return ("Ocurrió un error al seleccionar el ultimo:", e)
                     except psycopg2.Error as e:
                         return "Ocurrió un error al crear la factura de caja: " + str(e)
-
                 else:
                     return "El valor abonar es mayor al valor total de la factura"
             else:

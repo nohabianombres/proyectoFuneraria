@@ -1018,17 +1018,20 @@ class VentanasAdmin ():
 
     def funcion_generar_liquidacion(self):
         liquidacion = Liquidacion()
-        ret_gen_liq = liquidacion.generar_liquidacion(self.ui.LIdJef1Gen.text(),self.ui.LConJef1Gen.text(),self.ui.LIdJef1Gen.text(),self.ui.LConJef2Gen.text())
-        self.venta_liquidacion_generada(ret_gen_liq)
+        ret_gen_liq = liquidacion.generar_liquidacion(self.ui.LIdJef1Gen.text(),self.ui.LIdJef2Gen.text(),self.ui.LIdJef1Gen.text(),self.ui.LConJef2Gen.text())
+        self.venta_liquidacion_generada()
+        self.liquidacion_generada(ret_gen_liq)
+
         self.clear_line_edits(self.ui.menu_generar_liquidacion)
 
-    def venta_liquidacion_generada (self, ret_gen_liq):
+    def venta_liquidacion_generada (self):
         self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.liquidacion_generada)
+
+    def liquidacion_generada(self,ret_gen_liq):
         self.ui.LGasJef1Tot.setText(str(ret_gen_liq[0]))
         self.ui.LGasJef2Tot.setText(str(ret_gen_liq[1]))
         self.ui.LSalJef1Tot.setText(str(ret_gen_liq[2]))
         self.ui.LSalJef2Tot.setText(str(ret_gen_liq[3]))
-
 
     def venta_ultimo_saldo(self):
         self.ui.menu_admin2.setCurrentWidget(self.ui.ultimo_saldo)

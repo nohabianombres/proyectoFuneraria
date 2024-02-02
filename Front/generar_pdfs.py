@@ -85,8 +85,7 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_coprador,do
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: center;"><strong>FIRMA:_________________________________________</strong></p>
 <p style="text-align: center;">&nbsp;</p>
-<p>&nbsp;</p>        """
-
+<p>&nbsp;</p><p>"""
     # Datos de contexto
     context = {
         'fecha_actual': fecha_actual,

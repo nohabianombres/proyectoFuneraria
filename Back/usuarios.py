@@ -7,17 +7,20 @@ conexion= basedatos.conectar()
 class Usuarios ():
 
     def crear_usuario (self,contrasena, nombre, documento, cargo):
-        if documento.isdigit() :
-            try:
-                with conexion.cursor() as cursor:
-                    consulta = "INSERT INTO usuario(contrasena, nombre, documento, cargo) VALUES (%s, %s, %s, %s);"
-                    cursor.execute(consulta, (contrasena, nombre, documento, cargo))
-                conexion.commit()
-                return ("Usuario creado")
-            except psycopg2.Error as e:
-                return ( "Ocurrió un error al crear el usuario :", e)
+        if cargo=='Trabajador' or cargo=='Administrador' or cargo=='Administrador2' or cargo=='Visualizador':
+            if documento.isdigit() :
+                try:
+                    with conexion.cursor() as cursor:
+                        consulta = "INSERT INTO usuario(contrasena, nombre, documento, cargo) VALUES (%s, %s, %s, %s);"
+                        cursor.execute(consulta, (contrasena, nombre, documento, cargo))
+                    conexion.commit()
+                    return ("Usuario creado")
+                except psycopg2.Error as e:
+                    return ( "Ocurrió un error al crear el usuario :", e)
+            else:
+                return "El docuemnto del usuario debe ser un número"
         else:
-            return "El docuemnto del usuario debe ser un número"
+            return ("Los cargos son Trabajador, Administrador, Administrador2, Visualizador")
 
     def eliminar_usuario(self, id_usuario):
         if id_usuario.isdigit():
