@@ -8,7 +8,7 @@ class Usuarios ():
 
     def crear_usuario (self,contrasena, nombre, documento, cargo):
         if cargo=='Trabajador' or cargo=='Administrador' or cargo=='Administrador2' or cargo=='Visualizador':
-            if documento.isdigit() :
+            if documento.isdigit() and contrasena.isdigit():
                 try:
                     with conexion.cursor() as cursor:
                         consulta = "INSERT INTO usuario(contrasena, nombre, documento, cargo) VALUES (%s, %s, %s, %s);"
@@ -18,7 +18,7 @@ class Usuarios ():
                 except psycopg2.Error as e:
                     return ( "Ocurrió un error al crear el usuario :", e)
             else:
-                return "El docuemnto del usuario debe ser un número"
+                return "El docuemnto y la contraseña del usuario debe ser un número"
         else:
             return ("Los cargos son Trabajador, Administrador, Administrador2, Visualizador")
 

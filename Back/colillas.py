@@ -13,7 +13,6 @@ class Colillas ():
     def crear_colilla_socio(self, socio, numero_meses, usuario_encargado):
         if socio.isdigit() and numero_meses.isdigit():
 
-
             self.hora_actual = datetime.now().strftime('%H:%M:%S')
             self.fecha_actual = datetime.now().date()
 
@@ -44,8 +43,8 @@ class Colillas ():
                                 try:
                                     valor_total = int(poliza[-4])*int(numero_meses)
                                     with conexion.cursor() as cursor:
-                                        consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                        cursor.execute(consulta, (socio, valor_total, self.fecha_actual, ultimo_dato_insertado[6],ultimo_dato_insertado[7], ultimo_dato_insertado[8], ultimo_dato_insertado[9] + (( valor_total)/2),ultimo_dato_insertado[10] +  (valor_total/2), ultimo_dato_insertado[11] + valor_total, False))
+                                        consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, gasto) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                        cursor.execute(consulta, (socio, valor_total, self.fecha_actual, ultimo_dato_insertado[6],ultimo_dato_insertado[7], ultimo_dato_insertado[8], ultimo_dato_insertado[9] + (( valor_total)/2),ultimo_dato_insertado[10] +  (valor_total/2), ultimo_dato_insertado[11] + valor_total, False, ''))
                                     conexion.commit()
                                     print("Saldo cambiado")
 
@@ -78,7 +77,7 @@ class Colillas ():
         if documento.isdigit():
             try:
                 with conexion.cursor() as cursor:
-                    consulta = "SELECT socio, valor_mes, fecha_desde, fecha_hasta, usuario_ultimo_pago, fecha_ultimo_pago FROM polizas WHERE %s = ANY (documentos)"
+                    consulta = "SELECT socio, valor_mes, desde_fecha, hasta_fecha, usuario, fecha_pago FROM colillas WHERE %s = ANY (documentos) ORDER BY numero_colilla DESC LIMIT 1"
                     cursor.execute(consulta, (int(documento),))
                     colillas = cursor.fetchall()
                     if colillas:

@@ -277,9 +277,9 @@ class VentanasAdmin ():
         print('llegue a escoger_venta_gastos')
         if data == 'Funeraria':
             self.venta_gasto_funeraria()
-        elif data == 'Jefe 1':
+        elif data == 'Julio':
             self.venta_gasto_jefe1()
-        elif data == 'Jefe 2':
+        elif data == 'Armando':
             self.venta_gasto_jefe2()
 
     def show(self):
@@ -330,6 +330,7 @@ class VentanasAdmin ():
                 self.agregar_lista_mayor70_consultar(ret_con_pol_doc[0][6])
                 self.ui.LSocConPol.setText(str(ret_con_pol_doc[0][7]))
                 self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol_doc[0][8])
+                self.agregar_lista_parentesco_consultar(ret_con_pol_doc[0][9])
             else:
                 socios = [sublista[7] for sublista in ret_con_pol_doc]
                 self.crear_ventana_retorno(socios)
@@ -348,6 +349,7 @@ class VentanasAdmin ():
             self.agregar_lista_fechas_consultar(ret_con_pol[5])
             self.agregar_lista_mayor70_consultar(ret_con_pol[6])
             self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol[7])
+            self.agregar_lista_parentesco_consultar(ret_con_pol[8])
 
     def agregar_lista_fecha_afiliacion_consultar (self, fechas_afi):
         for fecha_afi in fechas_afi:
@@ -369,6 +371,9 @@ class VentanasAdmin ():
         for mayor70 in mayores70:
             self.ui.lisMayPol.addItem(str(mayor70))
 
+    def agregar_lista_parentesco_consultar (self,parentescos):
+        for parentesco in parentescos:
+            self.ui.lisParPol.addItem(str(parentesco))
 
 
 
@@ -894,7 +899,8 @@ class VentanasAdmin ():
 
     def funcion_crear_usuario (self):
         usuario = Usuarios ()
-        self.ret_fun_cre_usu = usuario.crear_usuario(self.ui.LConCreUsu.text(), self.ui.LNomCreUsu.text(), self.ui.LDocCreUsu.text(), self.ui.LCarCreUsu.text())
+        cargo = self.ui.LCarCreUsu.currentText()
+        self.ret_fun_cre_usu = usuario.crear_usuario(self.ui.LConCreUsu.text(), self.ui.LNomCreUsu.text(), self.ui.LDocCreUsu.text(), cargo)
         del usuario
         self.clear_line_edits(self.ui.stackedWidget_5)
         self.crear_ventana_retorno(self.ret_fun_cre_usu)
@@ -1018,14 +1024,12 @@ class VentanasAdmin ():
 
     def funcion_generar_liquidacion(self):
         liquidacion = Liquidacion()
-        ret_gen_liq = liquidacion.generar_liquidacion(self.ui.LIdJef1Gen.text(),self.ui.LIdJef2Gen.text(),self.ui.LIdJef1Gen.text(),self.ui.LConJef2Gen.text())
+        self.ret_gen_liq = liquidacion.generar_liquidacion(self.ui.LIdJef1Gen.text(),self.ui.LIdJef2Gen.text(),self.ui.LIdJef1Gen.text(),self.ui.LConJef2Gen.text())
         self.venta_liquidacion_generada()
-        self.liquidacion_generada(ret_gen_liq)
-
-        self.clear_line_edits(self.ui.menu_generar_liquidacion)
 
     def venta_liquidacion_generada (self):
         self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.liquidacion_generada)
+        self.liquidacion_generada(self.ret_gen_liq)
 
     def liquidacion_generada(self,ret_gen_liq):
         self.ui.LGasJef1Tot.setText(str(ret_gen_liq[0]))
@@ -1162,15 +1166,19 @@ class VentanasAdmin ():
         self.ui.tabUltSal.setRowCount(1)
         if ret_fun_con_ult_sal is not None:
             print('voy a imprimir')
-            fila = 0
-            self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
-            self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[0])))
-            self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[1])))
-            self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[2])))
-            self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[4])))
-            self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[5])))
-            self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[6])))
-            self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[7])))
+            try:
+
+                fila = 0
+                self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
+                self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[0])))
+                self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[1])))
+                self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[2])))
+                self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[4])))
+                self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[5])))
+                self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[6])))
+                self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[7])))
+            except psycopg2.Error as e:
+                print(e)
         else:
             print('No se encontró ninguna póliza')
 

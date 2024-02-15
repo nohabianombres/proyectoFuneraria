@@ -14,58 +14,84 @@ class Adicionales ():
         if documento_comprador.isdigit() and valor_abonar.isdigit():
             print('Entre a crear factura de caja')
             fecha_actual = datetime.now().date()
+            if int(valor_abonar)>0:
 
             # Verificar si todos los elementos en las listas son dígitos
-            if all(x.isdigit() for x in cantidades) and all(y.isdigit() for y in valores_unitarios):
-                cantidades_int = [int(x) for x in cantidades]
-                valores_unitarios_int = [int(y) for y in valores_unitarios]
+                if all(x.isdigit() for x in cantidades) and all(y.isdigit() for y in valores_unitarios):
+                    cantidades_int = [int(x) for x in cantidades]
+                    valores_unitarios_int = [int(y) for y in valores_unitarios]
 
-                valor_total = sum(x * y for x, y in zip(cantidades_int, valores_unitarios_int))
+                    valor_total = sum(x * y for x, y in zip(cantidades_int, valores_unitarios_int))
 
-                if valor_total > int(valor_abonar):
+                    if valor_total >= int(valor_abonar):
+
+                        try:
+                            with conexion.cursor() as cursor:
+                                consulta = "INSERT INTO adicionales(ciudad, fecha, nombre_comprador, documento_comprador, nombre_vendedor, descripciones, cantidades, valores_unitarios, valor_total, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                cursor.execute(consulta, (
+                                ciudad, fecha_actual, nombre_comprador, int(documento_comprador), nombre_vendedor,
+                                descripciones, cantidades_int, valores_unitarios_int, valor_total, valor_total-int(valor_abonar)))
+                            conexion.commit()
+                            print('Fac creada')
+
+
+                            try:
+                                    with conexion.cursor() as cursor:
+                                        cursor.execute(
+                                            """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
+                                        ultimo_dato_insertado = cursor.fetchone()
+                                        print(ultimo_dato_insertado)
+                                    try:
+                                        with conexion.cursor() as cursor:
+                                            consulta = "INSERT INTO saldo(valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, descripciones, gasto, socio) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                            cursor.execute(consulta, (
+                                                int(valor_abonar), fecha_actual, ultimo_dato_insertado[6],
+                                                ultimo_dato_insertado[7], ultimo_dato_insertado[8],
+                                                ultimo_dato_insertado[9] + (int(valor_abonar) / 2),
+                                                ultimo_dato_insertado[10] + (int(valor_abonar) / 2),
+                                                ultimo_dato_insertado[11] + int(valor_abonar), False, descripciones,'',0))
+                                        conexion.commit()
+                                        print("Saldo cambiado")
+                                        pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador,
+                                                         documento_comprador,
+                                                         descripciones, valor_total - int(valor_abonar), valor_abonar,
+                                                         valor_total)
+                                        return "Factura de caja creada"
+                                    except psycopg2.Error as e:
+                                        return ("Ocurrió un error al crear el ultimo saldo:")
+                            except psycopg2.Error as e:
+                                    return ("Ocurrió un error al seleccionar el ultimo:", e)
+                        except psycopg2.Error as e:
+                            return "Ocurrió un error al crear la factura de caja: " + str(e)
+                    else:
+                        return "El valor abonar es mayor al valor total de la factura"
+                else:
+                    return "La cantidad y valor unitario deben ser unicamente de números"
+            else:
+                if all(x.isdigit() for x in cantidades) and all(y.isdigit() for y in valores_unitarios):
+                    fecha_actual = datetime.now().date()
+                    cantidades_int = [int(x) for x in cantidades]
+                    valores_unitarios_int = [int(y) for y in valores_unitarios]
+
+                    valor_total = sum(x * y for x, y in zip(cantidades_int, valores_unitarios_int))
 
                     try:
                         with conexion.cursor() as cursor:
                             consulta = "INSERT INTO adicionales(ciudad, fecha, nombre_comprador, documento_comprador, nombre_vendedor, descripciones, cantidades, valores_unitarios, valor_total, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
                             cursor.execute(consulta, (
                             ciudad, fecha_actual, nombre_comprador, int(documento_comprador), nombre_vendedor,
-                            descripciones, cantidades_int, valores_unitarios_int, valor_total, valor_total-int(valor_abonar)))
+                            descripciones, cantidades_int, valores_unitarios_int, valor_total, valor_total))
                         conexion.commit()
                         print('Fac creada')
-
-
-                        try:
-                                with conexion.cursor() as cursor:
-                                    cursor.execute(
-                                        """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
-                                    ultimo_dato_insertado = cursor.fetchone()
-                                    print(ultimo_dato_insertado)
-                                try:
-                                    with conexion.cursor() as cursor:
-                                        consulta = "INSERT INTO saldo(valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                        cursor.execute(consulta, (
-                                            int(valor_abonar), fecha_actual, ultimo_dato_insertado[6],
-                                            ultimo_dato_insertado[7], ultimo_dato_insertado[8],
-                                            ultimo_dato_insertado[9] + (int(valor_abonar) / 2),
-                                            ultimo_dato_insertado[10] + (int(valor_abonar) / 2),
-                                            ultimo_dato_insertado[11] + int(valor_abonar), False))
-                                    conexion.commit()
-                                    print("Saldo cambiado")
-                                    pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador,
-                                                     documento_comprador,
-                                                     descripciones, valor_total - int(valor_abonar), valor_abonar,
-                                                     valor_total)
-                                    return "Factura de caja creada"
-                                except psycopg2.Error as e:
-                                    return ("Ocurrió un error al crear el ultimo saldo:")
-                        except psycopg2.Error as e:
-                                return ("Ocurrió un error al seleccionar el ultimo:", e)
+                        pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador,
+                                         documento_comprador,
+                                         descripciones, valor_total, 0,
+                                         valor_total)
+                        return ("Factura de caja creada")
                     except psycopg2.Error as e:
-                        return "Ocurrió un error al crear la factura de caja: " + str(e)
+                        return ("Ocurrió un error al crear la factura de caja:" + str(e))
                 else:
-                    return "El valor abonar es mayor al valor total de la factura"
-            else:
-                return "La cantidad y valor unitario deben ser unicamente de números"
+                    return "La cantidad y valor unitario deben ser unicamente de números"
         else:
             return "El documento del comprador y el valor abonar deben ser números"
 
@@ -84,7 +110,7 @@ class Adicionales ():
             self.saldo = []
             try:
                 with conexion.cursor() as cursor:
-                    cursor.execute("SELECT id_adicional,saldo, nombre_comprador, documento_comprador, saldo, fecha FROM adicionales WHERE documento_comprador=%s AND saldo <> 0" , (str(documento),))
+                    cursor.execute("SELECT id_adicional,saldo, nombre_comprador, documento_comprador, saldo, fecha FROM adicionales WHERE documento_comprador=%s AND saldo > 0" , (str(documento),))
                     datos_factura = cursor.fetchall()
                     if datos_factura:
                         for saldo_id in datos_factura:
@@ -134,13 +160,13 @@ class Adicionales ():
                                         print(ultimo_dato_insertado)
                                     try:
                                         with conexion.cursor() as cursor:
-                                            consulta = "INSERT INTO saldo(valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                            consulta = "INSERT INTO saldo(valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, descripciones, gasto, socio) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
                                             cursor.execute(consulta, (
                                             int(valor_abonado), fecha_actual, ultimo_dato_insertado[6],
                                             ultimo_dato_insertado[7], ultimo_dato_insertado[8],
                                             ultimo_dato_insertado[9] + (int(valor_abonado) / 2),
                                             ultimo_dato_insertado[10] + (int(valor_abonado) / 2),
-                                            ultimo_dato_insertado[11] + int(valor_abonado), False))
+                                            ultimo_dato_insertado[11] + int(valor_abonado), False, factura_caja[6], '',0))
                                         conexion.commit()
                                         print("Saldo cambiado")
                                         pdf_factura_caja(factura_caja[1], fecha_actual, usuario_encargado, factura_caja[3],factura_caja[4],

@@ -303,6 +303,7 @@ class VentanasTrabajador ():
                 self.agregar_lista_mayor70_consultar(ret_con_pol_doc[0][6])
                 self.ui.LSocConPol.setText(str(ret_con_pol_doc[0][7]))
                 self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol_doc[0][8])
+                self.agregar_lista_parentesco_consultar(ret_con_pol_doc[0][9])
             else:
                 socios = [sublista[7] for sublista in ret_con_pol_doc]
                 self.crear_ventana_retorno(socios)
@@ -321,6 +322,7 @@ class VentanasTrabajador ():
             self.agregar_lista_fechas_consultar(ret_con_pol[5])
             self.agregar_lista_mayor70_consultar(ret_con_pol[6])
             self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol[7])
+            self.agregar_lista_parentesco_consultar(ret_con_pol[8])
 
     def agregar_lista_fecha_afiliacion_consultar(self, fechas_afi):
         for fecha_afi in fechas_afi:
@@ -341,6 +343,10 @@ class VentanasTrabajador ():
     def agregar_lista_mayor70_consultar(self, mayores70):
         for mayor70 in mayores70:
             self.ui.lisMayPol.addItem(str(mayor70))
+
+    def agregar_lista_parentesco_consultar (self,parentescos):
+        for parentesco in parentescos:
+            self.ui.lisParPol.addItem(str(parentesco))
 
     def ventana_agregar_persona(self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.agregar_persona)

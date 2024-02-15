@@ -291,6 +291,7 @@ class VentanasAdmin2 ():
     def ventana_gastos(self):
         self.ui.menu_admin1.setCurrentWidget(self.ui.gastos)
 
+
     def ventana_usuarios(self):
         self.ui.menu_admin1.setCurrentWidget(self.ui.usuarios)
 
@@ -326,6 +327,7 @@ class VentanasAdmin2 ():
                 self.agregar_lista_mayor70_consultar(ret_con_pol_doc[0][6])
                 self.ui.LSocConPol.setText(str(ret_con_pol_doc[0][7]))
                 self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol_doc[0][8])
+                self.agregar_lista_parentesco_consultar(ret_con_pol_doc[0][9])
             else:
                 socios = [sublista[7] for sublista in ret_con_pol_doc]
                 self.crear_ventana_retorno(socios)
@@ -344,6 +346,7 @@ class VentanasAdmin2 ():
             self.agregar_lista_fechas_consultar(ret_con_pol[5])
             self.agregar_lista_mayor70_consultar(ret_con_pol[6])
             self.agregar_lista_fecha_afiliacion_consultar(ret_con_pol[7])
+            self.agregar_lista_parentesco_consultar(ret_con_pol[8])
 
     def agregar_lista_fecha_afiliacion_consultar(self, fechas_afi):
         for fecha_afi in fechas_afi:
@@ -364,6 +367,10 @@ class VentanasAdmin2 ():
     def agregar_lista_mayor70_consultar(self, mayores70):
         for mayor70 in mayores70:
             self.ui.lisMayPol.addItem(str(mayor70))
+
+    def agregar_lista_parentesco_consultar (self,parentescos):
+        for parentesco in parentescos:
+            self.ui.lisParPol.addItem(str(parentesco))
 
     def ventana_agregar_persona(self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.agregar_persona)
@@ -887,7 +894,6 @@ class VentanasAdmin2 ():
         ret_gen_liq = liquidacion.generar_liquidacion(self.ui.LIdJef1Gen.text(), self.ui.LConJef1Gen.text(),
                                                       self.ui.LIdJef1Gen.text(), self.ui.LConJef2Gen.text())
         self.venta_liquidacion_generada(ret_gen_liq)
-        self.clear_line_edits(self.ui.menu_generar_liquidacion)
 
     def venta_liquidacion_generada(self, ret_gen_liq):
         self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.liquidacion_generada)

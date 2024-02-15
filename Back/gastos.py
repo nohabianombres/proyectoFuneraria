@@ -29,8 +29,8 @@ class Gastos ():
                         print(saldo_jefe2)
                         print(ultimo_dato_insertado[-7])
                         with conexion.cursor() as cursor:
-                            consulta = "INSERT INTO saldo(gasto, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                            cursor.execute(consulta, (gasto, int(valor), fecha_actual,int(ultimo_dato_insertado[-7]) + int(valor),int(ultimo_dato_insertado[-6]), int(ultimo_dato_insertado[-5]),saldo_jefe1, saldo_jefe2,int(ultimo_dato_insertado[-2]) - int(valor), False))
+                            consulta = "INSERT INTO saldo(gasto, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, socio) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                            cursor.execute(consulta, (gasto, int(valor), fecha_actual,int(ultimo_dato_insertado[-7]) + int(valor),int(ultimo_dato_insertado[-6]), int(ultimo_dato_insertado[-5]),saldo_jefe1, saldo_jefe2,int(ultimo_dato_insertado[-2]) - int(valor), False, 0))
                             conexion.commit()
                         print("Saldo cambiado")
                         return 'El gasto y lo demás a sido generado con exito'
@@ -40,7 +40,7 @@ class Gastos ():
                     return ("Ocurrió un error al seleccionar el último:", e)
 
             except psycopg2.Error as e:
-                return ( "Ocurrió un error al asentar el gasto:")
+                return ( "Ocurrió un error al asentar el gasto:",e)
         else:
             return "El valor debe ser un número"
 
@@ -67,8 +67,8 @@ class Gastos ():
 
                         print(saldo_jefe2)
                         with conexion.cursor() as cursor:
-                            consulta = "INSERT INTO saldo(gasto, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                            cursor.execute(consulta, (gasto, valor, fecha_actual,ultimo_dato_insertado[-7], int(ultimo_dato_insertado[-6]) + int(valor), ultimo_dato_insertado[-5],saldo_jefe1, saldo_jefe2, int(ultimo_dato_insertado[-2]) - int(valor), False))
+                            consulta = "INSERT INTO saldo(gasto, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, socio) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                            cursor.execute(consulta, (gasto, valor, fecha_actual,ultimo_dato_insertado[-7], int(ultimo_dato_insertado[-6]) + int(valor), ultimo_dato_insertado[-5],saldo_jefe1, saldo_jefe2, int(ultimo_dato_insertado[-2]) - int(valor), False, 0))
                         conexion.commit()
                         print("Saldo cambiado")
                         return 'El gasto y lo demás a sido generado con exito'
@@ -103,17 +103,17 @@ class Gastos ():
                         saldo_jefe2 = ultimo_dato_insertado[10] - (int(valor)/2)
 
                         with conexion.cursor() as cursor:
-                            consulta = "INSERT INTO saldo(gasto, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                            cursor.execute(consulta, (gasto, int(valor), fecha_actual,ultimo_dato_insertado[-7] , ultimo_dato_insertado[-6] ,int(valor)+ int(ultimo_dato_insertado[-5]),saldo_jefe1 , saldo_jefe2 ,int(ultimo_dato_insertado[-2]) - int(valor), False))
+                            consulta = "INSERT INTO saldo(gasto, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, socio) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                            cursor.execute(consulta, (gasto, int(valor), fecha_actual,ultimo_dato_insertado[-7] , ultimo_dato_insertado[-6] ,int(valor)+ int(ultimo_dato_insertado[-5]),saldo_jefe1 , saldo_jefe2 ,int(ultimo_dato_insertado[-2]) - int(valor), False, 0))
                             conexion.commit()
                         print("Saldo cambiado")
                         return 'El gasto y lo demás a sido generado con exito'
                     except psycopg2.Error as e:
-                        return ("Ocurrió un error al crear el ultimo saldo:")
+                        return ("Ocurrió un error al crear el ultimo saldo:",e)
                 except psycopg2.Error as e:
                     return ("Ocurrió un error al seleccionar el ultimo:", e)
             except psycopg2.Error as e:
-                return ("Ocurrió un error al asentar el gasto:")
+                return ("Ocurrió un error al asentar el gasto:",e)
         else:
             return "El valor debe ser un número"
 

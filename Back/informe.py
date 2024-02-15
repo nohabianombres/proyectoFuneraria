@@ -10,7 +10,7 @@ class Informes ():
     def mostrar_ultimo_saldo(self):
         try:
             with conexion.cursor() as cursor:
-                cursor.execute("""SELECT socio, gasto, descripciones, fecha, valor, funeraria ,jefe1, jefe2 FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
+                cursor.execute("""SELECT socio,gasto, descripciones, fecha, valor, funeraria ,jefe1, jefe2 FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
                 ultimo_dato_insertado = cursor.fetchone()
                 return (ultimo_dato_insertado)
         except psycopg2.Error as e:

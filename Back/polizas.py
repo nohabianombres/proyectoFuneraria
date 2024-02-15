@@ -42,17 +42,24 @@ class Polizas ():
                     print(documentos)
 
                     documentos_int = []
-                    nombres_int = []
-                    parentesco_int=[]
 
                     for elemento in documentos:
                         # Verificar si el elemento es de tipo texto (str) y no está vacío
                         if isinstance(elemento, str) and elemento.strip():  # Verificar que no esté vacío
+
                             # Si es de tipo texto y no está vacío, convertir el elemento a entero y agregar a la lista documentos_int
-                            documentos_int.append(int(elemento))
+                            try:
+
+                                documentos_int.append(int(elemento))
+                            except:
+                                return "No es un documento"
                         else:
                             # Si es de tipo texto y está vacío, agregar 000 a la lista documentos_int como entero
                             documentos_int.append(000)
+
+
+
+
 
                     nombres_str = '{{{}}}'.format(
                         ','.join(filter(None, map(lambda x: 'NULL' if x == valor_por_defecto else x, nombres))))
@@ -78,45 +85,58 @@ class Polizas ():
 
                     # Imprime la lista mayor_70
                     print(mayor_70)
-
                     try:
                         with conexion.cursor() as cursor:
-                            consulta = "INSERT INTO polizas(socio, nombres, documentos, fechas_nacimiento, parentesco_titular, fecha_afiliacion, mayor_70, estado, valor_mes, usuario_creacion, usuario_ultimo_pago, fecha_ultimo_pago, fecha_desde, fecha_hasta) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                            cursor.execute(consulta, (int(socio), nombres_str, documentos_int, fechas_nacimiento_int, parentesco_titular_str, fechas_afiliacion, mayor_70, True, int(valor_total), usuario_encargado, usuario_encargado, fecha_afiliacion,fecha_afiliacion, hasta_fecha ))
-                        conexion.commit()
-                        print("Poliza ingresada")
-                        try:
-                            with conexion.cursor() as cursor:
-                                consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                cursor.execute(consulta, (int(valor_mes), fecha_afiliacion, hasta_fecha, fecha_afiliacion, hora_actual, usuario_encargado, documentos_int, nombres_str, int(socio), False))
-                            conexion.commit()
-                            print("Colilla creada")
+                            # Verificar si el socio ya existe
+                            consulta_verificacion = "SELECT COUNT(*) FROM polizas WHERE socio = %s;"
+                            cursor.execute(consulta_verificacion, (int(socio),))
+                            resultado = cursor.fetchone()
 
-                            try:
-                                with conexion.cursor() as cursor:
-                                    cursor.execute(
-                                        """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
-                                    ultimo_dato_insertado = cursor.fetchone()
-                                    print(ultimo_dato_insertado)
-
+                            # Si el socio no existe, proceder con la inserción
+                            if resultado[0] == 0:
 
                                 try:
                                     with conexion.cursor() as cursor:
-                                        consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                        cursor.execute(consulta, (socio, valor_total, fecha_afiliacion, ultimo_dato_insertado[6], ultimo_dato_insertado[7], ultimo_dato_insertado[8], int(ultimo_dato_insertado[9]) + (int(valor_total)/2), int(ultimo_dato_insertado[10]) + ((valor_total)/2), int(ultimo_dato_insertado[11]) + valor_total, False))
+                                        consulta = "INSERT INTO polizas(socio, nombres, documentos, fechas_nacimiento, parentesco_titular, fecha_afiliacion, mayor_70, estado, valor_mes, usuario_creacion, usuario_ultimo_pago, fecha_ultimo_pago, fecha_desde, fecha_hasta) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                        cursor.execute(consulta, (int(socio), nombres_str, documentos_int, fechas_nacimiento_int, parentesco_titular_str, fechas_afiliacion, mayor_70, True, int(valor_total), usuario_encargado, usuario_encargado, fecha_afiliacion,fecha_afiliacion, hasta_fecha ))
+                                    conexion.commit()
+                                    print("Poliza ingresada")
+                                    try:
+                                        with conexion.cursor() as cursor:
+                                            consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                            cursor.execute(consulta, (int(valor_mes), fecha_afiliacion, hasta_fecha, fecha_afiliacion, hora_actual, usuario_encargado, documentos_int, nombres_str, int(socio), False))
                                         conexion.commit()
-                                    print("Saldo cambiado")
-                                    pdf_colilla(datetime.now().date(),socio, valor_total, datetime.now().date(), hasta_fecha, usuario_encargado, nombres[0],documentos[0] )
-                                    return "Todo generado con exito"
+                                        print("Colilla creada")
 
+                                        try:
+                                            with conexion.cursor() as cursor:
+                                                cursor.execute(
+                                                    """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
+                                                ultimo_dato_insertado = cursor.fetchone()
+                                                print(ultimo_dato_insertado)
+
+
+                                            try:
+                                                with conexion.cursor() as cursor:
+                                                    consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, gasto) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                                    cursor.execute(consulta, (socio, valor_total, fecha_afiliacion, ultimo_dato_insertado[6], ultimo_dato_insertado[7], ultimo_dato_insertado[8], int(ultimo_dato_insertado[9]) + (int(valor_total)/2), int(ultimo_dato_insertado[10]) + ((valor_total)/2), int(ultimo_dato_insertado[11]) + valor_total, False, ''))
+                                                    conexion.commit()
+                                                print("Saldo cambiado")
+                                                pdf_colilla(datetime.now().date(),socio, valor_total, datetime.now().date(), hasta_fecha, usuario_encargado, nombres[0],documentos[0] )
+                                                return "Todo generado con exito"
+
+                                            except psycopg2.Error as e:
+                                                return ("Ocurrió un error al crear el ultimo saldo:"+  str(e))
+                                        except psycopg2.Error as e:
+                                                return ("Ocurrió un error al seleccionar el ultimo:"+  str(e))
+                                    except psycopg2.Error as e:
+                                        return ("Ocurrió un error al crear la colilla"+  str(e))
                                 except psycopg2.Error as e:
-                                    return ("Ocurrió un error al crear el ultimo saldo:"+  str(e))
-                            except psycopg2.Error as e:
-                                    return ("Ocurrió un error al seleccionar el ultimo:"+  str(e))
-                        except psycopg2.Error as e:
-                            return ("Ocurrió un error al crear la colilla"+  str(e))
-                    except psycopg2.Error as e:
-                        return "Ocurrió un error al crear la poliza" + str(e)
+                                    return "Ocurrió un error al crear la poliza" + str(e)
+                            else:
+                                return ("El socio ya existe en la base de datos. No se realizó la inserción.")
+                    except Exception as e:
+                        return (f"Error: {e}")
 
             else:
                 return "El socio, el valor del mes y el número de meses, deben ser unicamente números"
@@ -226,7 +246,7 @@ class Polizas ():
         if socio.isdigit():
             try:
                 with conexion.cursor() as cursor:
-                    cursor.execute("SELECT valor_mes, fecha_desde, fecha_hasta, nombres, documentos, fechas_nacimiento, mayor_70, fecha_afiliacion FROM polizas WHERE socio=" + str(socio))
+                    cursor.execute("SELECT valor_mes, fecha_desde, fecha_hasta, nombres, documentos, fechas_nacimiento, mayor_70, fecha_afiliacion, parentesco_titular FROM polizas WHERE socio=" + str(socio))
                     poliza = cursor.fetchone()
                     print(poliza)
                     if poliza != None:
@@ -263,7 +283,7 @@ class Polizas ():
                 documento_entero = int(documento)
                 print(documento_entero)
                 with conexion.cursor() as cursor:
-                    consulta = "SELECT valor_mes, fecha_desde, fecha_hasta, nombres, documentos, fechas_nacimiento, mayor_70, socio FROM polizas WHERE %s = ANY (documentos)"
+                    consulta = "SELECT valor_mes, fecha_desde, fecha_hasta, nombres, documentos, fechas_nacimiento, mayor_70, socio, fecha_afiliacion, parentesco_titular FROM polizas WHERE %s = ANY (documentos)"
                     cursor.execute(consulta, (documento_entero,))
                     polizas = cursor.fetchall()
                     if polizas:
@@ -337,7 +357,7 @@ class Polizas ():
             fechas_nacimiento = list(fechas_nacimiento) + [valor_por_defecto] * (max_length - len(fechas_nacimiento))
             parentesco_titular = list(parentesco_titular) + [valor_por_defecto] * (max_length - len(parentesco_titular))
 
-            if valor_mes.isdigit() and numero_meses.isdigit():
+            if valor_mes.isdigit() and numero_meses.isdigit() and socio.isdigit():
 
                 hora_actual = datetime.now().strftime('%H:%M:%S')
 
@@ -357,7 +377,7 @@ class Polizas ():
 
                             documentos_int.append(int(elemento))
                         except:
-                            return "no es documento"
+                            return "No es un documento"
                     else:
                         # Si es de tipo texto y está vacío, agregar 000 a la lista documentos_int como entero
                         documentos_int.append(000)
@@ -422,13 +442,13 @@ class Polizas ():
 
                                         try:
                                             with conexion.cursor() as cursor:
-                                                consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                                consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, gasto) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
                                                 cursor.execute(consulta, (
                                                     socio, valor_total, fecha_actual, ultimo_dato_insertado[6],
                                                     ultimo_dato_insertado[7], ultimo_dato_insertado[8],
                                                     int(ultimo_dato_insertado[9]) + (int(valor_total) / 2),
                                                     int(ultimo_dato_insertado[10]) + ((valor_total) / 2),
-                                                    int(ultimo_dato_insertado[11]) + valor_total, False))
+                                                    int(ultimo_dato_insertado[11]) + valor_total, False, ''))
                                                 conexion.commit()
                                             print("Saldo cambiado")
                                             pdf_colilla(datetime.now().date(), socio, valor_total, fecha_desde.date(), hasta_fecha.date(), usuario_encargado, nombres[0], documentos[0])
@@ -444,9 +464,9 @@ class Polizas ():
                         else:
                             return ("El socio ya existe en la base de datos. No se realizó la inserción.")
                 except Exception as e:
-                    print(f"Error: {e}")
+                    return (f"Error: {e}")
             else:
-                return "El valor del mes, y el número de meses deben ser unicamente números"
+                return "El valor del mes, el número de meses, y el socio deben ser unicamente números"
 
 
 
