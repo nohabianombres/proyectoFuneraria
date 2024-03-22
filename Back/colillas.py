@@ -77,12 +77,26 @@ class Colillas ():
         if documento.isdigit():
             try:
                 with conexion.cursor() as cursor:
-                    consulta = "SELECT socio, valor_mes, desde_fecha, hasta_fecha, usuario, fecha_pago FROM colillas WHERE %s = ANY (documentos) ORDER BY numero_colilla DESC LIMIT 1"
+                    consulta = """
+                        SELECT socio, valor_mes, desde_fecha, hasta_fecha, usuario, fecha_pago 
+                        FROM colillas 
+                        WHERE %s = ANY (documentos) 
+                        ORDER BY socio, numero_colilla DESC
+                    """
                     cursor.execute(consulta, (int(documento),))
                     colillas = cursor.fetchall()
                     if colillas:
-                        print(colillas)
-                        return colillas
+                        # Dividir los datos por socio y seleccionar el último dato insertado de cada grupo
+                        ultimo_colilla_por_grupo = {}
+                        for colilla in colillas:
+                            socio = colilla[0]
+                            if socio not in ultimo_colilla_por_grupo:
+                                ultimo_colilla_por_grupo[socio] = colilla
+                        # Convertir el diccionario en una lista de valores
+                        colillas_finales = list(ultimo_colilla_por_grupo.values())
+
+                        print(colillas_finales)
+                        return colillas_finales
                     else:
                         print("No te encuentras en ninguna colilla")
                         return 'No se encontró en ninguna colilla'

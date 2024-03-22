@@ -141,7 +141,6 @@ class Polizas ():
             else:
                 return "El socio, el valor del mes y el número de meses, deben ser unicamente números"
 
-
     def eliminar_persona(self, socio, nombre_par, documento_par, fecha_nacimiento_par, parentesco_par):
         try:
             with conexion.cursor() as cursor:
@@ -189,7 +188,7 @@ class Polizas ():
 
     def agregar_persona_poliza(self, socio, nuevo_documentor, nuevo_nombre, nueva_fecha_nacimiento, parentesco_titular,
                                nuevo_valor):
-        if socio.isdigit() and nuevo_valor.isdigit() and nuevo_documentor.isdigit():
+        if socio.isdigit() and nuevo_valor.isdigit():
             print(socio,nuevo_documentor,nuevo_nombre,nueva_fecha_nacimiento,parentesco_titular,nuevo_valor)
             socio = str(socio) if socio is not None else ''
             nuevo_documento = int(nuevo_documentor) if nuevo_documentor != '' else 0

@@ -30,22 +30,25 @@ class EmerRetorno():
 
 def validacion(id_usuario, contrasena):
     print('llegue', id_usuario, contrasena)
-    try:
-        with conexion.cursor() as cursor:
-            cursor.execute("SELECT * FROM usuario WHERE id_usuario = " + str(id_usuario))
-            usuario = cursor.fetchone()
-            print(usuario)
-            if usuario:
-                usuario_contrasena = usuario[1]
-                if usuario_contrasena == int(contrasena):
-                    print(usuario_contrasena)
-                    return usuario
+    if id_usuario.isdigit() and contrasena.isdigit():
+        try:
+            with conexion.cursor() as cursor:
+                cursor.execute("SELECT * FROM usuario WHERE id_usuario = " + str(id_usuario))
+                usuario = cursor.fetchone()
+                print(usuario)
+                if usuario:
+                    usuario_contrasena = usuario[1]
+                    if usuario_contrasena == int(contrasena):
+                        print(usuario_contrasena)
+                        return usuario
+                    else:
+                        return 'La contraseña la tienes incorrecta'
                 else:
-                    return 'La contraseña la tienes incorrecta'
-            else:
-                return 'No existe el usuario'
-    except psycopg2.Error as e:
-        return ("Ocurrio un error al consultar")
+                    return 'No existe el usuario'
+        except psycopg2.Error as e:
+            return ("Ocurrio un error al consultar")
+    else:
+        return ('El id y la contraseña tienen que ser números')
 
 class Login():
 

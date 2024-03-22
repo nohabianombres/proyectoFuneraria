@@ -167,12 +167,14 @@ class VentanasAdmin ():
         self.ui.botCanGasFun.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_4))
 
         self.ui.botCanEliUsu.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_5))
+        self.ui.botCanGen.clicked.connect(lambda: self.clear_line_edits(self.ui.menu_generar_liquidacion))
 
         self.ui.botCanConFac.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_6))
         self.ui.botCanConFac.clicked.connect(lambda: self.cler_table_edits(self.ui.stackedWidget_6))
         self.ui.botCanAboFac.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_6))
         self.ui.botCanCreFac.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_6))
         self.ui.botCanCreFac.clicked.connect(lambda: self.clear_list_edits(self.ui.stackedWidget_6))
+
 
         self.ui.botCanConPolDoc.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_2))
         self.ui.botCanConPolDoc.clicked.connect(lambda: self.clear_list_edits(self.ui.stackedWidget_2))
@@ -304,9 +306,10 @@ class VentanasAdmin ():
         self.ui.menu_admin1.setCurrentWidget(self.ui.informes)
 
     def ventana_liquidacion(self):
+
         self.ui.menu_admin1.setCurrentWidget(self.ui.page_3)
         self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.generar_liquidacion)
-
+        self.clear_line_edits(self.ui.menu_generar_liquidacion)
 
     def ventana_consultar_poliza (self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.consultar_poliza)
@@ -387,6 +390,7 @@ class VentanasAdmin ():
                                                          self.ui.LFecAgrPer.text(), self.ui.LParAgrPer.text(), self.ui.LValAgrPer.text())
         del poliza
         self.crear_ventana_retorno(self.fun_agr_per)
+        self.clear_line_edits(self.ui.stackedWidget_2)
 
     def ventana_eliminar_persona(self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.eliminar_persona)
@@ -1024,18 +1028,25 @@ class VentanasAdmin ():
 
     def funcion_generar_liquidacion(self):
         liquidacion = Liquidacion()
-        self.ret_gen_liq = liquidacion.generar_liquidacion(self.ui.LIdJef1Gen.text(),self.ui.LIdJef2Gen.text(),self.ui.LIdJef1Gen.text(),self.ui.LConJef2Gen.text())
-        self.venta_liquidacion_generada()
+        self.ret_gen_liq = liquidacion.generar_liquidacion(self.ui.LIdJef1Gen.text(),self.ui.LIdJef2Gen.text(),self.ui.LConJef1Gen.text(),self.ui.LConJef2Gen.text())
+        self.venta_liquidacion_generada(self.ret_gen_liq)
 
-    def venta_liquidacion_generada (self):
-        self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.liquidacion_generada)
-        self.liquidacion_generada(self.ret_gen_liq)
+    def venta_liquidacion_generada (self,datos_liquidacion):
+
+        if isinstance(datos_liquidacion, str):
+            self.crear_ventana_retorno(datos_liquidacion)
+            self.clear_line_edits(self.ui.menu_generar_liquidacion)
+
+        else:
+            self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.liquidacion_generada)
+            self.liquidacion_generada(datos_liquidacion)
 
     def liquidacion_generada(self,ret_gen_liq):
         self.ui.LGasJef1Tot.setText(str(ret_gen_liq[0]))
         self.ui.LGasJef2Tot.setText(str(ret_gen_liq[1]))
         self.ui.LSalJef1Tot.setText(str(ret_gen_liq[2]))
         self.ui.LSalJef2Tot.setText(str(ret_gen_liq[3]))
+
 
     def venta_ultimo_saldo(self):
         self.ui.menu_admin2.setCurrentWidget(self.ui.ultimo_saldo)
@@ -1072,11 +1083,15 @@ class VentanasAdmin ():
             fila = 0
             self.ui.tabInfSal.setRowCount(len(ret_con_inf_sal))
             for elementos in ret_con_inf_sal:
-                print(elementos)
+                if isinstance(elementos[2], list):
+                    descripciones = ", ".join(map(str, elementos[2]))
+                else:
+                    descripciones = elementos[2]
+
                 self.ui.tabInfSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(elementos[3].strftime("%Y-%m-%d")))
                 self.ui.tabInfSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[0])))
                 self.ui.tabInfSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[1])))
-                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((elementos[2])))
+                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem(descripciones))
                 self.ui.tabInfSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[4])))
                 self.ui.tabInfSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[5])))
                 self.ui.tabInfSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[6])))
@@ -1158,25 +1173,25 @@ class VentanasAdmin ():
 
     def funcion_consultar_informe_ultimo_saldo(self):
         informe = Informes ()
-        ret_fun_con_ult_sal = informe.mostrar_ultimo_saldo()
+        self.ret_fun_con_ult_sal = informe.mostrar_ultimo_saldo()
         del informe
         self.ui.tabUltSal.clearContents()
-        print(ret_fun_con_ult_sal)
         self.ui.tabUltSal.show()
         self.ui.tabUltSal.setRowCount(1)
-        if ret_fun_con_ult_sal is not None:
+
+        if self.ret_fun_con_ult_sal is not None:
             print('voy a imprimir')
             try:
-
+                descripciones = ", ".join(map(str, self.ret_fun_con_ult_sal[2]))
                 fila = 0
-                self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
-                self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[0])))
-                self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[1])))
-                self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[2])))
-                self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[4])))
-                self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[5])))
-                self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[6])))
-                self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[7])))
+                self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(self.ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
+                self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[0])))
+                self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[1])))
+                self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(descripciones)))
+                self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[4])))
+                self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[5])))
+                self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[6])))
+                self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[7])))
             except psycopg2.Error as e:
                 print(e)
         else:

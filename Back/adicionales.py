@@ -33,6 +33,13 @@ class Adicionales ():
                                 descripciones, cantidades_int, valores_unitarios_int, valor_total, valor_total-int(valor_abonar)))
                             conexion.commit()
                             print('Fac creada')
+                            """try:
+                                with conexion.cursor() as cursor:
+                                    consulta = "INSERT INTO facturas_adicionales(documento_comprador, nombre_comprador, fecha, nombre_vendedor, id_factura, valor_abonado, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s);"
+                                    cursor.execute(consulta, (int(documento_comprador), nombre_comprador, fecha_actual))
+                                conexion.commit()
+                                print("Factura de caja creada")"""
+
 
 
                             try:
