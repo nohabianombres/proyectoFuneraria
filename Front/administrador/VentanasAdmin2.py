@@ -55,12 +55,6 @@ class VentanasAdmin2 ():
         self.ui.tabla_gastos.setVisible(False)
         self.ui.botRevGas.setVisible(False)
 
-        # Establece la página que deseas mostrar
-        self.ui.stackedWidget_4.setCurrentWidget(self.ui.revisar_gastos)
-
-        # Luego, oculta la página
-        self.ui.revisar_gastos.setVisible(False)
-
         self.ui.menu_admin1.setCurrentWidget(self.ui.polizas)
         self.ui.botCol.clicked.connect(self.ventana_colillas)
         self.ui.botPol.clicked.connect(self.ventana_polizas)
@@ -116,6 +110,8 @@ class VentanasAdmin2 ():
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
 
+        self.ui.botRevGas.clicked.connect(self.venta_revisar_gastos)
+
         self.ui.botCreUsu.clicked.connect(self.venta_crear_usuario)
         self.ui.botEliUsu.clicked.connect(self.venta_eliminar_usuario)
         self.ui.botMosTod.clicked.connect(self.venta_mostrar_todo_usuario)
@@ -167,6 +163,7 @@ class VentanasAdmin2 ():
         self.ui.botCanGasFun.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_4))
 
         self.ui.botCanEliUsu.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_5))
+        self.ui.botCanGen.clicked.connect(lambda: self.clear_line_edits(self.ui.menu_generar_liquidacion))
 
         self.ui.botCanConFac.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_6))
         self.ui.botCanConFac.clicked.connect(lambda: self.cler_table_edits(self.ui.stackedWidget_6))
@@ -274,9 +271,9 @@ class VentanasAdmin2 ():
         print('llegue a escoger_venta_gastos')
         if data == 'Funeraria':
             self.venta_gasto_funeraria()
-        elif data == 'Jefe 1':
+        elif data == 'Julio':
             self.venta_gasto_jefe1()
-        elif data == 'Jefe 2':
+        elif data == 'Armando':
             self.venta_gasto_jefe2()
 
     def show(self):
@@ -291,7 +288,6 @@ class VentanasAdmin2 ():
     def ventana_gastos(self):
         self.ui.menu_admin1.setCurrentWidget(self.ui.gastos)
 
-
     def ventana_usuarios(self):
         self.ui.menu_admin1.setCurrentWidget(self.ui.usuarios)
 
@@ -302,8 +298,10 @@ class VentanasAdmin2 ():
         self.ui.menu_admin1.setCurrentWidget(self.ui.informes)
 
     def ventana_liquidacion(self):
+
         self.ui.menu_admin1.setCurrentWidget(self.ui.page_3)
         self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.generar_liquidacion)
+        self.clear_line_edits(self.ui.menu_generar_liquidacion)
 
     def ventana_consultar_poliza(self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.consultar_poliza)
@@ -368,7 +366,7 @@ class VentanasAdmin2 ():
         for mayor70 in mayores70:
             self.ui.lisMayPol.addItem(str(mayor70))
 
-    def agregar_lista_parentesco_consultar (self,parentescos):
+    def agregar_lista_parentesco_consultar(self, parentescos):
         for parentesco in parentescos:
             self.ui.lisParPol.addItem(str(parentesco))
 
@@ -383,6 +381,7 @@ class VentanasAdmin2 ():
                                                          self.ui.LValAgrPer.text())
         del poliza
         self.crear_ventana_retorno(self.fun_agr_per)
+        self.clear_line_edits(self.ui.stackedWidget_2)
 
     def ventana_eliminar_persona(self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.eliminar_persona)
@@ -769,15 +768,76 @@ class VentanasAdmin2 ():
         self.clear_line_edits(self.ui.stackedWidget_4)
         self.crear_ventana_retorno(ret_fun_gas_fun)
 
+    def venta_revisar_gastos(self):
+        self.ui.stackedWidget_4.setCurrentWidget(self.ui.revisar_gastos)
+        self.funcion_revisar_gastos()
 
+    def funcion_revisar_gastos(self):
+        gastos = Gastos()
+        ret_gas_rev = gastos.gastos_sin_revisar()
+
+        self.ui.tabla_gastos.clearContents()
+        self.ui.tabla_gastos.show()
+
+        if ret_gas_rev is not None:
+            self.ui.tabla_gastos.setRowCount(len(ret_gas_rev))
+
+            for fila, elementos in enumerate(ret_gas_rev):
+                self.ui.tabla_gastos.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(elementos[0])))
+                self.ui.tabla_gastos.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[1])))
+                self.ui.tabla_gastos.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[2])))
+                self.ui.tabla_gastos.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[3])))
+                self.ui.tabla_gastos.setItem(fila, 4,
+                                             QtWidgets.QTableWidgetItem(str(elementos[4].strftime("%Y-%m-%d"))))
+                self.ui.tabla_gastos.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[5])))
+                self.ui.tabla_gastos.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[6])))
+                self.ui.tabla_gastos.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(elementos[7])))
+                self.ui.tabla_gastos.setItem(fila, 8, QtWidgets.QTableWidgetItem(str(elementos[8])))
+
+                button = QtWidgets.QPushButton("Revisar")
+                self.ui.tabla_gastos.setCellWidget(fila, 9, button)
+
+                self.ret_gas_rev_copy = copy.deepcopy(ret_gas_rev)
+
+                # Conectar la señal clicked del botón a una función lambda para capturar el valor actual de fila
+                button.clicked.connect(functools.partial(self.handle_button_clicked, fila))
+        else:
+            print('no encontré')
+
+    def handle_button_clicked(self, fila):
+
+        valor = self.ui.tabla_gastos.item(fila, 0).text()
+        gasto = Gastos()
+        print(valor)
+        print(fila)
+        gasto.revisar_gastos(int(valor))
+        print('hice el gasto')
+
+        # Eliminar la fila correspondiente
+        self.ui.tabla_gastos.removeRow(fila)
+        self.ret_gas_rev_copy.pop(fila)
+
+        # Actualizar el número de fila en todos los botones "Revisar" restantes
+        for fila, elementos in enumerate(self.ret_gas_rev_copy):
+            # ...
+
+            button = QtWidgets.QPushButton("Revisar")
+            self.ui.tabla_gastos.setCellWidget(fila, 9, button)
+
+            # Conectar la señal clicked del botón usando functools.partial para pasar la fila como argumento adicional
+            button.clicked.connect(functools.partial(self.handle_button_clicked, fila))
+
+        # Actualizar el número de filas en la tabla
+        self.ui.tabla_gastos.setRowCount(len(self.ret_gas_rev_copy))
 
     def venta_crear_usuario(self):
         self.ui.stackedWidget_5.setCurrentWidget(self.ui.crear_usuario)
 
     def funcion_crear_usuario(self):
         usuario = Usuarios()
+        cargo = self.ui.LCarCreUsu.currentText()
         self.ret_fun_cre_usu = usuario.crear_usuario(self.ui.LConCreUsu.text(), self.ui.LNomCreUsu.text(),
-                                                     self.ui.LDocCreUsu.text(), self.ui.LCarCreUsu.text())
+                                                     self.ui.LDocCreUsu.text(), cargo)
         del usuario
         self.clear_line_edits(self.ui.stackedWidget_5)
         self.crear_ventana_retorno(self.ret_fun_cre_usu)
@@ -828,7 +888,7 @@ class VentanasAdmin2 ():
         factura = Adicionales()
         ret_fun_cre_fac = factura.crear_factura_caja(self.ui.LCiuCreFac.text(), self.ui.LNomCreFac.text(),
                                                      self.ui.LDocCreFac.text(), self.ui.LNomCreFac.text(), lis_des,
-                                                     lis_can, lis_val, self.usuario[2],self.ui.LValAboCreFac.text())
+                                                     lis_can, lis_val, self.usuario[2], self.ui.LValAboCreFac.text())
         del factura
         self.clear_line_edits(self.ui.stackedWidget_6)
         self.clear_list_edits(self.ui.stackedWidget_6)
@@ -837,14 +897,17 @@ class VentanasAdmin2 ():
     def agregar_lista_descripciones(self):
         des = QListWidgetItem(str(self.ui.LDesCreFac.text()))
         self.ui.lisDes.addItem(des)
+        self.ui.LDesCreFac.clear()
 
     def agregar_lista_cantidades(self):
         can = QListWidgetItem(self.ui.LCanCreFac.text())
         self.ui.lisCan.addItem(can)
+        self.ui.LCanCreFac.clear()
 
     def agregar_lista_valores(self):
         val = QListWidgetItem(self.ui.LValCreFac.text())
         self.ui.lisVal.addItem(val)
+        self.ui.LValCreFac.clear()
 
     def venta_abonar_caja(self):
         self.ui.stackedWidget_6.setCurrentWidget(self.ui.abonar_caja)
@@ -891,12 +954,21 @@ class VentanasAdmin2 ():
 
     def funcion_generar_liquidacion(self):
         liquidacion = Liquidacion()
-        ret_gen_liq = liquidacion.generar_liquidacion(self.ui.LIdJef1Gen.text(), self.ui.LConJef1Gen.text(),
-                                                      self.ui.LIdJef1Gen.text(), self.ui.LConJef2Gen.text())
-        self.venta_liquidacion_generada(ret_gen_liq)
+        self.ret_gen_liq = liquidacion.generar_liquidacion(self.ui.LIdJef1Gen.text(), self.ui.LIdJef2Gen.text(),
+                                                           self.ui.LConJef1Gen.text(), self.ui.LConJef2Gen.text())
+        self.venta_liquidacion_generada(self.ret_gen_liq)
 
-    def venta_liquidacion_generada(self, ret_gen_liq):
-        self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.liquidacion_generada)
+    def venta_liquidacion_generada(self, datos_liquidacion):
+
+        if isinstance(datos_liquidacion, str):
+            self.crear_ventana_retorno(datos_liquidacion)
+            self.clear_line_edits(self.ui.menu_generar_liquidacion)
+
+        else:
+            self.ui.menu_generar_liquidacion.setCurrentWidget(self.ui.liquidacion_generada)
+            self.liquidacion_generada(datos_liquidacion)
+
+    def liquidacion_generada(self, ret_gen_liq):
         self.ui.LGasJef1Tot.setText(str(ret_gen_liq[0]))
         self.ui.LGasJef2Tot.setText(str(ret_gen_liq[1]))
         self.ui.LSalJef1Tot.setText(str(ret_gen_liq[2]))
@@ -934,11 +1006,15 @@ class VentanasAdmin2 ():
             fila = 0
             self.ui.tabInfSal.setRowCount(len(ret_con_inf_sal))
             for elementos in ret_con_inf_sal:
-                print(elementos)
+                if isinstance(elementos[2], list):
+                    descripciones = ", ".join(map(str, elementos[2]))
+                else:
+                    descripciones = elementos[2]
+
                 self.ui.tabInfSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(elementos[3].strftime("%Y-%m-%d")))
                 self.ui.tabInfSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[0])))
                 self.ui.tabInfSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[1])))
-                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((elementos[2])))
+                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem(descripciones))
                 self.ui.tabInfSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[4])))
                 self.ui.tabInfSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[5])))
                 self.ui.tabInfSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[6])))
@@ -1020,23 +1096,31 @@ class VentanasAdmin2 ():
 
     def funcion_consultar_informe_ultimo_saldo(self):
         informe = Informes()
-        ret_fun_con_ult_sal = informe.mostrar_ultimo_saldo()
+        self.ret_fun_con_ult_sal = informe.mostrar_ultimo_saldo()
         del informe
         self.ui.tabUltSal.clearContents()
-        print(ret_fun_con_ult_sal)
         self.ui.tabUltSal.show()
         self.ui.tabUltSal.setRowCount(1)
-        if ret_fun_con_ult_sal is not None:
+
+        if self.ret_fun_con_ult_sal is not None:
             print('voy a imprimir')
-            fila = 0
-            self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
-            self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[0])))
-            self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[1])))
-            self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[2])))
-            self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[4])))
-            self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[5])))
-            self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[6])))
-            self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[7])))
+            try:
+                if isinstance(self.ret_fun_con_ult_sal[2], list):
+                    descripciones = ", ".join(map(str, self.ret_fun_con_ult_sal[2]))
+                else:
+                    descripciones = self.ret_fun_con_ult_sal[2]
+                fila = 0
+                self.ui.tabUltSal.setItem(fila, 0,
+                                          QtWidgets.QTableWidgetItem(self.ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
+                self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[0])))
+                self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[1])))
+                self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(descripciones)))
+                self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[4])))
+                self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[5])))
+                self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[6])))
+                self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[7])))
+            except psycopg2.Error as e:
+                print(e)
         else:
             print('No se encontró ninguna póliza')
 
@@ -1049,7 +1133,7 @@ class VentanasAdmin2 ():
     def cerrar_sesion(self):
         self.ventanaAdmin.close()
         from Front.VentanaLogin import Login
-        self.login = Login ()
+        self.login = Login()
         self.login.login.show()
 
 

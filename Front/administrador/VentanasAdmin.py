@@ -1182,7 +1182,10 @@ class VentanasAdmin ():
         if self.ret_fun_con_ult_sal is not None:
             print('voy a imprimir')
             try:
-                descripciones = ", ".join(map(str, self.ret_fun_con_ult_sal[2]))
+                if isinstance(self.ret_fun_con_ult_sal[2], list):
+                    descripciones = ", ".join(map(str, self.ret_fun_con_ult_sal[2]))
+                else:
+                    descripciones = self.ret_fun_con_ult_sal[2]
                 fila = 0
                 self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(self.ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
                 self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[0])))

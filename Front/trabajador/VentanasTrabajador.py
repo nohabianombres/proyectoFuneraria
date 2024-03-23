@@ -53,11 +53,11 @@ class VentanasTrabajador ():
         self.ui.botCol.clicked.connect(self.ventana_colillas)
         self.ui.botPol.clicked.connect(self.ventana_polizas)
         self.ui.botGas.clicked.connect(self.ventana_gastos)
+
         self.ui.botFac.clicked.connect(self.ventana_facturas)
         self.ui.botInf.clicked.connect(self.ventana_informes)
 
         self.ui.botCer.clicked.connect(self.cerrar_sesion)
-
 
         self.ui.botConPol.clicked.connect(self.ventana_consultar_poliza)
         self.ui.botModPolVen.clicked.connect(self.ventana_modificar_poliza)
@@ -78,7 +78,6 @@ class VentanasTrabajador ():
         self.ui.agrPar.clicked.connect(self.agregar_lista_parentescos)
         self.ui.botAceCrePol.clicked.connect(self.funcion_crear_poliza)
         self.ui.botAceAgrPer.clicked.connect(self.funcion_agregar_persona)
-
         self.ui.botAceModPol.clicked.connect(self.funcion_modificar_poliza)
         self.ui.botEliPerDat.clicked.connect(self.funcion_eliminar_persona_poliza)
 
@@ -91,7 +90,6 @@ class VentanasTrabajador ():
         self.ui.botDocEdiCreAntPol.clicked.connect(self.editar_crear_documento_poliza_antigua)
         self.ui.botFecEdiCreAntPol.clicked.connect(self.editar_crear_fnto_poliza_antigua)
         self.ui.botParEdiCreAntPol.clicked.connect(self.editar_crear_parentesco_poliza_antigua)
-
 
         self.ui.botModPol.clicked.connect(self.funcion_guardar_modificar_poliza)
         self.ui.botEdiDatNom.clicked.connect(self.editar_dato_nombre_poliza)
@@ -125,12 +123,9 @@ class VentanasTrabajador ():
         self.ui.botAceGasJef1.clicked.connect(self.funcion_gasto_jefe1)
         self.ui.botAceGasJef2.clicked.connect(self.funcion_gasto_jefe2)
 
-
-
         self.ui.botAceCreCol.clicked.connect(self.funcion_crear_colilla)
         self.ui.botAceUltSoc.clicked.connect(self.funcion_ultimo_socio)
         self.ui.botAceBusUltDoc.clicked.connect(self.funcion_ultimo_documento)
-
 
         informes = ['Ultimo saldo', 'Saldo', 'Colillas', 'Gastos', 'Facturas caja']
 
@@ -145,10 +140,10 @@ class VentanasTrabajador ():
         self.ui.botInvAdm_27.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_3))
         self.ui.botInvAdm_27.clicked.connect(lambda: self.cler_table_edits(self.ui.stackedWidget_3))
 
-
         self.ui.botCanGasJef1.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_4))
         self.ui.botCanGasJef2.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_4))
         self.ui.botCanGasFun.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_4))
+
 
         self.ui.botCanConFac.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_6))
         self.ui.botCanConFac.clicked.connect(lambda: self.cler_table_edits(self.ui.stackedWidget_6))
@@ -256,9 +251,9 @@ class VentanasTrabajador ():
         print('llegue a escoger_venta_gastos')
         if data == 'Funeraria':
             self.venta_gasto_funeraria()
-        elif data == 'Jefe 1':
+        elif data == 'Julio':
             self.venta_gasto_jefe1()
-        elif data == 'Jefe 2':
+        elif data == 'Armando':
             self.venta_gasto_jefe2()
 
     def show(self):
@@ -272,7 +267,6 @@ class VentanasTrabajador ():
 
     def ventana_gastos(self):
         self.ui.menu_admin1.setCurrentWidget(self.ui.gastos)
-
 
     def ventana_facturas(self):
         self.ui.menu_admin1.setCurrentWidget(self.ui.facturas_caja)
@@ -344,7 +338,7 @@ class VentanasTrabajador ():
         for mayor70 in mayores70:
             self.ui.lisMayPol.addItem(str(mayor70))
 
-    def agregar_lista_parentesco_consultar (self,parentescos):
+    def agregar_lista_parentesco_consultar(self, parentescos):
         for parentesco in parentescos:
             self.ui.lisParPol.addItem(str(parentesco))
 
@@ -359,6 +353,7 @@ class VentanasTrabajador ():
                                                          self.ui.LValAgrPer.text())
         del poliza
         self.crear_ventana_retorno(self.fun_agr_per)
+        self.clear_line_edits(self.ui.stackedWidget_2)
 
     def ventana_eliminar_persona(self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.eliminar_persona)
@@ -745,6 +740,7 @@ class VentanasTrabajador ():
         self.clear_line_edits(self.ui.stackedWidget_4)
         self.crear_ventana_retorno(ret_fun_gas_fun)
 
+
     def venta_crear_factura(self):
         self.ui.stackedWidget_6.setCurrentWidget(self.ui.crear_caja)
 
@@ -755,7 +751,7 @@ class VentanasTrabajador ():
         factura = Adicionales()
         ret_fun_cre_fac = factura.crear_factura_caja(self.ui.LCiuCreFac.text(), self.ui.LNomCreFac.text(),
                                                      self.ui.LDocCreFac.text(), self.ui.LNomCreFac.text(), lis_des,
-                                                     lis_can, lis_val, self.usuario[2],self.ui.LValAboCreFac.text())
+                                                     lis_can, lis_val, self.usuario[2], self.ui.LValAboCreFac.text())
         del factura
         self.clear_line_edits(self.ui.stackedWidget_6)
         self.clear_list_edits(self.ui.stackedWidget_6)
@@ -764,14 +760,17 @@ class VentanasTrabajador ():
     def agregar_lista_descripciones(self):
         des = QListWidgetItem(str(self.ui.LDesCreFac.text()))
         self.ui.lisDes.addItem(des)
+        self.ui.LDesCreFac.clear()
 
     def agregar_lista_cantidades(self):
         can = QListWidgetItem(self.ui.LCanCreFac.text())
         self.ui.lisCan.addItem(can)
+        self.ui.LCanCreFac.clear()
 
     def agregar_lista_valores(self):
         val = QListWidgetItem(self.ui.LValCreFac.text())
         self.ui.lisVal.addItem(val)
+        self.ui.LValCreFac.clear()
 
     def venta_abonar_caja(self):
         self.ui.stackedWidget_6.setCurrentWidget(self.ui.abonar_caja)
@@ -849,11 +848,15 @@ class VentanasTrabajador ():
             fila = 0
             self.ui.tabInfSal.setRowCount(len(ret_con_inf_sal))
             for elementos in ret_con_inf_sal:
-                print(elementos)
+                if isinstance(elementos[2], list):
+                    descripciones = ", ".join(map(str, elementos[2]))
+                else:
+                    descripciones = elementos[2]
+
                 self.ui.tabInfSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(elementos[3].strftime("%Y-%m-%d")))
                 self.ui.tabInfSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[0])))
                 self.ui.tabInfSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[1])))
-                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((elementos[2])))
+                self.ui.tabInfSal.setItem(fila, 3, QtWidgets.QTableWidgetItem(descripciones))
                 self.ui.tabInfSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[4])))
                 self.ui.tabInfSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[5])))
                 self.ui.tabInfSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[6])))
@@ -935,23 +938,31 @@ class VentanasTrabajador ():
 
     def funcion_consultar_informe_ultimo_saldo(self):
         informe = Informes()
-        ret_fun_con_ult_sal = informe.mostrar_ultimo_saldo()
+        self.ret_fun_con_ult_sal = informe.mostrar_ultimo_saldo()
         del informe
         self.ui.tabUltSal.clearContents()
-        print(ret_fun_con_ult_sal)
         self.ui.tabUltSal.show()
         self.ui.tabUltSal.setRowCount(1)
-        if ret_fun_con_ult_sal is not None:
+
+        if self.ret_fun_con_ult_sal is not None:
             print('voy a imprimir')
-            fila = 0
-            self.ui.tabUltSal.setItem(fila, 0, QtWidgets.QTableWidgetItem(ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
-            self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[0])))
-            self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[1])))
-            self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem((ret_fun_con_ult_sal[2])))
-            self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[4])))
-            self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[5])))
-            self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[6])))
-            self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(ret_fun_con_ult_sal[7])))
+            try:
+                if isinstance(self.ret_fun_con_ult_sal[2], list):
+                    descripciones = ", ".join(map(str, self.ret_fun_con_ult_sal[2]))
+                else:
+                    descripciones = self.ret_fun_con_ult_sal[2]
+                fila = 0
+                self.ui.tabUltSal.setItem(fila, 0,
+                                          QtWidgets.QTableWidgetItem(self.ret_fun_con_ult_sal[3].strftime("%Y-%m-%d")))
+                self.ui.tabUltSal.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[0])))
+                self.ui.tabUltSal.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[1])))
+                self.ui.tabUltSal.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(descripciones)))
+                self.ui.tabUltSal.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[4])))
+                self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[5])))
+                self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[6])))
+                self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[7])))
+            except psycopg2.Error as e:
+                print(e)
         else:
             print('No se encontró ninguna póliza')
 
@@ -964,7 +975,7 @@ class VentanasTrabajador ():
     def cerrar_sesion(self):
         self.ventana_trabajador.close()
         from Front.VentanaLogin import Login
-        self.login = Login ()
+        self.login = Login()
         self.login.login.show()
 
 
