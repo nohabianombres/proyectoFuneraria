@@ -61,7 +61,7 @@ class Adicionales ():
                                         print("Saldo cambiado")
                                         pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador,
                                                          documento_comprador,
-                                                         descripciones, valor_total - int(valor_abonar), valor_abonar,
+                                                         descripciones, valor_total - int(valor_abonar), int(valor_abonar),
                                                          valor_total)
                                         return "Factura de caja creada"
                                     except psycopg2.Error as e:
