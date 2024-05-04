@@ -4,7 +4,7 @@ from dateutil.relativedelta import relativedelta
 from Front.generar_pdfs import pdf_colilla
 
 
-basedatos = Database("postgres", "87b3d9baf", "localhost")
+basedatos = Database("postgres", "GGLLiDeqFmoTGLXgJbndSxjieiUqNPxK", "viaduct.proxy.rlwy.net")
 conexion= basedatos.conectar()
 
 

@@ -74,6 +74,302 @@
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\Front\\trabajador\\trabajador.py',
    'PYMODULE'),
+  ('PIL',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\__init__.py',
+   'PYMODULE'),
+  ('PIL.BlpImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\BlpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BmpImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\BmpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BufrStubImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.CurImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\CurImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DcxImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\DcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DdsImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\DdsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.EpsImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\EpsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ExifTags',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ExifTags.py',
+   'PYMODULE'),
+  ('PIL.FitsImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\FitsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FliImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\FliImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FpxImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\FpxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FtexImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\FtexImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GbrImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\GbrImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GifImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\GifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GimpGradientFile',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\GimpGradientFile.py',
+   'PYMODULE'),
+  ('PIL.GimpPaletteFile',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\GimpPaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GribStubImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\GribStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Hdf5StubImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcnsImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\IcnsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcoImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\IcoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Image',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\Image.py',
+   'PYMODULE'),
+  ('PIL.ImageChops',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageChops.py',
+   'PYMODULE'),
+  ('PIL.ImageCms',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageCms.py',
+   'PYMODULE'),
+  ('PIL.ImageColor',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageColor.py',
+   'PYMODULE'),
+  ('PIL.ImageFile',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageFile.py',
+   'PYMODULE'),
+  ('PIL.ImageFilter',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageFilter.py',
+   'PYMODULE'),
+  ('PIL.ImageMode',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageMode.py',
+   'PYMODULE'),
+  ('PIL.ImageOps',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageOps.py',
+   'PYMODULE'),
+  ('PIL.ImagePalette',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImagePalette.py',
+   'PYMODULE'),
+  ('PIL.ImageQt',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageQt.py',
+   'PYMODULE'),
+  ('PIL.ImageSequence',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageSequence.py',
+   'PYMODULE'),
+  ('PIL.ImageShow',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageShow.py',
+   'PYMODULE'),
+  ('PIL.ImageTk',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageTk.py',
+   'PYMODULE'),
+  ('PIL.ImageWin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImageWin.py',
+   'PYMODULE'),
+  ('PIL.ImtImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\ImtImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IptcImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\IptcImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Jpeg2KImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\JpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegPresets',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\JpegPresets.py',
+   'PYMODULE'),
+  ('PIL.McIdasImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\McIdasImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MicImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\MicImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpegImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\MpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpoImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\MpoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MspImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\MspImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PaletteFile',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PaletteFile.py',
+   'PYMODULE'),
+  ('PIL.PalmImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PalmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcdImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PcdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcxImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PdfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfParser',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PdfParser.py',
+   'PYMODULE'),
+  ('PIL.PixarImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PixarImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PngImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PngImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PpmImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PsdImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PsdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PyAccess',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\PyAccess.py',
+   'PYMODULE'),
+  ('PIL.QoiImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\QoiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SgiImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\SgiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SpiderImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\SpiderImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SunImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\SunImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TgaImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\TgaImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TiffImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\TiffImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TiffTags',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\TiffTags.py',
+   'PYMODULE'),
+  ('PIL.WebPImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\WebPImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WmfImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\WmfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XVThumbImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XbmImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\XbmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XpmImagePlugin',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\XpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL._binary',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\_binary.py',
+   'PYMODULE'),
+  ('PIL._deprecate',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\_deprecate.py',
+   'PYMODULE'),
+  ('PIL._util',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\_util.py',
+   'PYMODULE'),
+  ('PIL._version',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\_version.py',
+   'PYMODULE'),
+  ('PIL.features',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PIL\\features.py',
+   'PYMODULE'),
   ('PyQt5',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\__init__.py',
@@ -82,6 +378,14 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\__future__.py',
    'PYMODULE'),
+  ('_aix_support',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\_aix_support.py',
+   'PYMODULE'),
+  ('_bootsubprocess',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\_bootsubprocess.py',
+   'PYMODULE'),
   ('_compat_pickle',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\_compat_pickle.py',
@@ -89,6 +393,10 @@
   ('_compression',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\_compression.py',
+   'PYMODULE'),
+  ('_markupbase',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\_markupbase.py',
    'PYMODULE'),
   ('_py_abc',
    'C:\\Program '
@@ -242,6 +550,10 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\base64.py',
    'PYMODULE'),
+  ('bdb',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\bdb.py',
+   'PYMODULE'),
   ('bisect',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\bisect.py',
@@ -253,6 +565,22 @@
   ('calendar',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\calendar.py',
+   'PYMODULE'),
+  ('cmd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\cmd.py',
+   'PYMODULE'),
+  ('code',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\code.py',
+   'PYMODULE'),
+  ('codeop',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\codeop.py',
+   'PYMODULE'),
+  ('colorsys',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\colorsys.py',
    'PYMODULE'),
   ('concurrent',
    'C:\\Program '
@@ -273,6 +601,10 @@
   ('concurrent.futures.thread',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\concurrent\\futures\\thread.py',
+   'PYMODULE'),
+  ('configparser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\configparser.py',
    'PYMODULE'),
   ('contextlib',
    'C:\\Program '
@@ -326,9 +658,17 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\decimal.py',
    'PYMODULE'),
+  ('difflib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\difflib.py',
+   'PYMODULE'),
   ('dis',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\dis.py',
+   'PYMODULE'),
+  ('doctest',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\doctest.py',
    'PYMODULE'),
   ('email',
    'C:\\Program '
@@ -414,6 +754,38 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\fnmatch.py',
    'PYMODULE'),
+  ('fpdf',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\fpdf\\__init__.py',
+   'PYMODULE'),
+  ('fpdf.fonts',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\fpdf\\fonts.py',
+   'PYMODULE'),
+  ('fpdf.fpdf',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\fpdf\\fpdf.py',
+   'PYMODULE'),
+  ('fpdf.html',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\fpdf\\html.py',
+   'PYMODULE'),
+  ('fpdf.php',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\fpdf\\php.py',
+   'PYMODULE'),
+  ('fpdf.py3k',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\fpdf\\py3k.py',
+   'PYMODULE'),
+  ('fpdf.template',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\fpdf\\template.py',
+   'PYMODULE'),
+  ('fpdf.ttfonts',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\fpdf\\ttfonts.py',
+   'PYMODULE'),
   ('fractions',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\fractions.py',
@@ -433,6 +805,10 @@
   ('gettext',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\gettext.py',
+   'PYMODULE'),
+  ('glob',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\glob.py',
    'PYMODULE'),
   ('gzip',
    'C:\\Program '
@@ -454,6 +830,10 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\html\\entities.py',
    'PYMODULE'),
+  ('html.parser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\html\\parser.py',
+   'PYMODULE'),
   ('http',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\http\\__init__.py',
@@ -466,6 +846,14 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\http\\cookiejar.py',
    'PYMODULE'),
+  ('http.server',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\http\\server.py',
+   'PYMODULE'),
+  ('imp',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\imp.py',
+   'PYMODULE'),
   ('importlib',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\importlib\\__init__.py',
@@ -474,6 +862,10 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\importlib\\_abc.py',
    'PYMODULE'),
+  ('importlib._adapters',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\importlib\\_adapters.py',
+   'PYMODULE'),
   ('importlib._bootstrap',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\importlib\\_bootstrap.py',
@@ -481,6 +873,10 @@
   ('importlib._bootstrap_external',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib._common',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\importlib\\_common.py',
    'PYMODULE'),
   ('importlib.abc',
    'C:\\Program '
@@ -522,6 +918,10 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\importlib\\readers.py',
    'PYMODULE'),
+  ('importlib.resources',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\importlib\\resources.py',
+   'PYMODULE'),
   ('importlib.util',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\importlib\\util.py',
@@ -533,98 +933,6 @@
   ('ipaddress',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\ipaddress.py',
-   'PYMODULE'),
-  ('jinja2',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\__init__.py',
-   'PYMODULE'),
-  ('jinja2._identifier',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\_identifier.py',
-   'PYMODULE'),
-  ('jinja2.async_utils',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\async_utils.py',
-   'PYMODULE'),
-  ('jinja2.bccache',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\bccache.py',
-   'PYMODULE'),
-  ('jinja2.compiler',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\compiler.py',
-   'PYMODULE'),
-  ('jinja2.constants',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\constants.py',
-   'PYMODULE'),
-  ('jinja2.debug',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\debug.py',
-   'PYMODULE'),
-  ('jinja2.defaults',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\defaults.py',
-   'PYMODULE'),
-  ('jinja2.environment',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\environment.py',
-   'PYMODULE'),
-  ('jinja2.exceptions',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\exceptions.py',
-   'PYMODULE'),
-  ('jinja2.ext',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\ext.py',
-   'PYMODULE'),
-  ('jinja2.filters',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\filters.py',
-   'PYMODULE'),
-  ('jinja2.idtracking',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\idtracking.py',
-   'PYMODULE'),
-  ('jinja2.lexer',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\lexer.py',
-   'PYMODULE'),
-  ('jinja2.loaders',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\loaders.py',
-   'PYMODULE'),
-  ('jinja2.nodes',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\nodes.py',
-   'PYMODULE'),
-  ('jinja2.optimizer',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\optimizer.py',
-   'PYMODULE'),
-  ('jinja2.parser',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\parser.py',
-   'PYMODULE'),
-  ('jinja2.runtime',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\runtime.py',
-   'PYMODULE'),
-  ('jinja2.sandbox',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\sandbox.py',
-   'PYMODULE'),
-  ('jinja2.tests',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\tests.py',
-   'PYMODULE'),
-  ('jinja2.utils',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\utils.py',
-   'PYMODULE'),
-  ('jinja2.visitor',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\jinja2\\visitor.py',
    'PYMODULE'),
   ('json',
    'C:\\Program '
@@ -649,14 +957,6 @@
   ('lzma',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\lzma.py',
-   'PYMODULE'),
-  ('markupsafe',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\markupsafe\\__init__.py',
-   'PYMODULE'),
-  ('markupsafe._native',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\markupsafe\\_native.py',
    'PYMODULE'),
   ('mimetypes',
    'C:\\Program '
@@ -766,6 +1066,474 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\numbers.py',
    'PYMODULE'),
+  ('numpy',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\__init__.py',
+   'PYMODULE'),
+  ('numpy.__config__',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\__config__.py',
+   'PYMODULE'),
+  ('numpy._distributor_init',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_distributor_init.py',
+   'PYMODULE'),
+  ('numpy._globals',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_globals.py',
+   'PYMODULE'),
+  ('numpy._pytesttester',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_pytesttester.py',
+   'PYMODULE'),
+  ('numpy._typing',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_typing\\__init__.py',
+   'PYMODULE'),
+  ('numpy._typing._add_docstring',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_typing\\_add_docstring.py',
+   'PYMODULE'),
+  ('numpy._typing._array_like',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_typing\\_array_like.py',
+   'PYMODULE'),
+  ('numpy._typing._char_codes',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_typing\\_char_codes.py',
+   'PYMODULE'),
+  ('numpy._typing._dtype_like',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_typing\\_dtype_like.py',
+   'PYMODULE'),
+  ('numpy._typing._nbit',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_typing\\_nbit.py',
+   'PYMODULE'),
+  ('numpy._typing._nested_sequence',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_typing\\_nested_sequence.py',
+   'PYMODULE'),
+  ('numpy._typing._scalars',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_typing\\_scalars.py',
+   'PYMODULE'),
+  ('numpy._typing._shape',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_typing\\_shape.py',
+   'PYMODULE'),
+  ('numpy._utils',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_utils\\__init__.py',
+   'PYMODULE'),
+  ('numpy._utils._inspect',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_utils\\_inspect.py',
+   'PYMODULE'),
+  ('numpy._version',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\_version.py',
+   'PYMODULE'),
+  ('numpy.array_api',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\__init__.py',
+   'PYMODULE'),
+  ('numpy.array_api._array_object',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_array_object.py',
+   'PYMODULE'),
+  ('numpy.array_api._constants',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_constants.py',
+   'PYMODULE'),
+  ('numpy.array_api._creation_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_creation_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api._data_type_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_data_type_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api._dtypes',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_dtypes.py',
+   'PYMODULE'),
+  ('numpy.array_api._elementwise_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_elementwise_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api._indexing_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_indexing_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api._manipulation_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_manipulation_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api._searching_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_searching_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api._set_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_set_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api._sorting_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_sorting_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api._statistical_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_statistical_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api._typing',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_typing.py',
+   'PYMODULE'),
+  ('numpy.array_api._utility_functions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\_utility_functions.py',
+   'PYMODULE'),
+  ('numpy.array_api.linalg',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\array_api\\linalg.py',
+   'PYMODULE'),
+  ('numpy.compat',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\compat\\__init__.py',
+   'PYMODULE'),
+  ('numpy.compat.py3k',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\compat\\py3k.py',
+   'PYMODULE'),
+  ('numpy.core',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\__init__.py',
+   'PYMODULE'),
+  ('numpy.core._add_newdocs',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_add_newdocs.py',
+   'PYMODULE'),
+  ('numpy.core._add_newdocs_scalars',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_add_newdocs_scalars.py',
+   'PYMODULE'),
+  ('numpy.core._asarray',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_asarray.py',
+   'PYMODULE'),
+  ('numpy.core._dtype',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_dtype.py',
+   'PYMODULE'),
+  ('numpy.core._dtype_ctypes',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_dtype_ctypes.py',
+   'PYMODULE'),
+  ('numpy.core._exceptions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_exceptions.py',
+   'PYMODULE'),
+  ('numpy.core._internal',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_internal.py',
+   'PYMODULE'),
+  ('numpy.core._machar',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_machar.py',
+   'PYMODULE'),
+  ('numpy.core._methods',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_methods.py',
+   'PYMODULE'),
+  ('numpy.core._string_helpers',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_string_helpers.py',
+   'PYMODULE'),
+  ('numpy.core._type_aliases',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_type_aliases.py',
+   'PYMODULE'),
+  ('numpy.core._ufunc_config',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\_ufunc_config.py',
+   'PYMODULE'),
+  ('numpy.core.arrayprint',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\arrayprint.py',
+   'PYMODULE'),
+  ('numpy.core.defchararray',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\defchararray.py',
+   'PYMODULE'),
+  ('numpy.core.einsumfunc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\einsumfunc.py',
+   'PYMODULE'),
+  ('numpy.core.fromnumeric',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\fromnumeric.py',
+   'PYMODULE'),
+  ('numpy.core.function_base',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\function_base.py',
+   'PYMODULE'),
+  ('numpy.core.getlimits',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\getlimits.py',
+   'PYMODULE'),
+  ('numpy.core.memmap',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\memmap.py',
+   'PYMODULE'),
+  ('numpy.core.multiarray',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\multiarray.py',
+   'PYMODULE'),
+  ('numpy.core.numeric',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\numeric.py',
+   'PYMODULE'),
+  ('numpy.core.numerictypes',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\numerictypes.py',
+   'PYMODULE'),
+  ('numpy.core.overrides',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\overrides.py',
+   'PYMODULE'),
+  ('numpy.core.records',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\records.py',
+   'PYMODULE'),
+  ('numpy.core.shape_base',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\shape_base.py',
+   'PYMODULE'),
+  ('numpy.core.umath',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\core\\umath.py',
+   'PYMODULE'),
+  ('numpy.ctypeslib',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\ctypeslib.py',
+   'PYMODULE'),
+  ('numpy.dtypes',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\dtypes.py',
+   'PYMODULE'),
+  ('numpy.exceptions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\exceptions.py',
+   'PYMODULE'),
+  ('numpy.fft',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\fft\\__init__.py',
+   'PYMODULE'),
+  ('numpy.fft._pocketfft',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\fft\\_pocketfft.py',
+   'PYMODULE'),
+  ('numpy.fft.helper',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\fft\\helper.py',
+   'PYMODULE'),
+  ('numpy.lib',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\__init__.py',
+   'PYMODULE'),
+  ('numpy.lib._datasource',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\_datasource.py',
+   'PYMODULE'),
+  ('numpy.lib._iotools',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\_iotools.py',
+   'PYMODULE'),
+  ('numpy.lib._version',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\_version.py',
+   'PYMODULE'),
+  ('numpy.lib.arraypad',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\arraypad.py',
+   'PYMODULE'),
+  ('numpy.lib.arraysetops',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\arraysetops.py',
+   'PYMODULE'),
+  ('numpy.lib.arrayterator',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\arrayterator.py',
+   'PYMODULE'),
+  ('numpy.lib.format',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\format.py',
+   'PYMODULE'),
+  ('numpy.lib.function_base',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\function_base.py',
+   'PYMODULE'),
+  ('numpy.lib.histograms',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\histograms.py',
+   'PYMODULE'),
+  ('numpy.lib.index_tricks',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\index_tricks.py',
+   'PYMODULE'),
+  ('numpy.lib.mixins',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\mixins.py',
+   'PYMODULE'),
+  ('numpy.lib.nanfunctions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\nanfunctions.py',
+   'PYMODULE'),
+  ('numpy.lib.npyio',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\npyio.py',
+   'PYMODULE'),
+  ('numpy.lib.polynomial',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\polynomial.py',
+   'PYMODULE'),
+  ('numpy.lib.recfunctions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\recfunctions.py',
+   'PYMODULE'),
+  ('numpy.lib.scimath',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\scimath.py',
+   'PYMODULE'),
+  ('numpy.lib.shape_base',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\shape_base.py',
+   'PYMODULE'),
+  ('numpy.lib.stride_tricks',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\stride_tricks.py',
+   'PYMODULE'),
+  ('numpy.lib.twodim_base',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\twodim_base.py',
+   'PYMODULE'),
+  ('numpy.lib.type_check',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\type_check.py',
+   'PYMODULE'),
+  ('numpy.lib.ufunclike',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\ufunclike.py',
+   'PYMODULE'),
+  ('numpy.lib.utils',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\lib\\utils.py',
+   'PYMODULE'),
+  ('numpy.linalg',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\linalg\\__init__.py',
+   'PYMODULE'),
+  ('numpy.linalg.linalg',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\linalg\\linalg.py',
+   'PYMODULE'),
+  ('numpy.ma',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\ma\\__init__.py',
+   'PYMODULE'),
+  ('numpy.ma.core',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\ma\\core.py',
+   'PYMODULE'),
+  ('numpy.ma.extras',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\ma\\extras.py',
+   'PYMODULE'),
+  ('numpy.ma.mrecords',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\ma\\mrecords.py',
+   'PYMODULE'),
+  ('numpy.matrixlib',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\matrixlib\\__init__.py',
+   'PYMODULE'),
+  ('numpy.matrixlib.defmatrix',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\matrixlib\\defmatrix.py',
+   'PYMODULE'),
+  ('numpy.polynomial',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\polynomial\\__init__.py',
+   'PYMODULE'),
+  ('numpy.polynomial._polybase',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\polynomial\\_polybase.py',
+   'PYMODULE'),
+  ('numpy.polynomial.chebyshev',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\polynomial\\chebyshev.py',
+   'PYMODULE'),
+  ('numpy.polynomial.hermite',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\polynomial\\hermite.py',
+   'PYMODULE'),
+  ('numpy.polynomial.hermite_e',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\polynomial\\hermite_e.py',
+   'PYMODULE'),
+  ('numpy.polynomial.laguerre',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\polynomial\\laguerre.py',
+   'PYMODULE'),
+  ('numpy.polynomial.legendre',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\polynomial\\legendre.py',
+   'PYMODULE'),
+  ('numpy.polynomial.polynomial',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\polynomial\\polynomial.py',
+   'PYMODULE'),
+  ('numpy.polynomial.polyutils',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\polynomial\\polyutils.py',
+   'PYMODULE'),
+  ('numpy.random',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\random\\__init__.py',
+   'PYMODULE'),
+  ('numpy.random._pickle',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\random\\_pickle.py',
+   'PYMODULE'),
+  ('numpy.testing',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\testing\\__init__.py',
+   'PYMODULE'),
+  ('numpy.testing._private',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\testing\\_private\\__init__.py',
+   'PYMODULE'),
+  ('numpy.testing._private.extbuild',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\testing\\_private\\extbuild.py',
+   'PYMODULE'),
+  ('numpy.testing._private.utils',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\testing\\_private\\utils.py',
+   'PYMODULE'),
+  ('numpy.testing.overrides',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\testing\\overrides.py',
+   'PYMODULE'),
+  ('numpy.typing',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\typing\\__init__.py',
+   'PYMODULE'),
+  ('numpy.version',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\numpy\\version.py',
+   'PYMODULE'),
   ('opcode',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\opcode.py',
@@ -774,33 +1542,241 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\optparse.py',
    'PYMODULE'),
+  ('packaging',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('packaging._elffile',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('packaging._manylinux',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('packaging._musllinux',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('packaging._parser',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('packaging._structures',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('packaging._tokenizer',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('packaging.markers',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\markers.py',
+   'PYMODULE'),
+  ('packaging.metadata',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\metadata.py',
+   'PYMODULE'),
+  ('packaging.requirements',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('packaging.specifiers',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('packaging.tags',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\tags.py',
+   'PYMODULE'),
+  ('packaging.utils',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\utils.py',
+   'PYMODULE'),
+  ('packaging.version',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\packaging\\version.py',
+   'PYMODULE'),
   ('pathlib',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\pathlib.py',
    'PYMODULE'),
-  ('pdfkit',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\pdfkit\\__init__.py',
-   'PYMODULE'),
-  ('pdfkit.api',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\pdfkit\\api.py',
-   'PYMODULE'),
-  ('pdfkit.configuration',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\pdfkit\\configuration.py',
-   'PYMODULE'),
-  ('pdfkit.pdfkit',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\pdfkit\\pdfkit.py',
-   'PYMODULE'),
-  ('pdfkit.source',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\pdfkit\\source.py',
+  ('pdb',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\pdb.py',
    'PYMODULE'),
   ('pickle',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\pickle.py',
+   'PYMODULE'),
+  ('pkg_resources',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._adapters',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_adapters.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._common',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_common.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._compat',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_compat.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._itertools',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_itertools.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._legacy',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_legacy.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources.abc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\abc.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources.readers',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\readers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources.simple',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\simple.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco.context',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\context.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco.functools',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\functools.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco.text',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\text\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.more_itertools',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.more_itertools.more',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\more.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.more_itertools.recipes',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\recipes.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._elffile',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._manylinux',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._musllinux',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._parser',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._structures',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._tokenizer',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.markers',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.requirements',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.specifiers',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.tags',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.utils',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.version',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.__main__',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__main__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.android',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\android.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.api',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\api.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.macos',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\macos.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.unix',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\unix.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.version',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.windows',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\windows.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.typing_extensions',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\typing_extensions.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.zipp',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\_vendor\\zipp.py',
+   'PYMODULE'),
+  ('pkg_resources.extern',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\pkg_resources\\extern\\__init__.py',
    'PYMODULE'),
   ('pkgutil',
    'C:\\Program '
@@ -809,6 +1785,10 @@
   ('platform',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\platform.py',
+   'PYMODULE'),
+  ('plistlib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\plistlib.py',
    'PYMODULE'),
   ('pprint',
    'C:\\Program '
@@ -845,6 +1825,18 @@
   ('py_compile',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\py_compile.py',
+   'PYMODULE'),
+  ('pydoc',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\pydoc.py',
+   'PYMODULE'),
+  ('pydoc_data',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\pydoc_data\\__init__.py',
+   'PYMODULE'),
+  ('pydoc_data.topics',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\pydoc_data\\topics.py',
    'PYMODULE'),
   ('queue',
    'C:\\Program '
@@ -890,6 +1882,10 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\socket.py',
    'PYMODULE'),
+  ('socketserver',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\socketserver.py',
+   'PYMODULE'),
   ('ssl',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\ssl.py',
@@ -909,6 +1905,10 @@
   ('subprocess',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('sysconfig',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\sysconfig.py',
    'PYMODULE'),
   ('tarfile',
    'C:\\Program '
@@ -938,9 +1938,57 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\tracemalloc.py',
    'PYMODULE'),
+  ('tty',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\tty.py',
+   'PYMODULE'),
   ('typing',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\typing.py',
+   'PYMODULE'),
+  ('unittest',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\__init__.py',
+   'PYMODULE'),
+  ('unittest._log',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\_log.py',
+   'PYMODULE'),
+  ('unittest.async_case',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\async_case.py',
+   'PYMODULE'),
+  ('unittest.case',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\case.py',
+   'PYMODULE'),
+  ('unittest.loader',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\loader.py',
+   'PYMODULE'),
+  ('unittest.main',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\main.py',
+   'PYMODULE'),
+  ('unittest.result',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\result.py',
+   'PYMODULE'),
+  ('unittest.runner',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\runner.py',
+   'PYMODULE'),
+  ('unittest.signals',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\signals.py',
+   'PYMODULE'),
+  ('unittest.suite',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\suite.py',
+   'PYMODULE'),
+  ('unittest.util',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\unittest\\util.py',
    'PYMODULE'),
   ('urllib',
    'C:\\Program '
@@ -969,6 +2017,10 @@
   ('uuid',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\uuid.py',
+   'PYMODULE'),
+  ('webbrowser',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\webbrowser.py',
    'PYMODULE'),
   ('xml',
    'C:\\Program '

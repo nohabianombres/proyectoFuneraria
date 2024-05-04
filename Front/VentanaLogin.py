@@ -8,7 +8,7 @@ from Front.trabajador.VentanasTrabajador import VentanasTrabajador
 from Front.emerComunes.retorno import Ui_Dialog
 
 
-basedatos = Database("postgres", "87b3d9baf", "localhost")
+basedatos = Database("postgres", "GGLLiDeqFmoTGLXgJbndSxjieiUqNPxK", "viaduct.proxy.rlwy.net")
 conexion = basedatos.conectar()
 
 class EmerRetorno():

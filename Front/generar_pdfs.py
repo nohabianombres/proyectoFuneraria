@@ -1,34 +1,10 @@
-import pdfkit
 import win32api
-from jinja2 import Template
 import win32print
-import os
-import pdfkit
-from jinja2 import Template
-import time
 from fpdf import FPDF
-import PyPDF2
 import os
-import io
-from PyPDF2 import PdfFileReader, PdfFileWriter
-from reportlab.pdfgen import canvas
-import requests
-import subprocess
-
-serial = ""
-grados = "0"  # Múltiplo de 90 pero como cadena
-impresora = "Microsoft Print to PDF"
-
-
-import aspose.pdf as pdf
-
 
 def print_file(file):
     win32api.ShellExecute(0,'print', file,win32print.GetDefaultPrinter(),'.',0)
-
-
-
-
 
 def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, recibio, nombre_titular, cedula_titular):
     pdf = FPDF(orientation='P', unit='mm', format=(80, 140))
@@ -70,8 +46,6 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
     pdf_path2 = os.path.join(colillas_path, nombre_pdf)
     pdf.output(pdf_path2)
     print_file(pdf_path2)
-
-
 
 def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador, documento_comprador, descripcion, valor_restante, valor_abonado, valor_total):
 

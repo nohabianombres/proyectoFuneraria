@@ -1,9 +1,9 @@
 import psycopg2
 
 class Database():
-    user = ""
-    password =""
-    host =""
+    user = "postgres"
+    password ="GGLLiDeqFmoTGLXgJbndSxjieiUqNPxK"
+    host ="viaduct.proxy.rlwy.net"
     def __init__(self, user, password, host):
          self.user =user
          self.password =password
@@ -15,11 +15,11 @@ class Database():
     def conectar(self):
          try:
              credenciales = {
-                 "dbname" : "funeraria" ,
+                 "dbname" : "railway" ,
                  "user" : self.user ,
                  "password" : self.password ,
                  "host" : self.host ,
-                 "port" : 5432
+                 "port" : 38680
              }
              print(credenciales)
              conexion= psycopg2.connect(**credenciales)

@@ -6,7 +6,7 @@ import psycopg2.extras
 from itertools import zip_longest
 from array import array
 
-basedatos = Database("postgres", "87b3d9baf", "localhost")
+basedatos = Database("postgres", "GGLLiDeqFmoTGLXgJbndSxjieiUqNPxK", "viaduct.proxy.rlwy.net")
 conexion= basedatos.conectar()
 
 class Polizas ():
