@@ -3,20 +3,19 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from Front.generar_pdfs import pdf_factura_caja
 
-basedatos = Database("postgres", "GGLLiDeqFmoTGLXgJbndSxjieiUqNPxK", "viaduct.proxy.rlwy.net")
+basedatos = Database("postgres", "87b3d9baf", "localhost")
 conexion= basedatos.conectar()
-
 
 class Adicionales ():
 
-    def crear_factura_caja(self, ciudad, nombre_comprador, documento_comprador, nombre_vendedor, descripciones,
-                           cantidades, valores_unitarios, usuario_encargado, valor_abonar):
+    def crear_factura_caja(self, ciudad, nombre_comprador, documento_comprador, descripciones,
+                           cantidades, valores_unitarios, usuario_encargado, valor_abonar, nota):
         if documento_comprador.isdigit() and valor_abonar.isdigit():
             print('Entre a crear factura de caja')
             fecha_actual = datetime.now().date()
-            if int(valor_abonar)>0:
+            if int(valor_abonar) > 0:
 
-            # Verificar si todos los elementos en las listas son dígitos
+                # Verificar si todos los elementos en las listas son dígitos
                 if all(x.isdigit() for x in cantidades) and all(y.isdigit() for y in valores_unitarios):
                     cantidades_int = [int(x) for x in cantidades]
                     valores_unitarios_int = [int(y) for y in valores_unitarios]
@@ -24,56 +23,83 @@ class Adicionales ():
                     valor_total = sum(x * y for x, y in zip(cantidades_int, valores_unitarios_int))
 
                     if valor_total >= int(valor_abonar):
-
                         try:
                             with conexion.cursor() as cursor:
-                                consulta = "INSERT INTO adicionales(ciudad, fecha, nombre_comprador, documento_comprador, nombre_vendedor, descripciones, cantidades, valores_unitarios, valor_total, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                # Inserta datos en la tabla 'adicionales' y obtiene el id_factura generado
+                                consulta = """
+                                    INSERT INTO adicionales(ciudad, fecha, nombre_comprador, documento_comprador, nombre_vendedor, descripciones, cantidades, valores_unitarios, valor_total, saldo, nota_factura) 
+                                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                                    RETURNING id_adicional;
+                                """
                                 cursor.execute(consulta, (
-                                ciudad, fecha_actual, nombre_comprador, int(documento_comprador), nombre_vendedor,
-                                descripciones, cantidades_int, valores_unitarios_int, valor_total, valor_total-int(valor_abonar)))
+                                    ciudad, fecha_actual, nombre_comprador, int(documento_comprador), usuario_encargado,
+                                    descripciones, cantidades_int, valores_unitarios_int, valor_total,
+                                    valor_total - int(valor_abonar), nota
+                                ))
+
+                                # Obtener el id_factura generado automáticamente
+                                id_factura = cursor.fetchone()[0]
+                                print(id_factura)
+
                             conexion.commit()
-                            print('Fac creada')
-                            """try:
-                                with conexion.cursor() as cursor:
-                                    consulta = "INSERT INTO facturas_adicionales(documento_comprador, nombre_comprador, fecha, nombre_vendedor, id_factura, valor_abonado, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s);"
-                                    cursor.execute(consulta, (int(documento_comprador), nombre_comprador, fecha_actual))
-                                conexion.commit()
-                                print("Factura de caja creada")"""
-
-
+                            print('Factura creada')
 
                             try:
+                                with conexion.cursor() as cursor:
+                                    # Inserta datos en la tabla 'facturas_adicionales' usando el id_factura obtenido
+                                    consulta = """
+                                        INSERT INTO facturas_adicionales(documento_comprador, nombre_comprador, fecha, nombre_vendedor, id_factura, valor_abonado, liquidado) 
+                                        VALUES (%s, %s, %s, %s, %s, %s, %s);
+                                    """
+                                    cursor.execute(consulta, (
+                                        int(documento_comprador), nombre_comprador, fecha_actual, usuario_encargado,
+                                        id_factura, valor_abonar, False
+                                    ))
+
+                                conexion.commit()
+                                print("Factura de caja creada")
+
+                                try:
                                     with conexion.cursor() as cursor:
                                         cursor.execute(
-                                            """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
+                                            """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)"""
+                                        )
                                         ultimo_dato_insertado = cursor.fetchone()
                                         print(ultimo_dato_insertado)
+
                                     try:
                                         with conexion.cursor() as cursor:
-                                            consulta = "INSERT INTO saldo(valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, descripciones, gasto, socio) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                            consulta = """
+                                                INSERT INTO saldo(valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, descripciones, gasto, socio) 
+                                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+                                            """
                                             cursor.execute(consulta, (
                                                 int(valor_abonar), fecha_actual, ultimo_dato_insertado[6],
                                                 ultimo_dato_insertado[7], ultimo_dato_insertado[8],
                                                 ultimo_dato_insertado[9] + (int(valor_abonar) / 2),
                                                 ultimo_dato_insertado[10] + (int(valor_abonar) / 2),
-                                                ultimo_dato_insertado[11] + int(valor_abonar), False, descripciones,'',0))
+                                                ultimo_dato_insertado[11] + int(valor_abonar), False, descripciones, '',
+                                                0
+                                            ))
                                         conexion.commit()
                                         print("Saldo cambiado")
                                         pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador,
-                                                         documento_comprador,
-                                                         descripciones, valor_total - int(valor_abonar), int(valor_abonar),
-                                                         valor_total)
+                                                         documento_comprador, descripciones,
+                                                         valor_total - int(valor_abonar),
+                                                         int(valor_abonar), valor_total)
                                         return "Factura de caja creada"
                                     except psycopg2.Error as e:
-                                        return ("Ocurrió un error al crear el ultimo saldo:")
+                                        return "Ocurrió un error al crear el último saldo: " + str(e)
+                                except psycopg2.Error as e:
+                                    return "Ocurrió un error al seleccionar el último saldo: " + str(e)
                             except psycopg2.Error as e:
-                                    return ("Ocurrió un error al seleccionar el ultimo:", e)
+                                return "Ocurrió un error al crear la factura de caja: " + str(e)
                         except psycopg2.Error as e:
                             return "Ocurrió un error al crear la factura de caja: " + str(e)
                     else:
                         return "El valor abonar es mayor al valor total de la factura"
                 else:
-                    return "La cantidad y valor unitario deben ser unicamente de números"
+                    return "La cantidad y valor unitario deben ser únicamente de números"
             else:
                 if all(x.isdigit() for x in cantidades) and all(y.isdigit() for y in valores_unitarios):
                     fecha_actual = datetime.now().date()
@@ -84,21 +110,23 @@ class Adicionales ():
 
                     try:
                         with conexion.cursor() as cursor:
-                            consulta = "INSERT INTO adicionales(ciudad, fecha, nombre_comprador, documento_comprador, nombre_vendedor, descripciones, cantidades, valores_unitarios, valor_total, saldo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                            consulta = """
+                                INSERT INTO adicionales(ciudad, fecha, nombre_comprador, documento_comprador, nombre_vendedor, descripciones, cantidades, valores_unitarios, valor_total, saldo, nota_factura) 
+                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+                            """
                             cursor.execute(consulta, (
-                            ciudad, fecha_actual, nombre_comprador, int(documento_comprador), nombre_vendedor,
-                            descripciones, cantidades_int, valores_unitarios_int, valor_total, valor_total))
+                                ciudad, fecha_actual, nombre_comprador, int(documento_comprador), usuario_encargado,
+                                descripciones, cantidades_int, valores_unitarios_int, valor_total, valor_total, nota
+                            ))
                         conexion.commit()
-                        print('Fac creada')
+                        print('Factura creada')
                         pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador,
-                                         documento_comprador,
-                                         descripciones, valor_total, 0,
-                                         valor_total)
-                        return ("Factura de caja creada")
+                                         documento_comprador, descripciones, valor_total, 0, valor_total)
+                        return "Factura de caja creada"
                     except psycopg2.Error as e:
-                        return ("Ocurrió un error al crear la factura de caja:" + str(e))
+                        return "Ocurrió un error al crear la factura de caja: " + str(e)
                 else:
-                    return "La cantidad y valor unitario deben ser unicamente de números"
+                    return "La cantidad y valor unitario deben ser únicamente de números"
         else:
             return "El documento del comprador y el valor abonar deben ser números"
 
@@ -117,7 +145,7 @@ class Adicionales ():
             self.saldo = []
             try:
                 with conexion.cursor() as cursor:
-                    cursor.execute("SELECT id_adicional,saldo, nombre_comprador, documento_comprador, saldo, fecha FROM adicionales WHERE documento_comprador=%s AND saldo > 0" , (str(documento),))
+                    cursor.execute("SELECT id_adicional,saldo, nombre_comprador, documento_comprador, saldo, fecha, nota_factura FROM adicionales WHERE documento_comprador=%s AND saldo > 0" , (str(documento),))
                     datos_factura = cursor.fetchall()
                     if datos_factura:
                         for saldo_id in datos_factura:
@@ -200,6 +228,21 @@ class Adicionales ():
             return "El id de la factura y el valor abonar deben ser números"
 
 
+    def mostrar_cartera(self):
+        try:
+            with conexion.cursor() as cursor:
+                consulta = """
+                    SELECT id_adicional, fecha, nombre_comprador, documento_comprador, nombre_vendedor, descripciones, valor_total, saldo 
+                    FROM adicionales 
+                    WHERE saldo > 0 
+                    ORDER BY id_adicional ASC;
+                """
+                cursor.execute(consulta)
+                cartera = cursor.fetchall()
+            print(cartera)
+            return cartera
+        except psycopg2.Error as e:
+            return "Ocurrió un error al consultar: " + str(e)
 
 
 

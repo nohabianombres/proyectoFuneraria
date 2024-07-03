@@ -5,11 +5,12 @@ from BD.Conexion import *
 from Front.administrador.VentanasAdmin2 import VentanasAdmin2, EmerRetorno2
 
 from Front.trabajador.VentanasTrabajador import VentanasTrabajador
+from Front.trabajador.VentanaAdminBase import VentanaAdminBase
 from Front.emerComunes.retorno import Ui_Dialog
 
 
-basedatos = Database("postgres", "GGLLiDeqFmoTGLXgJbndSxjieiUqNPxK", "viaduct.proxy.rlwy.net")
-conexion = basedatos.conectar()
+basedatos = Database("postgres", "87b3d9baf", "localhost")
+conexion= basedatos.conectar()
 
 class EmerRetorno():
 
@@ -97,6 +98,14 @@ class Login():
                 admin = VentanasAdmin2()
                 admin.recibir_datos(ret_val)
                 admin.show()
+
+            elif ret_val[4] == 'Administrador Base':
+                print(ret_val)
+                self.login.close()
+                admin = VentanaAdminBase()
+                admin.recibir_datos(ret_val)
+                admin.show()
+
             elif ret_val[4] == 'Visualizador':
                 print(ret_val)
                 self.login.close()

@@ -2,7 +2,7 @@ from BD.Conexion import *
 from datetime import datetime, timedelta
 
 
-basedatos = Database("postgres", "GGLLiDeqFmoTGLXgJbndSxjieiUqNPxK", "viaduct.proxy.rlwy.net")
+basedatos = Database("postgres", "87b3d9baf", "localhost")
 conexion= basedatos.conectar()
 
 class Informes ():
@@ -31,7 +31,7 @@ class Informes ():
     def mostrar_colillas_no_liquidadas(self):
         try:
             with conexion.cursor() as cursor:
-                consulta = "SELECT socio, valor_mes, desde_fecha, hasta_fecha, usuario, fecha_pago FROM colillas WHERE liquidado = %s ORDER BY numero_colilla ASC"
+                consulta = "SELECT socio, valor_mes, desde_fecha, hasta_fecha, usuario, fecha_pago, hora_pago FROM colillas WHERE liquidado = %s ORDER BY numero_colilla ASC"
                 cursor.execute(consulta, (False,))
                 colillas = cursor.fetchall()
             print(colillas)
@@ -55,8 +55,8 @@ class Informes ():
             with conexion.cursor() as cursor:
                 consulta = "SELECT id_factura,nombre_comprador,documento_comprador, nombre_vendedor, valor_abonado,fecha  FROM facturas_adicionales WHERE liquidado = %s ORDER BY id_abono ASC"
                 cursor.execute(consulta, (False,))
-                gastos = cursor.fetchall()
-            print(gastos)
-            return gastos
+                facturas_caja = cursor.fetchall()
+            print(facturas_caja)
+            return facturas_caja
         except psycopg2.Error as e:
             return "Ocurrió un error al consultar: " + str(e)

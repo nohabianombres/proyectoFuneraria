@@ -71,7 +71,7 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador, 
     pdf.set_font('Arial', '', 9)
     pdf.cell(60, 5, txt="CIUDAD: " + str(ciudad), ln=True, align='C')
     pdf.cell(60, 5, txt="FECHA: " + fecha_actual.strftime("%d/%m/%Y"), ln=True, align='C')
-    pdf.cell(60, 5, txt="NOMBRE COMPRADOR: " + str(nombre_comprador), ln=True, align='C')
+    pdf.cell(60, 5, txt="NOMBRE COMPRADOR: \n " + str(nombre_comprador), ln=True, align='C')
     pdf.cell(60, 5, txt="DOCUMENTO COMPRADOR: " + str(documento_comprador), ln=True, align='C')
     pdf.cell(60, 5, txt="POR CONCEPTO DE: " + descripciones, ln=True, align='C')
     pdf.set_font('Arial', 'B', 11)

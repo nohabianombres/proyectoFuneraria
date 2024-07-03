@@ -2,7 +2,7 @@ from BD.Conexion import *
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-basedatos = Database("postgres", "GGLLiDeqFmoTGLXgJbndSxjieiUqNPxK", "viaduct.proxy.rlwy.net")
+basedatos = Database("postgres", "87b3d9baf", "localhost")
 conexion= basedatos.conectar()
 
 class Gastos ():

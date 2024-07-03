@@ -9,8 +9,8 @@ from Front.VentanaLogin import Login, validacion
 
 
 
-basedatos = Database("postgres", "GGLLiDeqFmoTGLXgJbndSxjieiUqNPxK", "viaduct.proxy.rlwy.net")
-conexion = basedatos.conectar()
+basedatos = Database("postgres", "87b3d9baf", "localhost")
+conexion= basedatos.conectar()
 
 
 if __name__ == '__main__':
