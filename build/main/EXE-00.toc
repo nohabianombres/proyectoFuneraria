@@ -1,6 +1,6 @@
 ('C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto funeraria\\dist\\main.exe',
- False,
- False,
+ True,
+ True,
  False,
  ['C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto funeraria\\ico.ico'],
  None,
@@ -31,7 +31,8 @@
  None,
  'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
  'funeraria\\build\\main\\main.pkg',
- [('pyi-contents-directory _internal', '', 'OPTION'),
+ [('v', None, 'OPTION'),
+  ('pyi-contents-directory _internal', '', 'OPTION'),
   ('PYZ-00.pyz',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\build\\main\\PYZ-00.pyz',
@@ -87,21 +88,9 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\python310.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
@@ -111,61 +100,73 @@
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
    'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
+   'BINARY'),
   ('PyQt5\\Qt5\\plugins\\generic\\qtuiotouchplugin.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\plugins\\generic\\qtuiotouchplugin.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\bin\\libGLESv2.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\libGLESv2.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\bin\\opengl32sw.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\opengl32sw.dll',
-   'BINARY'),
   ('PyQt5\\Qt5\\bin\\libEGL.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\libEGL.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\opengl32sw.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\opengl32sw.dll',
    'BINARY'),
   ('libopenblas64__v0.3.23-gcc_10_3_0.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
@@ -319,6 +320,10 @@
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PIL\\_imaging.cp310-win_amd64.pyd',
    'EXTENSION'),
+  ('_elementtree.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
   ('win32\\win32print.pyd',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\win32\\win32print.pyd',
@@ -339,77 +344,77 @@
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\QtWidgets.pyd',
    'EXTENSION'),
-  ('api-ms-win-crt-string-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
-   'BINARY'),
   ('VCRUNTIME140.dll',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\VCRUNTIME140.dll',
-   'BINARY'),
-  ('api-ms-win-crt-filesystem-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-filesystem-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-runtime-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-runtime-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-time-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-heap-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-heap-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-stdio-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-stdio-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-environment-l1-1-0.dll',
+  ('api-ms-win-crt-conio-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-environment-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-conio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-string-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-process-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-process-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-math-l1-1-0.dll',
+  ('api-ms-win-crt-time-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-math-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-crt-locale-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-locale-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-time-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-crt-convert-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-convert-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-crt-conio-l1-1-0.dll',
+  ('api-ms-win-crt-math-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-crt-conio-l1-1-0.dll',
+   'Toolkit\\api-ms-win-crt-math-l1-1-0.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\bin\\Qt5Core.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Core.dll',
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-crt-locale-l1-1-0.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\bin\\Qt5Gui.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Gui.dll',
    'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5Core.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Core.dll',
+   'BINARY'),
   ('api-ms-win-crt-utility-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-crt-utility-l1-1-0.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\bin\\Qt5DBus.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5DBus.dll',
-   'BINARY'),
   ('PyQt5\\Qt5\\bin\\Qt5Svg.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Svg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5DBus.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5DBus.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\bin\\MSVCP140.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
@@ -419,10 +424,6 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\VCRUNTIME140_1.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\bin\\Qt5Quick.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Quick.dll',
-   'BINARY'),
   ('PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
@@ -430,6 +431,10 @@
   ('PyQt5\\Qt5\\bin\\Qt5Network.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Network.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5Quick.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Quick.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\bin\\VCRUNTIME140.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
@@ -479,337 +484,137 @@
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\MSVCP140_1.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\bin\\Qt5QmlModels.dll',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5QmlModels.dll',
-   'BINARY'),
   ('PyQt5\\Qt5\\bin\\Qt5Qml.dll',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Qml.dll',
    'BINARY'),
-  ('api-ms-win-core-util-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-util-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-console-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-console-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-errorhandling-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-errorhandling-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-processthreads-l1-1-1.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
-   'BINARY'),
-  ('api-ms-win-core-timezone-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-file-l2-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-file-l2-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-synch-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-namedpipe-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-synch-l1-2-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-synch-l1-2-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-interlocked-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-interlocked-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-heap-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-datetime-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-profile-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-profile-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-memory-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-processenvironment-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-localization-l1-2-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-localization-l1-2-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-libraryloader-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-libraryloader-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-string-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
+  ('PyQt5\\Qt5\\bin\\Qt5QmlModels.dll',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5QmlModels.dll',
    'BINARY'),
   ('api-ms-win-core-sysinfo-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-sysinfo-l1-1-0.dll',
    'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processenvironment-l1-1-0.dll',
+   'BINARY'),
   ('api-ms-win-core-rtlsupport-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-rtlsupport-l1-1-0.dll',
    'BINARY'),
-  ('api-ms-win-core-debug-l1-1-0.dll',
+  ('api-ms-win-core-console-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-debug-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-processthreads-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-processthreads-l1-1-0.dll',
-   'BINARY'),
-  ('api-ms-win-core-handle-l1-1-0.dll',
-   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
-   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
+   'Toolkit\\api-ms-win-core-console-l1-1-0.dll',
    'BINARY'),
   ('api-ms-win-core-file-l1-1-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-file-l1-1-0.dll',
    'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
   ('api-ms-win-core-file-l1-2-0.dll',
    'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
    'Toolkit\\api-ms-win-core-file-l1-2-0.dll',
    'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance '
+   'Toolkit\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('ico2.png',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\Front\\ico2.png',
+   'DATA'),
+  ('sellomarca.jpg',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\Front\\sellomarca.jpg',
+   'DATA'),
   ('base_library.zip',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\build\\main\\base_library.zip',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ru.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ru.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ar.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ar.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_it.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_it.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_sv.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_sv.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_ja.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ja.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_ru.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ru.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_sk.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_sk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_es.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_es.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_de.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_de.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_he.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_he.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_tr.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_tr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_fi.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fi.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_he.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_he.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_it.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_it.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_es.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_es.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_zh_TW.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_zh_TW.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_pl.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_pl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_fi.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fi.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ko.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ko.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_tr.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_tr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_fr.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_sl.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_sl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_ko.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ko.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_hu.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_hu.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_lv.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_lv.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_bg.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_bg.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_cs.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_cs.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_gd.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_gd.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_lv.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_lv.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ko.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ko.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_hu.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_hu.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_da.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_da.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_cs.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_cs.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_fa.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fa.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_pt.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_pt.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ja.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ja.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_ar.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ar.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_gd.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_gd.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_bg.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_bg.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_es.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_es.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ru.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ru.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qt_help_hu.qm',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_hu.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_pl.qm',
+  ('PyQt5\\Qt5\\translations\\qt_sv.qm',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_pl.qm',
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_sv.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_tr.qm',
+  ('PyQt5\\Qt5\\translations\\qt_bg.qm',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_tr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_sk.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_sk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ca.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ca.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ja.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ja.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_en.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_en.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_uk.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_uk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_da.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_da.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_cs.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_cs.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_it.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_it.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_gl.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_gl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_uk.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_uk.qm',
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_bg.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qt_sk.qm',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
@@ -819,85 +624,3101 @@
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_en.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ar.qm',
+  ('PyQt5\\Qt5\\translations\\qt_ko.qm',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ar.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_de.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_de.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_fr.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_fr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_zh_CN.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_zh_CN.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_fr.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ca.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ca.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_ca.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ca.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_gl.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_gl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_uk.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_uk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_da.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_da.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_zh_CN.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_zh_CN.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_de.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_de.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_en.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_en.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_pl.qm',
-   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_pl.qm',
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ko.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qt_lt.qm',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_lt.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_zh_TW.qm',
+  ('PyQt5\\Qt5\\translations\\qt_help_zh_TW.qm',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_zh_TW.qm',
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_zh_TW.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_ru.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ru.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_he.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_he.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_uk.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_uk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_ru.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ru.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_lv.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_lv.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_fa.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fa.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_sk.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_sk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_bg.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_bg.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_da.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_da.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_sk.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_sk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_gd.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_gd.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_uk.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_uk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_ja.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ja.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_tr.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_tr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_sl.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_sl.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qtbase_bg.qm',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_bg.qm',
    'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_cs.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_cs.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_da.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_da.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_fr.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_fr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_tr.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_tr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_de.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_de.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_en.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_en.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_ca.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ca.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_zh_CN.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_zh_CN.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_it.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_it.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_ko.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ko.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_gl.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_gl.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ru.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ru.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_en.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_pt.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_pt.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_pl.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_pl.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_gl.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_gl.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_ca.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ca.qm',
+   'DATA'),
   ('PyQt5\\Qt5\\translations\\qt_sl.qm',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
    'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_sl.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_he.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_he.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_it.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_it.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_ar.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ar.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_da.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_cs.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_cs.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_pl.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_pl.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_zh_CN.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_zh_CN.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_ar.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ar.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_uk.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_uk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_hu.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_hu.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_es.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_es.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_ja.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ja.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ar.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ar.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_hu.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_hu.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_pl.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_pl.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_lv.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_es.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_es.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_fr.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_zh_TW.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_zh_TW.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ja.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ja.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_tr.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_tr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_fi.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fi.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_de.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_de.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\venv\\lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'DATA'),
+  ('multiprocessing\\popen_forkserver.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\popen_forkserver.pyc',
+   'DATA'),
+  ('multiprocessing\\connection.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\connection.pyc',
+   'DATA'),
+  ('multiprocessing\\resource_sharer.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\resource_sharer.pyc',
+   'DATA'),
+  ('multiprocessing\\process.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\process.pyc',
+   'DATA'),
+  ('signal.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\signal.pyc',
+   'DATA'),
+  ('selectors.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\selectors.pyc',
+   'DATA'),
+  ('xmlrpc\\client.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xmlrpc\\client.pyc',
+   'DATA'),
+  ('xmlrpc\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xmlrpc\\__init__.pyc',
+   'DATA'),
+  ('gzip.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\gzip.pyc',
+   'DATA'),
+  ('argparse.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\argparse.pyc',
+   'DATA'),
+  ('textwrap.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\textwrap.pyc',
+   'DATA'),
+  ('shutil.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\shutil.pyc',
+   'DATA'),
+  ('zipfile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\zipfile.pyc',
+   'DATA'),
+  ('py_compile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\py_compile.pyc',
+   'DATA'),
+  ('importlib\\machinery.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\machinery.pyc',
+   'DATA'),
+  ('importlib\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\__init__.pyc',
+   'DATA'),
+  ('importlib\\_common.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\_common.pyc',
+   'DATA'),
+  ('importlib\\_adapters.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\_adapters.pyc',
+   'DATA'),
+  ('typing.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\typing.pyc',
+   'DATA'),
+  ('importlib\\abc.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\abc.pyc',
+   'DATA'),
+  ('importlib\\_abc.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\_abc.pyc',
+   'DATA'),
+  ('importlib\\_bootstrap.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\_bootstrap.pyc',
+   'DATA'),
+  ('importlib\\_bootstrap_external.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\_bootstrap_external.pyc',
+   'DATA'),
+  ('importlib\\metadata\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\metadata\\__init__.pyc',
+   'DATA'),
+  ('importlib\\metadata\\_itertools.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\metadata\\_itertools.pyc',
+   'DATA'),
+  ('importlib\\metadata\\_functools.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\metadata\\_functools.pyc',
+   'DATA'),
+  ('importlib\\metadata\\_collections.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\metadata\\_collections.pyc',
+   'DATA'),
+  ('importlib\\metadata\\_meta.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\metadata\\_meta.pyc',
+   'DATA'),
+  ('importlib\\metadata\\_adapters.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\metadata\\_adapters.pyc',
+   'DATA'),
+  ('importlib\\metadata\\_text.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\metadata\\_text.pyc',
+   'DATA'),
+  ('email\\message.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\message.pyc',
+   'DATA'),
+  ('email\\policy.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\policy.pyc',
+   'DATA'),
+  ('email\\contentmanager.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\contentmanager.pyc',
+   'DATA'),
+  ('email\\quoprimime.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\quoprimime.pyc',
+   'DATA'),
+  ('string.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\string.pyc',
+   'DATA'),
+  ('email\\headerregistry.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\headerregistry.pyc',
+   'DATA'),
+  ('email\\_header_value_parser.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\_header_value_parser.pyc',
+   'DATA'),
+  ('urllib\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\urllib\\__init__.pyc',
+   'DATA'),
+  ('email\\iterators.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\iterators.pyc',
+   'DATA'),
+  ('email\\generator.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\generator.pyc',
+   'DATA'),
+  ('random.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\random.pyc',
+   'DATA'),
+  ('statistics.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\statistics.pyc',
+   'DATA'),
+  ('fractions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fractions.pyc',
+   'DATA'),
+  ('numbers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numbers.pyc',
+   'DATA'),
+  ('hashlib.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\hashlib.pyc',
+   'DATA'),
+  ('logging\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\logging\\__init__.pyc',
+   'DATA'),
+  ('pickle.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pickle.pyc',
+   'DATA'),
+  ('pprint.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pprint.pyc',
+   'DATA'),
+  ('dataclasses.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\dataclasses.pyc',
+   'DATA'),
+  ('inspect.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\inspect.pyc',
+   'DATA'),
+  ('token.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\token.pyc',
+   'DATA'),
+  ('dis.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\dis.pyc',
+   'DATA'),
+  ('opcode.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\opcode.pyc',
+   'DATA'),
+  ('ast.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\ast.pyc',
+   'DATA'),
+  ('_compat_pickle.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_compat_pickle.pyc',
+   'DATA'),
+  ('bisect.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\bisect.pyc',
+   'DATA'),
+  ('email\\_encoded_words.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\_encoded_words.pyc',
+   'DATA'),
+  ('email\\charset.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\charset.pyc',
+   'DATA'),
+  ('email\\encoders.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\encoders.pyc',
+   'DATA'),
+  ('email\\base64mime.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\base64mime.pyc',
+   'DATA'),
+  ('email\\_policybase.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\_policybase.pyc',
+   'DATA'),
+  ('email\\header.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\header.pyc',
+   'DATA'),
+  ('email\\errors.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\errors.pyc',
+   'DATA'),
+  ('email\\utils.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\utils.pyc',
+   'DATA'),
+  ('email\\_parseaddr.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\_parseaddr.pyc',
+   'DATA'),
+  ('calendar.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\calendar.pyc',
+   'DATA'),
+  ('quopri.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\quopri.pyc',
+   'DATA'),
+  ('getopt.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\getopt.pyc',
+   'DATA'),
+  ('uu.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\uu.pyc',
+   'DATA'),
+  ('optparse.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\optparse.pyc',
+   'DATA'),
+  ('email\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\__init__.pyc',
+   'DATA'),
+  ('email\\parser.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\parser.pyc',
+   'DATA'),
+  ('email\\feedparser.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\email\\feedparser.pyc',
+   'DATA'),
+  ('csv.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\csv.pyc',
+   'DATA'),
+  ('importlib\\readers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\readers.pyc',
+   'DATA'),
+  ('tokenize.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\tokenize.pyc',
+   'DATA'),
+  ('pathlib.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pathlib.pyc',
+   'DATA'),
+  ('contextlib.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\contextlib.pyc',
+   'DATA'),
+  ('importlib\\util.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\util.pyc',
+   'DATA'),
+  ('tarfile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\tarfile.pyc',
+   'DATA'),
+  ('lzma.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\lzma.pyc',
+   'DATA'),
+  ('bz2.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\bz2.pyc',
+   'DATA'),
+  ('fnmatch.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fnmatch.pyc',
+   'DATA'),
+  ('copy.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\copy.pyc',
+   'DATA'),
+  ('gettext.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\gettext.pyc',
+   'DATA'),
+  ('_compression.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_compression.pyc',
+   'DATA'),
+  ('xml\\parsers\\expat.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\parsers\\expat.pyc',
+   'DATA'),
+  ('xml\\parsers\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\parsers\\__init__.pyc',
+   'DATA'),
+  ('xml\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\__init__.pyc',
+   'DATA'),
+  ('xml\\sax\\expatreader.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\sax\\expatreader.pyc',
+   'DATA'),
+  ('xml\\sax\\saxutils.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\sax\\saxutils.pyc',
+   'DATA'),
+  ('urllib\\request.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\urllib\\request.pyc',
+   'DATA'),
+  ('getpass.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\getpass.pyc',
+   'DATA'),
+  ('nturl2path.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\nturl2path.pyc',
+   'DATA'),
+  ('ftplib.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\ftplib.pyc',
+   'DATA'),
+  ('netrc.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\netrc.pyc',
+   'DATA'),
+  ('shlex.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\shlex.pyc',
+   'DATA'),
+  ('mimetypes.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\mimetypes.pyc',
+   'DATA'),
+  ('http\\cookiejar.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\http\\cookiejar.pyc',
+   'DATA'),
+  ('http\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\http\\__init__.pyc',
+   'DATA'),
+  ('ssl.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\ssl.pyc',
+   'DATA'),
+  ('urllib\\response.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\urllib\\response.pyc',
+   'DATA'),
+  ('urllib\\error.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\urllib\\error.pyc',
+   'DATA'),
+  ('xml\\sax\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\sax\\__init__.pyc',
+   'DATA'),
+  ('xml\\sax\\handler.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\sax\\handler.pyc',
+   'DATA'),
+  ('xml\\sax\\_exceptions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\sax\\_exceptions.pyc',
+   'DATA'),
+  ('xml\\sax\\xmlreader.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\sax\\xmlreader.pyc',
+   'DATA'),
+  ('urllib\\parse.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\urllib\\parse.pyc',
+   'DATA'),
+  ('http\\client.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\http\\client.pyc',
+   'DATA'),
+  ('decimal.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\decimal.pyc',
+   'DATA'),
+  ('_pydecimal.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_pydecimal.pyc',
+   'DATA'),
+  ('contextvars.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\contextvars.pyc',
+   'DATA'),
+  ('datetime.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\datetime.pyc',
+   'DATA'),
+  ('_strptime.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_strptime.pyc',
+   'DATA'),
+  ('base64.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\base64.pyc',
+   'DATA'),
+  ('hmac.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\hmac.pyc',
+   'DATA'),
+  ('tempfile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\tempfile.pyc',
+   'DATA'),
+  ('struct.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\struct.pyc',
+   'DATA'),
+  ('socket.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\socket.pyc',
+   'DATA'),
+  ('multiprocessing\\util.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\util.pyc',
+   'DATA'),
+  ('multiprocessing\\resource_tracker.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\resource_tracker.pyc',
+   'DATA'),
+  ('multiprocessing\\popen_fork.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\popen_fork.pyc',
+   'DATA'),
+  ('multiprocessing\\forkserver.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\forkserver.pyc',
+   'DATA'),
+  ('multiprocessing\\context.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\context.pyc',
+   'DATA'),
+  ('multiprocessing\\sharedctypes.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\sharedctypes.pyc',
+   'DATA'),
+  ('multiprocessing\\heap.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\heap.pyc',
+   'DATA'),
+  ('ctypes\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\ctypes\\__init__.pyc',
+   'DATA'),
+  ('ctypes\\_endian.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\ctypes\\_endian.pyc',
+   'DATA'),
+  ('multiprocessing\\pool.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\pool.pyc',
+   'DATA'),
+  ('multiprocessing\\dummy\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\dummy\\__init__.pyc',
+   'DATA'),
+  ('multiprocessing\\dummy\\connection.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\dummy\\connection.pyc',
+   'DATA'),
+  ('queue.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\queue.pyc',
+   'DATA'),
+  ('multiprocessing\\queues.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\queues.pyc',
+   'DATA'),
+  ('multiprocessing\\synchronize.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\synchronize.pyc',
+   'DATA'),
+  ('multiprocessing\\managers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\managers.pyc',
+   'DATA'),
+  ('multiprocessing\\shared_memory.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\shared_memory.pyc',
+   'DATA'),
+  ('secrets.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\secrets.pyc',
+   'DATA'),
+  ('multiprocessing\\reduction.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\reduction.pyc',
+   'DATA'),
+  ('multiprocessing\\popen_spawn_posix.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\popen_spawn_posix.pyc',
+   'DATA'),
+  ('multiprocessing\\popen_spawn_win32.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\popen_spawn_win32.pyc',
+   'DATA'),
+  ('subprocess.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\subprocess.pyc',
+   'DATA'),
+  ('multiprocessing\\spawn.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\spawn.pyc',
+   'DATA'),
+  ('runpy.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\runpy.pyc',
+   'DATA'),
+  ('pkgutil.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkgutil.pyc',
+   'DATA'),
+  ('zipimport.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\zipimport.pyc',
+   'DATA'),
+  ('multiprocessing\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\multiprocessing\\__init__.pyc',
+   'DATA'),
+  ('threading.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\threading.pyc',
+   'DATA'),
+  ('_threading_local.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_threading_local.pyc',
+   'DATA'),
+  ('pkg_resources\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\__init__.pyc',
+   'DATA'),
+  ('packaging\\version.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\version.pyc',
+   'DATA'),
+  ('packaging\\utils.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\utils.pyc',
+   'DATA'),
+  ('packaging\\tags.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\tags.pyc',
+   'DATA'),
+  ('packaging\\specifiers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\specifiers.pyc',
+   'DATA'),
+  ('packaging\\requirements.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\requirements.pyc',
+   'DATA'),
+  ('packaging\\metadata.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\metadata.pyc',
+   'DATA'),
+  ('packaging\\markers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\markers.pyc',
+   'DATA'),
+  ('packaging\\_tokenizer.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\_tokenizer.pyc',
+   'DATA'),
+  ('packaging\\_structures.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\_structures.pyc',
+   'DATA'),
+  ('packaging\\_parser.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\_parser.pyc',
+   'DATA'),
+  ('packaging\\_musllinux.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\_musllinux.pyc',
+   'DATA'),
+  ('packaging\\_manylinux.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\_manylinux.pyc',
+   'DATA'),
+  ('packaging\\_elffile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\_elffile.pyc',
+   'DATA'),
+  ('packaging\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\packaging\\__init__.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\zipp.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\zipp.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\typing_extensions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\typing_extensions.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\platformdirs\\windows.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\platformdirs\\windows.pyc',
+   'DATA'),
+  ('__future__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\__future__.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\platformdirs\\version.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\platformdirs\\version.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\platformdirs\\unix.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\platformdirs\\unix.pyc',
+   'DATA'),
+  ('configparser.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\configparser.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\platformdirs\\macos.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\platformdirs\\macos.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\platformdirs\\api.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\platformdirs\\api.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\platformdirs\\android.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\platformdirs\\android.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\platformdirs\\__main__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\platformdirs\\__main__.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\platformdirs\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\platformdirs\\__init__.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\version.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\version.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\utils.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\utils.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\tags.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\tags.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\specifiers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\specifiers.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\requirements.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\requirements.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\markers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\markers.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\_tokenizer.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\_tokenizer.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\_structures.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\_structures.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\_parser.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\_parser.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\_musllinux.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\_musllinux.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\_manylinux.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\_manylinux.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\_elffile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\_elffile.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\packaging\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\packaging\\__init__.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\more_itertools\\recipes.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\more_itertools\\recipes.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\more_itertools\\more.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\more_itertools\\more.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\more_itertools\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\more_itertools\\__init__.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\jaraco\\text\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\jaraco\\text\\__init__.pyc',
+   'DATA'),
+  ('importlib\\resources.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\importlib\\resources.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\jaraco\\functools.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\jaraco\\functools.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\jaraco\\context.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\jaraco\\context.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\jaraco\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\jaraco\\__init__.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\importlib_resources\\simple.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\importlib_resources\\simple.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\importlib_resources\\readers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\importlib_resources\\readers.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\importlib_resources\\abc.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\importlib_resources\\abc.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\importlib_resources\\_legacy.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\importlib_resources\\_legacy.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\importlib_resources\\_itertools.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\importlib_resources\\_itertools.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\importlib_resources\\_compat.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\importlib_resources\\_compat.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\importlib_resources\\_common.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\importlib_resources\\_common.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\importlib_resources\\_adapters.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\importlib_resources\\_adapters.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\importlib_resources\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\importlib_resources\\__init__.pyc',
+   'DATA'),
+  ('pkg_resources\\_vendor\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\_vendor\\__init__.pyc',
+   'DATA'),
+  ('sysconfig.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\sysconfig.pyc',
+   'DATA'),
+  ('_aix_support.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_aix_support.pyc',
+   'DATA'),
+  ('_bootsubprocess.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_bootsubprocess.pyc',
+   'DATA'),
+  ('pkg_resources\\extern\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pkg_resources\\extern\\__init__.pyc',
+   'DATA'),
+  ('imp.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\imp.pyc',
+   'DATA'),
+  ('plistlib.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\plistlib.pyc',
+   'DATA'),
+  ('platform.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\platform.pyc',
+   'DATA'),
+  ('_pyi_rth_utils\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_pyi_rth_utils\\__init__.pyc',
+   'DATA'),
+  ('tracemalloc.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\tracemalloc.pyc',
+   'DATA'),
+  ('_py_abc.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_py_abc.pyc',
+   'DATA'),
+  ('stringprep.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\stringprep.pyc',
+   'DATA'),
+  ('Front\\VentanaLogin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\VentanaLogin.pyc',
+   'DATA'),
+  ('Front\\emerComunes\\retorno.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\emerComunes\\retorno.pyc',
+   'DATA'),
+  ('PyQt5\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PyQt5\\__init__.pyc',
+   'DATA'),
+  ('Front\\trabajador\\VentanaAdminBase.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\trabajador\\VentanaAdminBase.pyc',
+   'DATA'),
+  ('Back\\informe.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Back\\informe.pyc',
+   'DATA'),
+  ('Back\\liquidacion.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Back\\liquidacion.pyc',
+   'DATA'),
+  ('Front\\crearExcel.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\crearExcel.pyc',
+   'DATA'),
+  ('openpyxl\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\_constants.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\_constants.pyc',
+   'DATA'),
+  ('openpyxl\\reader\\excel.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\reader\\excel.pyc',
+   'DATA'),
+  ('openpyxl\\reader\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\reader\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\reader\\drawings.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\reader\\drawings.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\reader.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\reader.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\reference.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\reference.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\formulas.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\formulas.pyc',
+   'DATA'),
+  ('openpyxl\\formula\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\formula\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\formula\\tokenizer.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\formula\\tokenizer.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\cell.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\cell.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\worksheet.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\worksheet.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\print_settings.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\print_settings.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\formula.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\formula.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\scenario.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\scenario.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\pagebreak.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\pagebreak.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\properties.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\properties.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\colors.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\colors.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\named_styles.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\named_styles.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\cell_style.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\cell_style.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\indexed_list.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\indexed_list.pyc',
+   'DATA'),
+  ('openpyxl\\descriptors\\excel.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\descriptors\\excel.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\protection.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\protection.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\numbers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\numbers.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\fonts.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\fonts.pyc',
+   'DATA'),
+  ('openpyxl\\descriptors\\nested.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\descriptors\\nested.pyc',
+   'DATA'),
+  ('openpyxl\\descriptors\\base.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\descriptors\\base.pyc',
+   'DATA'),
+  ('openpyxl\\descriptors\\namespace.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\descriptors\\namespace.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\datetime.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\datetime.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\fills.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\fills.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\borders.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\borders.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\alignment.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\alignment.pyc',
+   'DATA'),
+  ('openpyxl\\descriptors\\sequence.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\descriptors\\sequence.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\merge.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\merge.pyc',
+   'DATA'),
+  ('openpyxl\\cell\\cell.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\cell\\cell.pyc',
+   'DATA'),
+  ('openpyxl\\cell\\rich_text.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\cell\\rich_text.pyc',
+   'DATA'),
+  ('openpyxl\\cell\\text.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\cell\\text.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\hyperlink.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\hyperlink.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\styleable.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\styleable.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\builtins.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\builtins.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\proxy.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\proxy.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\cell_range.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\cell_range.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\views.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\views.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\filters.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\filters.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\protection.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\protection.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\protection.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\protection.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\dimensions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\dimensions.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\bound_dictionary.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\bound_dictionary.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\units.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\units.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\page.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\page.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\datavalidation.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\datavalidation.pyc',
+   'DATA'),
+  ('openpyxl\\formula\\translate.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\formula\\translate.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\defined_name.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\defined_name.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\child.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\child.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\header_footer.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\header_footer.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\escape.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\escape.pyc',
+   'DATA'),
+  ('openpyxl\\formatting\\formatting.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\formatting\\formatting.pyc',
+   'DATA'),
+  ('openpyxl\\formatting\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\formatting\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\formatting\\rule.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\formatting\\rule.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\differential.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\differential.pyc',
+   'DATA'),
+  ('openpyxl\\compat\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\compat\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\compat\\strings.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\compat\\strings.pyc',
+   'DATA'),
+  ('openpyxl\\descriptors\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\descriptors\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\descriptors\\serialisable.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\descriptors\\serialisable.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\series_factory.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\series_factory.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\series.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\series.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\trendline.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\trendline.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\layout.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\layout.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\text.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\text.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\text.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\text.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\drawing.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\drawing.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\geometry.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\geometry.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\line.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\line.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\fill.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\fill.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\effect.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\effect.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\colors.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\colors.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\marker.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\marker.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\picture.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\picture.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\label.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\label.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\error_bar.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\error_bar.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\shapes.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\shapes.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\data_source.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\data_source.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\surface_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\surface_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\axis.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\axis.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\title.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\title.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\descriptors.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\descriptors.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\_3d.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\_3d.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\legend.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\legend.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\stock_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\stock_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\updown_bars.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\updown_bars.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\scatter_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\scatter_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\radar_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\radar_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\pie_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\pie_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\line_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\line_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\bubble_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\bubble_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\bar_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\bar_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\area_chart.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\area_chart.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\chartspace.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\chartspace.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\print_settings.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\print_settings.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\pivot.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\pivot.pyc',
+   'DATA'),
+  ('openpyxl\\chart\\plotarea.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chart\\plotarea.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\image.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\image.pyc',
+   'DATA'),
+  ('PIL\\Image.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\Image.pyc',
+   'DATA'),
+  ('PIL\\XpmImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\XpmImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\ImageFile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageFile.pyc',
+   'DATA'),
+  ('PIL\\XbmImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\XbmImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\XVThumbImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\XVThumbImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\WmfImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\WmfImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\WebPImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\WebPImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\TgaImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\TgaImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\SunImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\SunImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\SpiderImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\SpiderImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\ImageTk.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageTk.pyc',
+   'DATA'),
+  ('PIL\\SgiImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\SgiImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\QoiImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\QoiImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\PsdImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PsdImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\PixarImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PixarImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\PdfImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PdfImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\features.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\features.pyc',
+   'DATA'),
+  ('PIL\\PdfParser.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PdfParser.pyc',
+   'DATA'),
+  ('PIL\\ImageSequence.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageSequence.pyc',
+   'DATA'),
+  ('PIL\\PcxImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PcxImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\PcdImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PcdImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\PalmImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PalmImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\MspImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\MspImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\MpoImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\MpoImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\MpegImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\MpegImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\MicImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\MicImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\McIdasImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\McIdasImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\Jpeg2KImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\Jpeg2KImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\IptcImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\IptcImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\ImtImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImtImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\ImImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\IcoImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\IcoImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\IcnsImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\IcnsImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\Hdf5StubImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\Hdf5StubImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\GribStubImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\GribStubImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\GbrImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\GbrImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\FtexImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\FtexImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\FpxImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\FpxImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\FliImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\FliImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\FitsImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\FitsImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\EpsImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\EpsImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\_deprecate.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\_deprecate.pyc',
+   'DATA'),
+  ('PIL\\DdsImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\DdsImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\DcxImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\DcxImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\CurImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\CurImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\BufrStubImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\BufrStubImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\BlpImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\BlpImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\TiffImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\TiffImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\ImageOps.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageOps.pyc',
+   'DATA'),
+  ('PIL\\ImageShow.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageShow.pyc',
+   'DATA'),
+  ('PIL\\ImageQt.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageQt.pyc',
+   'DATA'),
+  ('PIL\\ImageColor.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageColor.pyc',
+   'DATA'),
+  ('colorsys.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\colorsys.pyc',
+   'DATA'),
+  ('PIL\\ImageFilter.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageFilter.pyc',
+   'DATA'),
+  ('PIL\\ImageCms.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageCms.pyc',
+   'DATA'),
+  ('PIL\\ImageWin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageWin.pyc',
+   'DATA'),
+  ('PIL\\PyAccess.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PyAccess.pyc',
+   'DATA'),
+  ('numpy\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\__init__.pyc',
+   'DATA'),
+  ('numpy\\core\\_dtype_ctypes.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_dtype_ctypes.pyc',
+   'DATA'),
+  ('numpy\\version.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\version.pyc',
+   'DATA'),
+  ('numpy\\_version.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_version.pyc',
+   'DATA'),
+  ('json\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\json\\__init__.pyc',
+   'DATA'),
+  ('json\\encoder.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\json\\encoder.pyc',
+   'DATA'),
+  ('json\\decoder.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\json\\decoder.pyc',
+   'DATA'),
+  ('json\\scanner.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\json\\scanner.pyc',
+   'DATA'),
+  ('numpy\\_pytesttester.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_pytesttester.pyc',
+   'DATA'),
+  ('numpy\\testing\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\testing\\__init__.pyc',
+   'DATA'),
+  ('numpy\\testing\\overrides.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\testing\\overrides.pyc',
+   'DATA'),
+  ('numpy\\lib\\recfunctions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\recfunctions.pyc',
+   'DATA'),
+  ('numpy\\lib\\_iotools.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\_iotools.pyc',
+   'DATA'),
+  ('numpy\\core\\numeric.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\numeric.pyc',
+   'DATA'),
+  ('numpy\\core\\_asarray.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_asarray.pyc',
+   'DATA'),
+  ('numpy\\core\\arrayprint.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\arrayprint.pyc',
+   'DATA'),
+  ('numpy\\core\\fromnumeric.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\fromnumeric.pyc',
+   'DATA'),
+  ('numpy\\core\\_methods.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_methods.pyc',
+   'DATA'),
+  ('numpy\\lib\\stride_tricks.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\stride_tricks.pyc',
+   'DATA'),
+  ('numpy\\core\\_exceptions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_exceptions.pyc',
+   'DATA'),
+  ('numpy\\_utils\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_utils\\__init__.pyc',
+   'DATA'),
+  ('numpy\\core\\_ufunc_config.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_ufunc_config.pyc',
+   'DATA'),
+  ('numpy\\core\\numerictypes.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\numerictypes.pyc',
+   'DATA'),
+  ('numpy\\core\\_dtype.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_dtype.pyc',
+   'DATA'),
+  ('numpy\\core\\_type_aliases.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_type_aliases.pyc',
+   'DATA'),
+  ('numpy\\core\\_string_helpers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_string_helpers.pyc',
+   'DATA'),
+  ('numpy\\core\\shape_base.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\shape_base.pyc',
+   'DATA'),
+  ('numpy\\core\\multiarray.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\multiarray.pyc',
+   'DATA'),
+  ('numpy\\ma\\mrecords.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\ma\\mrecords.pyc',
+   'DATA'),
+  ('numpy\\core\\records.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\records.pyc',
+   'DATA'),
+  ('numpy\\core\\umath.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\umath.pyc',
+   'DATA'),
+  ('numpy\\core\\overrides.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\overrides.pyc',
+   'DATA'),
+  ('numpy\\_utils\\_inspect.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_utils\\_inspect.pyc',
+   'DATA'),
+  ('numpy\\testing\\_private\\extbuild.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\testing\\_private\\extbuild.pyc',
+   'DATA'),
+  ('numpy\\testing\\_private\\utils.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\testing\\_private\\utils.pyc',
+   'DATA'),
+  ('doctest.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\doctest.pyc',
+   'DATA'),
+  ('pdb.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pdb.pyc',
+   'DATA'),
+  ('pydoc.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pydoc.pyc',
+   'DATA'),
+  ('webbrowser.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\webbrowser.pyc',
+   'DATA'),
+  ('http\\server.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\http\\server.pyc',
+   'DATA'),
+  ('socketserver.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\socketserver.pyc',
+   'DATA'),
+  ('html\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\html\\__init__.pyc',
+   'DATA'),
+  ('html\\entities.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\html\\entities.pyc',
+   'DATA'),
+  ('pydoc_data\\topics.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pydoc_data\\topics.pyc',
+   'DATA'),
+  ('pydoc_data\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\pydoc_data\\__init__.pyc',
+   'DATA'),
+  ('tty.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\tty.pyc',
+   'DATA'),
+  ('glob.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\glob.pyc',
+   'DATA'),
+  ('code.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\code.pyc',
+   'DATA'),
+  ('codeop.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\codeop.pyc',
+   'DATA'),
+  ('bdb.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\bdb.pyc',
+   'DATA'),
+  ('cmd.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\cmd.pyc',
+   'DATA'),
+  ('difflib.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\difflib.pyc',
+   'DATA'),
+  ('unittest\\case.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\case.pyc',
+   'DATA'),
+  ('unittest\\_log.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\_log.pyc',
+   'DATA'),
+  ('unittest\\util.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\util.pyc',
+   'DATA'),
+  ('unittest\\result.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\result.pyc',
+   'DATA'),
+  ('numpy\\testing\\_private\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\testing\\_private\\__init__.pyc',
+   'DATA'),
+  ('unittest\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\__init__.pyc',
+   'DATA'),
+  ('unittest\\async_case.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\async_case.pyc',
+   'DATA'),
+  ('asyncio\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\__init__.pyc',
+   'DATA'),
+  ('asyncio\\unix_events.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\unix_events.pyc',
+   'DATA'),
+  ('asyncio\\log.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\log.pyc',
+   'DATA'),
+  ('asyncio\\windows_events.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\windows_events.pyc',
+   'DATA'),
+  ('asyncio\\windows_utils.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\windows_utils.pyc',
+   'DATA'),
+  ('asyncio\\selector_events.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\selector_events.pyc',
+   'DATA'),
+  ('asyncio\\proactor_events.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\proactor_events.pyc',
+   'DATA'),
+  ('asyncio\\base_subprocess.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\base_subprocess.pyc',
+   'DATA'),
+  ('asyncio\\threads.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\threads.pyc',
+   'DATA'),
+  ('asyncio\\subprocess.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\subprocess.pyc',
+   'DATA'),
+  ('asyncio\\streams.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\streams.pyc',
+   'DATA'),
+  ('asyncio\\queues.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\queues.pyc',
+   'DATA'),
+  ('asyncio\\runners.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\runners.pyc',
+   'DATA'),
+  ('asyncio\\base_events.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\base_events.pyc',
+   'DATA'),
+  ('concurrent\\futures\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\concurrent\\futures\\__init__.pyc',
+   'DATA'),
+  ('concurrent\\futures\\thread.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\concurrent\\futures\\thread.pyc',
+   'DATA'),
+  ('concurrent\\futures\\process.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\concurrent\\futures\\process.pyc',
+   'DATA'),
+  ('concurrent\\futures\\_base.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\concurrent\\futures\\_base.pyc',
+   'DATA'),
+  ('concurrent\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\concurrent\\__init__.pyc',
+   'DATA'),
+  ('asyncio\\trsock.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\trsock.pyc',
+   'DATA'),
+  ('asyncio\\staggered.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\staggered.pyc',
+   'DATA'),
+  ('asyncio\\tasks.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\tasks.pyc',
+   'DATA'),
+  ('asyncio\\locks.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\locks.pyc',
+   'DATA'),
+  ('asyncio\\base_tasks.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\base_tasks.pyc',
+   'DATA'),
+  ('asyncio\\mixins.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\mixins.pyc',
+   'DATA'),
+  ('asyncio\\sslproto.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\sslproto.pyc',
+   'DATA'),
+  ('asyncio\\transports.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\transports.pyc',
+   'DATA'),
+  ('asyncio\\protocols.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\protocols.pyc',
+   'DATA'),
+  ('asyncio\\futures.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\futures.pyc',
+   'DATA'),
+  ('asyncio\\exceptions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\exceptions.pyc',
+   'DATA'),
+  ('asyncio\\events.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\events.pyc',
+   'DATA'),
+  ('asyncio\\coroutines.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\coroutines.pyc',
+   'DATA'),
+  ('asyncio\\base_futures.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\base_futures.pyc',
+   'DATA'),
+  ('asyncio\\format_helpers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\format_helpers.pyc',
+   'DATA'),
+  ('asyncio\\constants.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\asyncio\\constants.pyc',
+   'DATA'),
+  ('unittest\\signals.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\signals.pyc',
+   'DATA'),
+  ('unittest\\main.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\main.pyc',
+   'DATA'),
+  ('unittest\\runner.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\runner.pyc',
+   'DATA'),
+  ('unittest\\loader.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\loader.pyc',
+   'DATA'),
+  ('unittest\\suite.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\unittest\\suite.pyc',
+   'DATA'),
+  ('numpy\\matrixlib\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\matrixlib\\__init__.pyc',
+   'DATA'),
+  ('numpy\\matrixlib\\defmatrix.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\matrixlib\\defmatrix.pyc',
+   'DATA'),
+  ('numpy\\ma\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\ma\\__init__.pyc',
+   'DATA'),
+  ('numpy\\ma\\extras.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\ma\\extras.pyc',
+   'DATA'),
+  ('numpy\\lib\\index_tricks.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\index_tricks.pyc',
+   'DATA'),
+  ('numpy\\lib\\function_base.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\function_base.pyc',
+   'DATA'),
+  ('numpy\\lib\\histograms.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\histograms.pyc',
+   'DATA'),
+  ('numpy\\lib\\twodim_base.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\twodim_base.pyc',
+   'DATA'),
+  ('numpy\\core\\function_base.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\function_base.pyc',
+   'DATA'),
+  ('numpy\\ma\\core.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\ma\\core.pyc',
+   'DATA'),
+  ('numpy\\ctypeslib.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\ctypeslib.pyc',
+   'DATA'),
+  ('numpy\\core\\_internal.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_internal.pyc',
+   'DATA'),
+  ('numpy\\random\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\random\\__init__.pyc',
+   'DATA'),
+  ('numpy\\random\\_pickle.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\random\\_pickle.pyc',
+   'DATA'),
+  ('numpy\\polynomial\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\polynomial\\__init__.pyc',
+   'DATA'),
+  ('numpy\\polynomial\\_polybase.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\polynomial\\_polybase.pyc',
+   'DATA'),
+  ('numpy\\polynomial\\laguerre.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\polynomial\\laguerre.pyc',
+   'DATA'),
+  ('numpy\\polynomial\\hermite_e.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\polynomial\\hermite_e.pyc',
+   'DATA'),
+  ('numpy\\polynomial\\hermite.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\polynomial\\hermite.pyc',
+   'DATA'),
+  ('numpy\\polynomial\\legendre.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\polynomial\\legendre.pyc',
+   'DATA'),
+  ('numpy\\polynomial\\chebyshev.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\polynomial\\chebyshev.pyc',
+   'DATA'),
+  ('numpy\\polynomial\\polynomial.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\polynomial\\polynomial.pyc',
+   'DATA'),
+  ('numpy\\polynomial\\polyutils.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\polynomial\\polyutils.pyc',
+   'DATA'),
+  ('numpy\\fft\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\fft\\__init__.pyc',
+   'DATA'),
+  ('numpy\\fft\\helper.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\fft\\helper.pyc',
+   'DATA'),
+  ('numpy\\fft\\_pocketfft.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\fft\\_pocketfft.pyc',
+   'DATA'),
+  ('numpy\\linalg\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\linalg\\__init__.pyc',
+   'DATA'),
+  ('numpy\\linalg\\linalg.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\linalg\\linalg.pyc',
+   'DATA'),
+  ('numpy\\_typing\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_typing\\__init__.pyc',
+   'DATA'),
+  ('numpy\\_typing\\_array_like.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_typing\\_array_like.pyc',
+   'DATA'),
+  ('numpy\\_typing\\_dtype_like.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_typing\\_dtype_like.pyc',
+   'DATA'),
+  ('numpy\\_typing\\_shape.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_typing\\_shape.pyc',
+   'DATA'),
+  ('numpy\\_typing\\_scalars.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_typing\\_scalars.pyc',
+   'DATA'),
+  ('numpy\\_typing\\_char_codes.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_typing\\_char_codes.pyc',
+   'DATA'),
+  ('numpy\\_typing\\_nbit.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_typing\\_nbit.pyc',
+   'DATA'),
+  ('numpy\\_typing\\_nested_sequence.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_typing\\_nested_sequence.pyc',
+   'DATA'),
+  ('numpy\\lib\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\__init__.pyc',
+   'DATA'),
+  ('numpy\\lib\\_version.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\_version.pyc',
+   'DATA'),
+  ('numpy\\lib\\arraypad.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\arraypad.pyc',
+   'DATA'),
+  ('numpy\\lib\\arrayterator.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\arrayterator.pyc',
+   'DATA'),
+  ('numpy\\lib\\npyio.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\npyio.pyc',
+   'DATA'),
+  ('numpy\\lib\\_datasource.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\_datasource.pyc',
+   'DATA'),
+  ('numpy\\lib\\format.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\format.pyc',
+   'DATA'),
+  ('numpy\\lib\\arraysetops.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\arraysetops.pyc',
+   'DATA'),
+  ('numpy\\lib\\utils.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\utils.pyc',
+   'DATA'),
+  ('numpy\\lib\\polynomial.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\polynomial.pyc',
+   'DATA'),
+  ('numpy\\lib\\ufunclike.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\ufunclike.pyc',
+   'DATA'),
+  ('numpy\\lib\\shape_base.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\shape_base.pyc',
+   'DATA'),
+  ('numpy\\lib\\nanfunctions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\nanfunctions.pyc',
+   'DATA'),
+  ('numpy\\lib\\type_check.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\type_check.pyc',
+   'DATA'),
+  ('numpy\\core\\getlimits.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\getlimits.pyc',
+   'DATA'),
+  ('numpy\\core\\_machar.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_machar.pyc',
+   'DATA'),
+  ('numpy\\lib\\scimath.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\scimath.pyc',
+   'DATA'),
+  ('numpy\\lib\\mixins.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\lib\\mixins.pyc',
+   'DATA'),
+  ('numpy\\dtypes.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\dtypes.pyc',
+   'DATA'),
+  ('numpy\\compat\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\compat\\__init__.pyc',
+   'DATA'),
+  ('numpy\\compat\\py3k.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\compat\\py3k.pyc',
+   'DATA'),
+  ('numpy\\core\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\__init__.pyc',
+   'DATA'),
+  ('numpy\\core\\_add_newdocs_scalars.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_add_newdocs_scalars.pyc',
+   'DATA'),
+  ('numpy\\core\\_add_newdocs.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\_add_newdocs.pyc',
+   'DATA'),
+  ('numpy\\core\\einsumfunc.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\einsumfunc.pyc',
+   'DATA'),
+  ('numpy\\core\\memmap.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\memmap.pyc',
+   'DATA'),
+  ('numpy\\core\\defchararray.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\core\\defchararray.pyc',
+   'DATA'),
+  ('numpy\\__config__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\__config__.pyc',
+   'DATA'),
+  ('numpy\\array_api\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\__init__.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_utility_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_utility_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_array_object.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_array_object.pyc',
+   'DATA'),
+  ('numpy\\typing\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\typing\\__init__.pyc',
+   'DATA'),
+  ('numpy\\_typing\\_add_docstring.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_typing\\_add_docstring.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_typing.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_typing.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_statistical_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_statistical_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_sorting_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_sorting_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_set_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_set_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_searching_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_searching_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_manipulation_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_manipulation_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\linalg.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\linalg.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_indexing_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_indexing_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_elementwise_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_elementwise_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_dtypes.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_dtypes.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_data_type_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_data_type_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_creation_functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_creation_functions.pyc',
+   'DATA'),
+  ('numpy\\array_api\\_constants.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\array_api\\_constants.pyc',
+   'DATA'),
+  ('numpy\\_distributor_init.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_distributor_init.pyc',
+   'DATA'),
+  ('numpy\\exceptions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\exceptions.pyc',
+   'DATA'),
+  ('numpy\\_globals.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\numpy\\_globals.pyc',
+   'DATA'),
+  ('PIL\\ImagePalette.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImagePalette.pyc',
+   'DATA'),
+  ('PIL\\PaletteFile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PaletteFile.pyc',
+   'DATA'),
+  ('PIL\\GimpPaletteFile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\GimpPaletteFile.pyc',
+   'DATA'),
+  ('PIL\\GimpGradientFile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\GimpGradientFile.pyc',
+   'DATA'),
+  ('PIL\\PngImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PngImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\ImageChops.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageChops.pyc',
+   'DATA'),
+  ('PIL\\PpmImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\PpmImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\JpegImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\JpegImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\JpegPresets.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\JpegPresets.pyc',
+   'DATA'),
+  ('PIL\\GifImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\GifImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\BmpImagePlugin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\BmpImagePlugin.pyc',
+   'DATA'),
+  ('PIL\\_util.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\_util.pyc',
+   'DATA'),
+  ('PIL\\_binary.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\_binary.pyc',
+   'DATA'),
+  ('PIL\\TiffTags.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\TiffTags.pyc',
+   'DATA'),
+  ('PIL\\ImageMode.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ImageMode.pyc',
+   'DATA'),
+  ('PIL\\ExifTags.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\ExifTags.pyc',
+   'DATA'),
+  ('PIL\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\__init__.pyc',
+   'DATA'),
+  ('PIL\\_version.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\PIL\\_version.pyc',
+   'DATA'),
+  ('openpyxl\\xml\\functions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\xml\\functions.pyc',
+   'DATA'),
+  ('et_xmlfile\\xmlfile.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\et_xmlfile\\xmlfile.pyc',
+   'DATA'),
+  ('et_xmlfile\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\et_xmlfile\\__init__.pyc',
+   'DATA'),
+  ('xml\\etree\\ElementTree.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\etree\\ElementTree.pyc',
+   'DATA'),
+  ('xml\\etree\\cElementTree.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\etree\\cElementTree.pyc',
+   'DATA'),
+  ('xml\\etree\\ElementInclude.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\etree\\ElementInclude.pyc',
+   'DATA'),
+  ('xml\\etree\\ElementPath.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\etree\\ElementPath.pyc',
+   'DATA'),
+  ('xml\\etree\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\xml\\etree\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\spreadsheet_drawing.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\spreadsheet_drawing.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\relation.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\relation.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\picture.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\picture.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\properties.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\properties.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\graphic.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\graphic.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\connector.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\connector.pyc',
+   'DATA'),
+  ('openpyxl\\drawing\\xdr.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\drawing\\xdr.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\table.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\table.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\related.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\related.pyc',
+   'DATA'),
+  ('openpyxl\\chartsheet\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chartsheet\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\chartsheet\\chartsheet.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chartsheet\\chartsheet.pyc',
+   'DATA'),
+  ('openpyxl\\chartsheet\\publish.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chartsheet\\publish.pyc',
+   'DATA'),
+  ('openpyxl\\chartsheet\\custom.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chartsheet\\custom.pyc',
+   'DATA'),
+  ('openpyxl\\chartsheet\\views.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chartsheet\\views.pyc',
+   'DATA'),
+  ('openpyxl\\chartsheet\\protection.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chartsheet\\protection.pyc',
+   'DATA'),
+  ('openpyxl\\chartsheet\\properties.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chartsheet\\properties.pyc',
+   'DATA'),
+  ('openpyxl\\chartsheet\\relation.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\chartsheet\\relation.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\drawing.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\drawing.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\_reader.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\_reader.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\_read_only.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\_read_only.pyc',
+   'DATA'),
+  ('openpyxl\\cell\\read_only.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\cell\\read_only.pyc',
+   'DATA'),
+  ('openpyxl\\packaging\\relationship.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\packaging\\relationship.pyc',
+   'DATA'),
+  ('openpyxl\\packaging\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\packaging\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\packaging\\manifest.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\packaging\\manifest.pyc',
+   'DATA'),
+  ('openpyxl\\packaging\\custom.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\packaging\\custom.pyc',
+   'DATA'),
+  ('openpyxl\\packaging\\core.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\packaging\\core.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\stylesheet.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\stylesheet.pyc',
+   'DATA'),
+  ('openpyxl\\styles\\table.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\styles\\table.pyc',
+   'DATA'),
+  ('openpyxl\\reader\\workbook.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\reader\\workbook.pyc',
+   'DATA'),
+  ('openpyxl\\pivot\\record.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\pivot\\record.pyc',
+   'DATA'),
+  ('openpyxl\\pivot\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\pivot\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\pivot\\fields.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\pivot\\fields.pyc',
+   'DATA'),
+  ('openpyxl\\pivot\\cache.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\pivot\\cache.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\external_link\\external.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\external_link\\external.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\external_link\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\external_link\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\packaging\\workbook.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\packaging\\workbook.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\web.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\web.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\views.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\views.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\smart_tags.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\smart_tags.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\protection.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\protection.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\properties.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\properties.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\function_group.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\function_group.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\external_reference.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\external_reference.pyc',
+   'DATA'),
+  ('openpyxl\\reader\\strings.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\reader\\strings.pyc',
+   'DATA'),
+  ('openpyxl\\comments\\comment_sheet.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\comments\\comment_sheet.pyc',
+   'DATA'),
+  ('openpyxl\\comments\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\comments\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\comments\\shape_writer.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\comments\\shape_writer.pyc',
+   'DATA'),
+  ('openpyxl\\comments\\comments.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\comments\\comments.pyc',
+   'DATA'),
+  ('openpyxl\\comments\\author.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\comments\\author.pyc',
+   'DATA'),
+  ('openpyxl\\cell\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\cell\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\xml\\constants.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\xml\\constants.pyc',
+   'DATA'),
+  ('openpyxl\\utils\\exceptions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\utils\\exceptions.pyc',
+   'DATA'),
+  ('openpyxl\\pivot\\table.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\pivot\\table.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\workbook.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\workbook.pyc',
+   'DATA'),
+  ('openpyxl\\writer\\excel.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\writer\\excel.pyc',
+   'DATA'),
+  ('openpyxl\\writer\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\writer\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\writer\\theme.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\writer\\theme.pyc',
+   'DATA'),
+  ('openpyxl\\workbook\\_writer.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\workbook\\_writer.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\_writer.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\_writer.pyc',
+   'DATA'),
+  ('openpyxl\\cell\\_writer.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\cell\\_writer.pyc',
+   'DATA'),
+  ('openpyxl\\packaging\\extended.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\packaging\\extended.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\copier.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\copier.pyc',
+   'DATA'),
+  ('openpyxl\\worksheet\\_write_only.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\worksheet\\_write_only.pyc',
+   'DATA'),
+  ('openpyxl\\xml\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\xml\\__init__.pyc',
+   'DATA'),
+  ('openpyxl\\compat\\numbers.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\openpyxl\\compat\\numbers.pyc',
+   'DATA'),
+  ('Back\\adicionales.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Back\\adicionales.pyc',
+   'DATA'),
+  ('Front\\generar_pdfs.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\generar_pdfs.pyc',
+   'DATA'),
+  ('fpdf\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fpdf\\__init__.pyc',
+   'DATA'),
+  ('fpdf\\template.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fpdf\\template.pyc',
+   'DATA'),
+  ('fpdf\\py3k.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fpdf\\py3k.pyc',
+   'DATA'),
+  ('html\\parser.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\html\\parser.pyc',
+   'DATA'),
+  ('_markupbase.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\_markupbase.pyc',
+   'DATA'),
+  ('fpdf\\html.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fpdf\\html.pyc',
+   'DATA'),
+  ('fpdf\\fpdf.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fpdf\\fpdf.pyc',
+   'DATA'),
+  ('fpdf\\php.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fpdf\\php.pyc',
+   'DATA'),
+  ('fpdf\\fonts.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fpdf\\fonts.pyc',
+   'DATA'),
+  ('fpdf\\ttfonts.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\fpdf\\ttfonts.pyc',
+   'DATA'),
+  ('dateutil\\relativedelta.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\dateutil\\relativedelta.pyc',
+   'DATA'),
+  ('dateutil\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\dateutil\\__init__.pyc',
+   'DATA'),
+  ('dateutil\\_version.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\dateutil\\_version.pyc',
+   'DATA'),
+  ('dateutil\\_common.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\dateutil\\_common.pyc',
+   'DATA'),
+  ('six.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\six.pyc',
+   'DATA'),
+  ('Back\\usuarios.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Back\\usuarios.pyc',
+   'DATA'),
+  ('Back\\colillas.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Back\\colillas.pyc',
+   'DATA'),
+  ('Back\\polizas.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Back\\polizas.pyc',
+   'DATA'),
+  ('psycopg2\\extras.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\psycopg2\\extras.pyc',
+   'DATA'),
+  ('psycopg2\\sql.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\psycopg2\\sql.pyc',
+   'DATA'),
+  ('uuid.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\uuid.pyc',
+   'DATA'),
+  ('psycopg2\\_ipaddress.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\psycopg2\\_ipaddress.pyc',
+   'DATA'),
+  ('ipaddress.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\ipaddress.pyc',
+   'DATA'),
+  ('psycopg2\\_range.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\psycopg2\\_range.pyc',
+   'DATA'),
+  ('psycopg2\\_json.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\psycopg2\\_json.pyc',
+   'DATA'),
+  ('psycopg2\\extensions.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\psycopg2\\extensions.pyc',
+   'DATA'),
+  ('psycopg2\\__init__.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\psycopg2\\__init__.pyc',
+   'DATA'),
+  ('Back\\gastos.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Back\\gastos.pyc',
+   'DATA'),
+  ('Front\\trabajador\\trabajador.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\trabajador\\trabajador.pyc',
+   'DATA'),
+  ('Front\\trabajador\\VentanasTrabajador.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\trabajador\\VentanasTrabajador.pyc',
+   'DATA'),
+  ('Front\\administrador\\VentanasAdmin2.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\administrador\\VentanasAdmin2.pyc',
+   'DATA'),
+  ('Front\\administrador\\Administrador.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\administrador\\Administrador.pyc',
+   'DATA'),
+  ('Front\\administrador\\VentanasAdmin.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\administrador\\VentanasAdmin.pyc',
+   'DATA'),
+  ('Front\\login.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\Front\\login.pyc',
+   'DATA'),
+  ('BD\\Conexion.pyc',
+   'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
+   'funeraria\\build\\main\\localpycs\\BD\\Conexion.pyc',
    'DATA')],
  [],
  False,
  False,
- 1719693330,
- [('runw.exe',
+ 1720203439,
+ [('run_d.exe',
    'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto '
-   'funeraria\\venv\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
+   'funeraria\\venv\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run_d.exe',
    'EXECUTABLE')],
  'C:\\Program '
  'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\python310.dll')

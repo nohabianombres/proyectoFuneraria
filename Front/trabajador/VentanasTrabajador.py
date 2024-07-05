@@ -7,7 +7,7 @@ from PyQt5 import QtWidgets
 from datetime import datetime
 from Front.trabajador.trabajador import Ui_trabajadormainWindow
 from Front.emerComunes.retorno import Ui_Dialog
-from PyQt5.QtWidgets import QApplication, QListWidgetItem, QTableWidgetItem, QApplication, QMainWindow, QLineEdit, QPushButton, QWidget, QDialog,QTextEdit
+from PyQt5.QtWidgets import QApplication, QHeaderView,QListWidgetItem, QTableWidgetItem, QApplication, QMainWindow, QLineEdit, QPushButton, QWidget, QDialog,QTextEdit
 from Back.gastos import Gastos
 from Back.polizas import Polizas
 from Back.colillas import Colillas
@@ -120,6 +120,7 @@ class VentanasTrabajador ():
         self.ui.botAceAboFac.clicked.connect(self.funcion_abonar_factura_caja)
         self.ui.botConEliFac.clicked.connect(self.venta_consultar_factura)
         self.ui.botAceConFac.clicked.connect(self.funcion_consultar_factura_caja)
+        self.ui.botAceBusAbo.clicked.connect(self.funcion_consultar_abonos_facturas_caja)
 
         self.ui.botMosCar.clicked.connect(self.venta_consultar_cartera)
 
@@ -137,7 +138,6 @@ class VentanasTrabajador ():
         self.ui.botAceCreCol.clicked.connect(self.funcion_crear_colilla)
         self.ui.botAceUltSoc.clicked.connect(self.funcion_ultimo_socio)
         self.ui.botAceBusUltDoc.clicked.connect(self.funcion_ultimo_documento)
-
 
         informes = ['Ultimo saldo', 'Saldo', 'Colillas', 'Gastos', 'Facturas caja']
 
@@ -161,6 +161,9 @@ class VentanasTrabajador ():
         self.ui.botCanAboFac.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_6))
         self.ui.botCanCreFac.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_6))
         self.ui.botCanCreFac.clicked.connect(lambda: self.clear_list_edits(self.ui.stackedWidget_6))
+
+        self.ui.botCanBusAbo.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_6))
+        self.ui.botCanBusAbo.clicked.connect(lambda: self.clear_list_edits(self.ui.stackedWidget_6))
 
         self.ui.botCanConPolDoc.clicked.connect(lambda: self.cler_table_edits(self.ui.stackedWidget_2))
         self.ui.botCanConPolDoc.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_2))
@@ -296,7 +299,6 @@ class VentanasTrabajador ():
         self.ui.menu_admin1.setCurrentWidget(self.ui.gastos)
         self.reset_inactivity_timer()
 
-
     def ventana_facturas(self):
         self.ui.menu_admin1.setCurrentWidget(self.ui.facturas_caja)
         self.reset_inactivity_timer()
@@ -338,11 +340,17 @@ class VentanasTrabajador ():
                         self.ui.tabConPol.setItem(i, 1, QtWidgets.QTableWidgetItem(str(ret_con_pol_doc[0][4][i])))
                         self.ui.tabConPol.setItem(i, 2, QtWidgets.QTableWidgetItem(
                             ret_con_pol_doc[0][5][i].strftime("%Y-%m-%d")))
-                        self.ui.tabConPol.setItem(i, 3, QtWidgets.QTableWidgetItem(str(ret_con_pol_doc[0][6][i])))
-                        self.ui.tabConPol.setItem(i, 4, QtWidgets.QTableWidgetItem(
-                            ret_con_pol_doc[0][8][i].strftime("%Y-%m-%d")))
+                        if len(ret_con_pol_doc[0][6]) > i:
+                            self.ui.tabConPol.setItem(i, 3, QtWidgets.QTableWidgetItem(str(ret_con_pol_doc[0][6][i])))
+                        if len(ret_con_pol_doc[0][8]) > i:
+                            self.ui.tabConPol.setItem(i, 4, QtWidgets.QTableWidgetItem(
+                                ret_con_pol_doc[0][8][i].strftime("%Y-%m-%d")))
                         self.ui.tabConPol.setItem(i, 5, QtWidgets.QTableWidgetItem(str(ret_con_pol_doc[0][9][i])))
+
                         i = i + 1
+                    self.ui.tabConPol.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+                    self.ui.tabConPol.horizontalHeader().setStretchLastSection(True)
+
                 else:
                     print('no encontre')
 
@@ -362,21 +370,31 @@ class VentanasTrabajador ():
             self.ui.LDesPol.setText((ret_con_pol[1].strftime("%Y-%m-%d")))
             self.ui.LHasPol.setText((ret_con_pol[2].strftime("%Y-%m-%d")))
             self.ui.LNotConPol.setText(str(ret_con_pol[9]))
-            fila = 0
             self.ui.tabConPol.clearContents()
             self.ui.tabConPol.show()
             self.ui.tabConPol.setRowCount(len(ret_con_pol[3]))
+
+            fila = 0
             while fila < len(ret_con_pol[3]):
                 print('aca estoy')
+
                 self.ui.tabConPol.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(ret_con_pol[3][fila])))
                 self.ui.tabConPol.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(ret_con_pol[4][fila])))
+                print((ret_con_pol[5][fila]))
                 self.ui.tabConPol.setItem(fila, 2,
-                                          QtWidgets.QTableWidgetItem((ret_con_pol[5][fila]).strftime("%Y-%m-%d")))
-                self.ui.tabConPol.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(ret_con_pol[6][fila])))
-                self.ui.tabConPol.setItem(fila, 4,
-                                          QtWidgets.QTableWidgetItem((ret_con_pol[7][fila]).strftime("%Y-%m-%d")))
+                                          QtWidgets.QTableWidgetItem(ret_con_pol[5][fila].strftime("%Y-%m-%d")))
+                if len(ret_con_pol[6]) > fila:
+                    self.ui.tabConPol.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(ret_con_pol[6][fila])))
+                if len(ret_con_pol[7]) > fila:
+                    self.ui.tabConPol.setItem(fila, 4,
+                                              QtWidgets.QTableWidgetItem(ret_con_pol[7][fila].strftime("%Y-%m-%d")))
+
                 self.ui.tabConPol.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(ret_con_pol[8][fila])))
                 fila = fila + 1
+
+            self.ui.tabConPol.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+            self.ui.tabConPol.horizontalHeader().setStretchLastSection(True)
+
         self.reset_inactivity_timer()
 
     def ventana_agregar_persona(self):
@@ -734,12 +752,16 @@ class VentanasTrabajador ():
                 self.ui.tableWidget.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(self.fun_ult_pag_soc[6][0])))
                 self.ui.tableWidget.setItem(fila, 4,
                                             QtWidgets.QTableWidgetItem(self.fun_ult_pag_soc[2].strftime("%Y-%m-%d")))
-
                 self.ui.tableWidget.setItem(fila, 5,
                                             QtWidgets.QTableWidgetItem(self.fun_ult_pag_soc[3].strftime("%Y-%m-%d")))
                 self.ui.tableWidget.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(self.fun_ult_pag_soc[4])))
                 self.ui.tableWidget.setItem(fila, 7,
                                             QtWidgets.QTableWidgetItem(self.fun_ult_pag_soc[5].strftime("%Y-%m-%d")))
+
+                # Ajuste automático del ancho de las columnas
+                self.ui.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+                self.ui.tableWidget.horizontalHeader().setStretchLastSection(True)
+
             else:
                 print('No se encontró ninguna póliza')
 
@@ -781,6 +803,8 @@ class VentanasTrabajador ():
                     self.ui.tableWidget_2.setItem(fila, 7,
                                                   QtWidgets.QTableWidgetItem(elementos[5].strftime("%Y-%m-%d")))
                     fila = fila + 1
+                self.ui.tableWidget_2.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+                self.ui.tableWidget_2.horizontalHeader().setStretchLastSection(True)
             else:
                 print('no encontre')
         self.reset_inactivity_timer()
@@ -846,6 +870,7 @@ class VentanasTrabajador ():
         self.clear_line_edits(self.ui.stackedWidget_4)
         self.crear_ventana_retorno(ret_fun_gas_fun)
         self.reset_inactivity_timer()
+
 
     def venta_crear_factura(self):
         self.ui.stackedWidget_6.setCurrentWidget(self.ui.crear_caja)
@@ -913,6 +938,10 @@ class VentanasTrabajador ():
                 self.ui.tabMosCar.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(elementos[7])))
 
                 fila = fila + 1
+
+            self.ui.tabMosCar.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+            self.ui.tabMosCar.horizontalHeader().setStretchLastSection(True)
+
         else:
             print('no encontre')
 
@@ -960,10 +989,43 @@ class VentanasTrabajador ():
                     self.ui.tabConFac.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[-3])))
                     self.ui.tabConFac.setItem(fila, 4, QtWidgets.QTableWidgetItem((elementos[-2].strftime("%Y-%m-%d"))))
                     fila = fila + 1
+
+                self.ui.tabConFac.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+                self.ui.tabConFac.horizontalHeader().setStretchLastSection(True)
             else:
                 print('no encontre')
 
         self.reset_inactivity_timer()
+
+    def funcion_consultar_abonos_facturas_caja(self):
+        facturas = Adicionales()
+        ret_con_abo = facturas.consultar_abonos_facturas_documento(self.ui.LDocComAbo.text())
+        del facturas
+        if isinstance(ret_con_abo, str):
+            self.crear_ventana_retorno(ret_con_abo)
+        else:
+            print(ret_con_abo[0])
+
+            self.ui.tabConAbo.clearContents()
+            self.ui.tabConAbo.show()
+
+            fila = 0
+            self.ui.tabConAbo.setRowCount(len(ret_con_abo[0]))
+            for elementos in ret_con_abo:
+                self.ui.tabConAbo.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(elementos[0])))
+                self.ui.tabConAbo.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[1])))
+                self.ui.tabConAbo.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[2])))
+                self.ui.tabConAbo.setItem(fila, 3,
+                                          QtWidgets.QTableWidgetItem((elementos[3].strftime("%Y-%m-%d"))))
+                self.ui.tabConAbo.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[4])))
+
+                self.ui.tabConAbo.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[5])))
+                fila = fila + 1
+
+            self.ui.tabConAbo.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+            self.ui.tabConAbo.horizontalHeader().setStretchLastSection(True)
+
+            self.reset_inactivity_timer()
 
     def venta_ultimo_saldo(self):
         self.ui.menu_admin2.setCurrentWidget(self.ui.ultimo_saldo)
@@ -1016,6 +1078,10 @@ class VentanasTrabajador ():
                 self.ui.tabInfSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[6])))
                 self.ui.tabInfSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(elementos[7])))
                 fila = fila + 1
+
+            self.ui.tabInfSal.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+            self.ui.tabInfSal.horizontalHeader().setStretchLastSection(True)
+
         else:
             print('no encontre')
 
@@ -1040,8 +1106,11 @@ class VentanasTrabajador ():
                 self.ui.tabCol.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[3].strftime("%Y-%m-%d"))))
                 self.ui.tabCol.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[4])))
                 self.ui.tabCol.setItem(fila, 5, QtWidgets.QTableWidgetItem((elementos[5].strftime("%Y-%m-%d"))))
-                self.ui.tabCol.setItem(fila, 6, QtWidgets.QTableWidgetItem(elementos[6]))
                 fila += 1
+
+            self.ui.tabCol.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+            self.ui.tabCol.horizontalHeader().setStretchLastSection(True)
+
         else:
             print('no encontre')
 
@@ -1066,9 +1135,12 @@ class VentanasTrabajador ():
                 self.ui.tabFac.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[2])))
                 self.ui.tabFac.setItem(fila, 4, QtWidgets.QTableWidgetItem(str(elementos[3])))
                 self.ui.tabFac.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(elementos[4])))
-                self.ui.tabFac.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[5])))
 
                 fila = fila + 1
+
+            self.ui.tabFac.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+            self.ui.tabFac.horizontalHeader().setStretchLastSection(True)
+
         else:
             print('no encontre')
 
@@ -1094,6 +1166,10 @@ class VentanasTrabajador ():
                 self.ui.tabGas.setItem(fila, 4, QtWidgets.QTableWidgetItem((elementos[4].strftime("%Y-%m-%d"))))
 
                 fila = fila + 1
+
+            self.ui.tabGas.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+            self.ui.tabGas.horizontalHeader().setStretchLastSection(True)
+
         else:
             print('no encontre')
 
@@ -1124,6 +1200,8 @@ class VentanasTrabajador ():
                 self.ui.tabUltSal.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[5])))
                 self.ui.tabUltSal.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[6])))
                 self.ui.tabUltSal.setItem(fila, 7, QtWidgets.QTableWidgetItem(str(self.ret_fun_con_ult_sal[7])))
+                self.ui.tabUltSal.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+                self.ui.tabUltSal.horizontalHeader().setStretchLastSection(True)
             except psycopg2.Error as e:
                 print(e)
         else:
@@ -1148,4 +1226,11 @@ class VentanasTrabajador ():
             from Front.VentanaLogin import Login
             self.login = Login()
             self.login.login.show()
+
+    """if __name__ == '__main__':
+        app = QApplication(sys.argv)
+        jaja = VentanasAdmin()
+        jaja.show()
+        sys.exit(app.exec())"""
+
 

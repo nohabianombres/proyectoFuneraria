@@ -11,7 +11,7 @@ class Colillas ():
 
     def crear_colilla_socio(self, socio, numero_meses, usuario_encargado):
         if socio.isdigit() and numero_meses.isdigit():
-
+            print('esta raro')
             self.hora_actual = datetime.now().strftime('%H:%M:%S')
             self.fecha_actual = datetime.now().date()
 
@@ -20,7 +20,7 @@ class Colillas ():
                     cursor.execute("SELECT * FROM polizas WHERE socio=" + str(socio))
                     poliza = cursor.fetchone()
                     if poliza:
-                        hasta_fecha = poliza [-5] + relativedelta(months=int(numero_meses))
+                        hasta_fecha = poliza [-6] + relativedelta(months=int(numero_meses))
                         print(hasta_fecha)
                         hasta_fecha_str = hasta_fecha.strftime("%Y-%m-%d")
                         print("Fecha en formato de cadena:", hasta_fecha_str)
@@ -37,7 +37,7 @@ class Colillas ():
                                 with conexion.cursor() as cursor:
                                     consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
                                     cursor.execute(consulta, (
-                                        poliza[-4], poliza[-5], hasta_fecha, self.fecha_actual, self.hora_actual,
+                                        poliza[-5], poliza[-6], hasta_fecha, self.fecha_actual, self.hora_actual,
                                         usuario_encargado,
                                         poliza[2], poliza[1], int(socio), False))
                                 conexion.commit()
@@ -50,7 +50,7 @@ class Colillas ():
                                         ultimo_dato_insertado = cursor.fetchone()
                                         print(ultimo_dato_insertado)
                                     try:
-                                        valor_total = int(poliza[-4]) * int(numero_meses)
+                                        valor_total = int(poliza[-5]) * int(numero_meses)
                                         with conexion.cursor() as cursor:
                                             consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, gasto) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
                                             cursor.execute(consulta, (
@@ -66,14 +66,18 @@ class Colillas ():
                                             with conexion.cursor() as cursor:
                                                 consulta = "UPDATE polizas SET fecha_desde = %s, fecha_hasta = %s, usuario_ultimo_pago = %s, fecha_ultimo_pago = %s WHERE socio = %s"
                                                 cursor.execute(consulta,
-                                                               (poliza[-5], hasta_fecha, usuario_encargado,
+                                                               (poliza[-6], hasta_fecha, usuario_encargado,
                                                                 self.fecha_actual, socio))
                                             conexion.commit()
-                                            pdf_colilla(self.fecha_actual, socio, valor_total, poliza[-5], hasta_fecha,
+
+
+                                            pdf_colilla(self.fecha_actual, socio, valor_total, poliza[-6], hasta_fecha,
                                                         usuario_encargado, poliza[1][0], poliza[2][0])
+
                                             print("Todos los datos de la colilla se han cambiado correctamente")
                                             return "Todos los datos de la colilla se han cambiado correctamente"
                                         except psycopg2.Error as e:
+
                                             return "Ocurrió un error al editar: " + str(e)
                                     except psycopg2.Error as e:
                                         return ("Ocurrió un error al crear el ultimo saldo:" + str(e))

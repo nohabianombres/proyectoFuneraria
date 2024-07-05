@@ -116,7 +116,7 @@ class Polizas ():
                                     try:
                                         with conexion.cursor() as cursor:
                                             consulta = "INSERT INTO polizas(socio, nombres, documentos, fechas_nacimiento, parentesco_titular, fecha_afiliacion, mayor_70, estado, valor_mes, usuario_creacion, usuario_ultimo_pago, fecha_ultimo_pago, fecha_desde, fecha_hasta, nota_poliza) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                            cursor.execute(consulta, (int(socio), nombres_str, documentos_int, fechas_nacimiento_int, parentesco_titular_str, fechas_afiliacion, mayor_70, True, int(valor_total), usuario_encargado, usuario_encargado, fecha_afiliacion,fecha_afiliacion, hasta_fecha, nota ))
+                                            cursor.execute(consulta, (int(socio), nombres_str, documentos_int, fechas_nacimiento_int, parentesco_titular_str, fechas_afiliacion, mayor_70, True, int(valor_mes), usuario_encargado, usuario_encargado, fecha_afiliacion,fecha_afiliacion, hasta_fecha, nota ))
                                         conexion.commit()
                                         print("Poliza ingresada")
                                         try:

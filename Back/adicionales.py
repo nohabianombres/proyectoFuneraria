@@ -161,6 +161,23 @@ class Adicionales ():
         else:
             return "No es un número de documento correcto"
 
+    def consultar_abonos_facturas_documento (self, documento):
+        if documento.isdigit() :
+            try:
+                with conexion.cursor() as cursor:
+                    cursor.execute("SELECT id_factura, nombre_comprador, documento_comprador, fecha, valor_abonado, nombre_vendedor FROM facturas_adicionales WHERE documento_comprador=%s" , (str(documento),))
+                    datos_facturas = cursor.fetchall()
+                    if datos_facturas:
+                        print(datos_facturas)
+                        return datos_facturas
+                    else:
+                        print('No existe ninguna factura')
+                        return 'No se encontro ninguna factura'
+            except psycopg2.Error as e:
+                return "Ocurrio un error al consultar: " + str(e)
+        else:
+            return "No es un número de documento correcto"
+
     def abonar_factura_caja (self, id_adicional, valor_abonado, usuario_encargado):
         if id_adicional.isdigit() and valor_abonado.isdigit():
             fecha_actual = datetime.now().date()
@@ -170,7 +187,7 @@ class Adicionales ():
                     cursor.execute("SELECT * FROM adicionales WHERE id_adicional=" + str(id_adicional))
                     factura_caja = cursor.fetchone()
                     print(factura_caja)
-                    valor_saldo = factura_caja [-1]
+                    valor_saldo = factura_caja [-2]
                     print(valor_saldo)
                     if int(valor_saldo) >= int(valor_abonado):
                         print('entre al if')
