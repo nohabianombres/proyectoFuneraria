@@ -2,7 +2,7 @@ import win32api
 import win32print
 from fpdf import FPDF
 import os, sys
-
+import time
 
 
 #def print_file(file):
@@ -18,7 +18,7 @@ def resolver_ruta(ruta_relativa):
 def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, recibio, nombre_titular, cedula_titular):
 
     def generar_pdf_con_imagen_sello(incluir_sello):
-        pdf = FPDF(orientation='P', unit='mm', format=(80, 140))
+        pdf = FPDF(orientation='P', unit='mm', format=(75, 140))
         pdf.add_page()
 
         # Configurar fuente y tamaño
@@ -27,11 +27,11 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
         centro_x = pdf.w
         print(centro_x)
         print('ejemplo')
-        pdf.image(resolver_ruta('ico2.png'), x=22, y=2, w=35)
+        pdf.image(('Front/ico2.png'), x=22, y=2, w=35)
 
         if incluir_sello:
             # Añadir la imagen sellomarca
-            pdf.image(resolver_ruta('sellomarca.jpg'), x=13, y=45, w=55)
+            pdf.image(('Front/sellomarca.jpg'), x=13, y=45, w=55)
 
         # Agregar contenido al PDF
         pdf.set_y(25)
@@ -55,10 +55,14 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
         pdf.cell(60, 5, txt="", ln=True, align='C')  # Espacio en blanco
         pdf.cell(60, 5, txt="FIRMA: _______________________________", ln=True, align='C')
 
-        # Guardar el PDF en un archivo
+        project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+        # Construir rutas relativas a partir de la raíz del proyecto
         nombre_pdf = str(socio) + ('.pdf' if incluir_sello else '.pdf')
-        colillas_path = r"C:\Users\Jose\OneDrive - UCO\Desktop\proyecto funeraria\colillas"
+        colillas_path = os.path.join(project_root, 'colillas')
         pdf_path2 = os.path.join(colillas_path, nombre_pdf)
+
+        # Output
         pdf.output(pdf_path2)
 
         return pdf_path2
@@ -69,11 +73,12 @@ def pdf_colilla(fecha_actual, socio, valor_total, fecha_desde, fecha_hasta, reci
     # Imprimir el PDF guardado sin la imagen sellomarca
     print_file(pdf_path_sin_sello)
 
+    #time.sleep(5)
     # Generar y guardar el PDF con la imagen sellomarca
-    pdf_path_con_sello = generar_pdf_con_imagen_sello(incluir_sello=True)
+    #pdf_path_con_sello = generar_pdf_con_imagen_sello(incluir_sello=True)
 
     # Imprimir el PDF guardado con la imagen sellomarca si es necesario
-    print_file(pdf_path_con_sello)
+    #print_file(pdf_path_con_sello)
 
 
 def print_file(filepath):
@@ -81,7 +86,7 @@ def print_file(filepath):
 
 def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador, documento_comprador, descripcion, valor_restante, valor_abonado, valor_total):
 
-    pdf = FPDF(orientation='P', unit='mm', format=(80, 200))
+    pdf = FPDF(orientation='P', unit='mm', format=(75, 200))
     pdf.add_page()
 
     # Configurar fuente y tamaño
@@ -89,7 +94,7 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador, 
     pdf.set_auto_page_break(auto=True, margin=0)
     descripciones = ", ".join(map(str, descripcion))
     # Agregar contenido al PDF
-    pdf.image(resolver_ruta('ico2.png'), x=22, y=2, w=35)
+    pdf.image(('Front/ico2.png'), x=22, y=2, w=35)
     pdf.set_y(25)
     pdf.cell(60, 5, txt="NIT: 39.191.604", ln=True, align='C')
     pdf.cell(60, 5, txt="LA UNIÓN: 310 471 8651 - 314 677 4935", ln=True, align='C')
@@ -115,10 +120,13 @@ def pdf_factura_caja(ciudad, fecha_actual, usuario_encargado, nombre_comprador, 
     pdf.cell(60, 5, txt="", ln=True, align='C')  # Espacio en blanco
     pdf.cell(60, 5, txt="FIRMA: _______________________________", ln=True, align='C')
 
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
     # Guardar el PDF en un archivo
     nombre_pdf = 'caja ' + nombre_comprador + '.pdf'
-    adicioanles_path = r"C:\Users\Jose\OneDrive - UCO\Desktop\proyecto funeraria\facturas caja"
+    adicioanles_path = os.path.join(project_root, 'facturas caja')
     pdf_path = os.path.join(adicioanles_path, nombre_pdf)
     pdf.output(pdf_path)
 
     print_file(pdf_path)
+

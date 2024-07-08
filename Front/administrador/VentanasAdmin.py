@@ -51,8 +51,6 @@ class VentanasAdmin ():
         self.ui = Ui_MainWindow ()
         self.ui.setupUi(self.ventanaAdmin)
 
-        self.ui.botEliUltPag.setVisible(False)
-
 
         self.session_closed = False
         self.inactivity_timer = QTimer()
@@ -117,7 +115,6 @@ class VentanasAdmin ():
         self.ui.botUltPagSoc.clicked.connect(self.ventana_ultimo_pago_socio)
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
         self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
-        self.ui.botEliUltPag.clicked.connect(self.ventana_eliminar_ultimo_pago)
 
 
         self.ui.botRevGas.clicked.connect(self.venta_revisar_gastos)
@@ -151,7 +148,6 @@ class VentanasAdmin ():
         self.ui.botAceGasJef1.clicked.connect(self.funcion_gasto_jefe1)
         self.ui.botAceGasJef2.clicked.connect(self.funcion_gasto_jefe2)
 
-        self.ui.botAceEliPag.clicked.connect(self.funcion_eliminar_ultimo_pago)
         self.ui.botAceCreCol.clicked.connect(self.funcion_crear_colilla)
         self.ui.botAceUltSoc.clicked.connect(self.funcion_ultimo_socio)
         self.ui.botAceBusUltDoc.clicked.connect(self.funcion_ultimo_documento)
@@ -907,23 +903,6 @@ class VentanasAdmin ():
         self.clear_line_edits(self.ui.stackedWidget_3)
         self.crear_ventana_retorno(self.fun_cre_col)
         self.reset_inactivity_timer()
-
-
-
-    def ventana_eliminar_ultimo_pago(self):
-        self.ui.stackedWidget_3.setCurrentWidget(self.ui.eliminar_pago)
-        self.reset_inactivity_timer()
-
-    def funcion_eliminar_ultimo_pago (self):
-        colilla = Colillas()
-        self.fun_eli_pag = colilla.eliminar_ultimo_pago(self.ui.LSocEliPag.text())
-        del colilla
-        self.clear_line_edits(self.ui.stackedWidget_3)
-        self.crear_ventana_retorno(self.fun_eli_pag)
-        self.reset_inactivity_timer()
-
-
-
 
 
     def venta_gasto_jefe1 (self):

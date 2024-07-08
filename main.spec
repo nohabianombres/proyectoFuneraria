@@ -1,6 +1,5 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-
 a = Analysis(
     ['main.py'],
     pathex=[],
@@ -28,7 +27,7 @@ exe = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=True,
+    console=False,  # Cambiado a False para no abrir la consola
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,

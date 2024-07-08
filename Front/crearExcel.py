@@ -1,6 +1,7 @@
 import openpyxl
 from openpyxl import Workbook
 from datetime import datetime
+import os
 
 def crear_excel_saldo (datos_antes_de_cambio):
         # Crear un archivo Excel y agregar los datos extraídos
@@ -27,11 +28,15 @@ def crear_excel_saldo (datos_antes_de_cambio):
 
         # Obtener la fecha actual y formatearla
         fecha_actual = datetime.now().strftime("%Y-%m-%d")
-        # Crear el nombre del archivo con la fecha
-        archivo_excel = f'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto funeraria\\Front\\formularios\\saldos_liquidados_{fecha_actual}.xlsx'
-        # Guardar el archivo Excel
+
+        nombre_excel = 'saldos_liquidados_'+fecha_actual+'.xlsx'
+        project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+        formularios_path = os.path.join(project_root, 'Front', 'formularios')
+        archivo_excel = os.path.join(formularios_path, nombre_excel)
         wb.save(archivo_excel)
-        print(f"Datos guardados en el archivo {archivo_excel}")
+
+
+
 
 def crear_excel_gastos(datos_antes_de_cambio):
     # Crear un archivo Excel y agregar los datos extraídos
@@ -58,11 +63,14 @@ def crear_excel_gastos(datos_antes_de_cambio):
 
     # Obtener la fecha actual y formatearla
     fecha_actual = datetime.now().strftime("%Y-%m-%d")
-    # Crear el nombre del archivo con la fecha
-    archivo_excel = f'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto funeraria\\Front\\formularios\\gastos_liquidados_{fecha_actual}.xlsx'
-    # Guardar el archivo Excel
+
+    nombre_excel = 'gastos_liquidados_'+fecha_actual+'.xlsx'
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    formularios_path = os.path.join(project_root, 'Front', 'formularios')
+    archivo_excel = os.path.join(formularios_path, nombre_excel)
     wb.save(archivo_excel)
     print(f"Datos de gastos guardados en el archivo {archivo_excel}")
+
 
 def crear_excel_colillas(datos_colillas):
     # Crear un archivo Excel y agregar los datos extraídos
@@ -89,11 +97,13 @@ def crear_excel_colillas(datos_colillas):
 
     # Obtener la fecha actual y formatearla
     fecha_actual = datetime.now().strftime("%Y-%m-%d")
-    # Crear el nombre del archivo con la fecha
-    archivo_excel = f'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto funeraria\\Front\\formularios\\colillas_liquidadas_{fecha_actual}.xlsx'
-    # Guardar el archivo Excel
+
+
+    nombre_excel = 'colillas_liquidadas_'+fecha_actual+'.xlsx'
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    formularios_path = os.path.join(project_root, 'Front', 'formularios')
+    archivo_excel = os.path.join(formularios_path, nombre_excel)
     wb.save(archivo_excel)
-    print(f"Datos de colillas guardados en el archivo {archivo_excel}")
 
 
 def crear_excel_adicionales(datos_facturas):
@@ -121,8 +131,9 @@ def crear_excel_adicionales(datos_facturas):
 
     # Obtener la fecha actual y formatearla
     fecha_actual = datetime.now().strftime("%Y-%m-%d")
-    # Crear el nombre del archivo con la fecha
-    archivo_excel = f'C:\\Users\\Jose\\OneDrive - UCO\\Desktop\\proyecto funeraria\\Front\\formularios\\facturas_adicionales_liquidadas_{fecha_actual}.xlsx'
-    # Guardar el archivo Excel
+
+    nombre_excel = 'facturas_adicionales_liquidadas_'+fecha_actual+'.xlsx'
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    formularios_path = os.path.join(project_root, 'Front', 'formularios')
+    archivo_excel = os.path.join(formularios_path, nombre_excel)
     wb.save(archivo_excel)
-    print(f"Datos de facturas adicionales guardados en el archivo {archivo_excel}")
