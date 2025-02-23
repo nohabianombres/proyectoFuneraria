@@ -2,98 +2,287 @@ from BD.Conexion import *
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from Front.generar_pdfs import pdf_colilla
+from datetime import datetime
+from datetime import datetime, timedelta
 
 
 basedatos = Database("postgres", "87b3d9baf", "localhost")
 conexion= basedatos.conectar()
 
 class Colillas ():
-
+    
     def crear_colilla_socio(self, socio, numero_meses, usuario_encargado):
-        if socio.isdigit() and numero_meses.isdigit():
-            print('esta raro')
-            self.hora_actual = datetime.now().strftime('%H:%M:%S')
-            self.fecha_actual = datetime.now().date()
+       if socio.isdigit() and numero_meses.isdigit():
+           print('esta raro')
+           self.hora_actual = datetime.now().strftime('%H:%M:%S')
+           self.fecha_actual = datetime.now().date()
 
+           try:
+               with conexion.cursor() as cursor:
+                   cursor.execute("SELECT * FROM polizas WHERE socio=" + str(socio))
+                   poliza = cursor.fetchone()
+                   if poliza:
+                       suba_anual = poliza[15]
+                       hasta_fecha = poliza [9] + relativedelta(months=int(numero_meses))
+                       print(hasta_fecha)
+                       hasta_fecha_str = hasta_fecha.strftime("%Y-%m-%d")
+                       print("Fecha en formato de cadena:", hasta_fecha_str)
+
+                       # Convertir la cadena a un objeto datetime
+                       hasta_fecha_dat = datetime.strptime(hasta_fecha_str, "%Y-%m-%d")
+                       print("Fecha como objeto datetime:", hasta_fecha_dat)
+                       print(hasta_fecha_dat)
+                       fecha_comparacion = datetime(2025, 1, 10)
+                       fecha_comparacion2 = datetime(2026, 1, 10)
+
+                       print(fecha_comparacion)
+                       
+                       
+                       if hasta_fecha_dat < fecha_comparacion2:
+                       
+                       
+                       
+                           if hasta_fecha_dat < fecha_comparacion:
+                               print("hasta_fecha es menor que 10/01/2025")
+                               try:
+                                   with conexion.cursor() as cursor:
+                                       consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                       cursor.execute(consulta, (
+                                           poliza[10], poliza[9], hasta_fecha, self.fecha_actual, self.hora_actual,
+                                           usuario_encargado,
+                                           poliza[2], poliza[1], int(socio), False))
+                                   conexion.commit()
+                                   print("Colilla creada")
+    
+                                   try:
+                                       with conexion.cursor() as cursor:
+                                           cursor.execute(
+                                               """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
+                                           ultimo_dato_insertado = cursor.fetchone()
+                                           print(ultimo_dato_insertado)
+                                       try:
+                                           valor_total = int(poliza[10]) * int(numero_meses)
+                                           with conexion.cursor() as cursor:
+                                               consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, gasto) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                               cursor.execute(consulta, (
+                                               socio, valor_total, self.fecha_actual, ultimo_dato_insertado[6],
+                                               ultimo_dato_insertado[7], ultimo_dato_insertado[8],
+                                               ultimo_dato_insertado[9] + ((valor_total) / 2),
+                                               ultimo_dato_insertado[10] + (valor_total / 2),
+                                               ultimo_dato_insertado[11] + valor_total, False, ''))
+                                           conexion.commit()
+                                           print("Saldo cambiado")
+    
+                                           try:
+                                               with conexion.cursor() as cursor:
+                                                   consulta = "UPDATE polizas SET fecha_desde = %s, fecha_hasta = %s, usuario_ultimo_pago = %s, fecha_ultimo_pago = %s WHERE socio = %s"
+                                                   cursor.execute(consulta,
+                                                                  (poliza[9], hasta_fecha, usuario_encargado,
+                                                                   self.fecha_actual, socio))
+                                               conexion.commit()
+    
+    
+                                               pdf_colilla(self.fecha_actual, socio, valor_total, poliza[9], hasta_fecha,
+                                                           usuario_encargado, poliza[1][0], poliza[2][0])
+    
+                                               print("Todos los datos de la colilla se han cambiado correctamente")
+                                               return "Todos los datos de la colilla se han cambiado correctamente"
+                                           except psycopg2.Error as e:
+    
+                                               return "Ocurrió un error al editar: " + str(e)
+                                       except psycopg2.Error as e:
+                                           return ("Ocurrió un error al crear el ultimo saldo:" + str(e))
+                                   except psycopg2.Error as e:
+                                       return ("Ocurrió un error al seleccionar el ultimo:" + str(e))
+                               except psycopg2.Error as e:
+                                   return ("Ocurrió un error al crear la colilla")
+                           else:
+                               print("Fecha hasta no es menor que 10/01/2025")
+                               if suba_anual == True:
+                                   try:
+                                       with conexion.cursor() as cursor:
+                                           consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                           cursor.execute(consulta, (
+                                               poliza[10], poliza[9], hasta_fecha, self.fecha_actual, self.hora_actual,
+                                               usuario_encargado,
+                                               poliza[2], poliza[1], int(socio), False))
+                                       conexion.commit()
+                                       print("Colilla creada")
+    
+                                       try:
+                                           with conexion.cursor() as cursor:
+                                               cursor.execute(
+                                                   """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
+                                               ultimo_dato_insertado = cursor.fetchone()
+                                               print(ultimo_dato_insertado)
+                                           try:
+                                               valor_total = int(poliza[10]) * int(numero_meses)
+                                               with conexion.cursor() as cursor:
+                                                   consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, gasto) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                                   cursor.execute(consulta, (
+                                                   socio, valor_total, self.fecha_actual, ultimo_dato_insertado[6],
+                                                   ultimo_dato_insertado[7], ultimo_dato_insertado[8],
+                                                   ultimo_dato_insertado[9] + ((valor_total) / 2),
+                                                   ultimo_dato_insertado[10] + (valor_total / 2),
+                                                   ultimo_dato_insertado[11] + valor_total, False, ''))
+                                               conexion.commit()
+                                               print("Saldo cambiado")
+    
+                                               try:
+                                                   with conexion.cursor() as cursor:
+                                                       consulta = "UPDATE polizas SET fecha_desde = %s, fecha_hasta = %s, usuario_ultimo_pago = %s, fecha_ultimo_pago = %s WHERE socio = %s"
+                                                       cursor.execute(consulta,
+                                                                      (poliza[9], hasta_fecha, usuario_encargado,
+                                                                       self.fecha_actual, socio))
+                                                   conexion.commit()
+    
+    
+                                                   pdf_colilla(self.fecha_actual, socio, valor_total, poliza[9], hasta_fecha,
+                                                               usuario_encargado, poliza[1][0], poliza[2][0])
+    
+                                                   print("Todos los datos de la colilla se han cambiado correctamente")
+                                                   return "Todos los datos de la colilla se han cambiado correctamente"
+                                               except psycopg2.Error as e:
+    
+                                                   return "Ocurrió un error al editar: " + str(e)
+                                           except psycopg2.Error as e:
+                                               return ("Ocurrió un error al crear el ultimo saldo:" + str(e))
+                                       except psycopg2.Error as e:
+                                           return ("Ocurrió un error al seleccionar el ultimo:" + str(e))
+                                   except psycopg2.Error as e:
+                                       return ("Ocurrió un error al crear la colilla")
+                               else:
+                                   
+                                   valor_mes_antiguo = int(poliza[10])
+                                   valor_mes_nuevo = int(poliza[10]) + (int(len(poliza[1]))*500)
+                                   numero_dia = hasta_fecha_dat.day
+                                   numero_mes = hasta_fecha_dat.month
+                                   numero_anio = hasta_fecha_dat.year
+    
+                                   # Fecha de referencia para el cambio de precio
+                                   fecha_cambio_precio = datetime(2024, 12, 10).date()  # Convertimos a date
+    
+                                   valor_total = 0
+    
+                                   # Recorremos cada mes para determinar el costo
+                                   for mes in range(int(numero_meses)):
+                                       # Calcula la fecha actual sumando meses (como datetime.date)
+                                       fecha_actual = poliza [9] + relativedelta(months=mes)
+    
+                                       if fecha_actual <= fecha_cambio_precio:
+                                           valor_total += valor_mes_antiguo
+                                       else:
+                                           valor_total += valor_mes_nuevo
+    
+                                   print(f"El valor total a pagar es: {valor_total}")
+                                   
+                                   try:
+                                       with conexion.cursor() as cursor:
+                                           consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                           cursor.execute(consulta, (
+                                               valor_mes_nuevo, poliza[9], hasta_fecha, self.fecha_actual, self.hora_actual,
+                                               usuario_encargado,
+                                               poliza[2], poliza[1], int(socio), False))
+                                       conexion.commit()
+                                       print("Colilla creada")
+    
+                                       try:
+                                           with conexion.cursor() as cursor:
+                                               cursor.execute(
+                                                   """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
+                                               ultimo_dato_insertado = cursor.fetchone()
+                                               print(ultimo_dato_insertado)
+                                           try:
+                                               with conexion.cursor() as cursor:
+                                                   consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, gasto) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+                                                   cursor.execute(consulta, (
+                                                   socio, valor_total, self.fecha_actual, ultimo_dato_insertado[6],
+                                                   ultimo_dato_insertado[7], ultimo_dato_insertado[8],
+                                                   ultimo_dato_insertado[9] + ((valor_total) / 2),
+                                                   ultimo_dato_insertado[10] + (valor_total / 2),
+                                                   ultimo_dato_insertado[11] + valor_total, False, ''))
+                                               conexion.commit()
+                                               print("Saldo cambiado")
+    
+                                               try:
+                                                   with conexion.cursor() as cursor:
+                                                       consulta = "UPDATE polizas SET fecha_desde = %s, fecha_hasta = %s, usuario_ultimo_pago = %s, fecha_ultimo_pago = %s, suba_anual = %s, valor_mes = %s WHERE socio = %s"
+                                                       cursor.execute(consulta,
+                                                                      (poliza[9], hasta_fecha, usuario_encargado,
+                                                                       self.fecha_actual, True,valor_mes_nuevo,socio))
+                                                   conexion.commit()
+    
+    
+                                                   pdf_colilla(self.fecha_actual, socio, valor_total, poliza[9], hasta_fecha,
+                                                               usuario_encargado, poliza[1][0], poliza[2][0])
+    
+                                                   print("Todos los datos de la colilla se han cambiado correctamente")
+                                                   return "Todos los datos de la colilla se han cambiado correctamente"
+                                               except psycopg2.Error as e:
+    
+                                                   return "Ocurrió un error al editar: " + str(e)
+                                           except psycopg2.Error as e:
+                                               return ("Ocurrió un error al crear el ultimo saldo:" + str(e))
+                                       except psycopg2.Error as e:
+                                           return ("Ocurrió un error al seleccionar el ultimo:" + str(e))
+                                   except psycopg2.Error as e:
+                                       return ("Ocurrió un error al crear la colilla")
+                       else:
+                           return ("Excede en la fecha limite 10/01/2026")      
+                               
+                   else:
+                       return ("El cliente no existe")
+           except psycopg2.Error as e:
+               return "Ocurrio un error al consultar: "+str(e)
+       else:
+           return "El socio y número de meses deben ser unicamente números"
+
+
+
+
+    def consultar_pagos_documento(self, documento):
+        print(documento)
+        if documento.isdigit():
             try:
                 with conexion.cursor() as cursor:
-                    cursor.execute("SELECT * FROM polizas WHERE socio=" + str(socio))
-                    poliza = cursor.fetchone()
-                    if poliza:
-                        hasta_fecha = poliza [-6] + relativedelta(months=int(numero_meses))
-                        print(hasta_fecha)
-                        hasta_fecha_str = hasta_fecha.strftime("%Y-%m-%d")
-                        print("Fecha en formato de cadena:", hasta_fecha_str)
-
-                        # Convertir la cadena a un objeto datetime
-                        hasta_fecha_dat = datetime.strptime(hasta_fecha_str, "%Y-%m-%d")
-                        print("Fecha como objeto datetime:", hasta_fecha_dat)
-                        print(hasta_fecha_dat)
-                        fecha_comparacion = datetime(2025, 1, 10)
-                        print(fecha_comparacion)
-                        if hasta_fecha_dat < fecha_comparacion:
-                            print("hasta_fecha es menor que 10/01/2025")
-                            try:
-                                with conexion.cursor() as cursor:
-                                    consulta = "INSERT INTO colillas(valor_mes, desde_fecha, hasta_fecha, fecha_pago, hora_pago, usuario, documentos, nombres, socio, liquidado) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                    cursor.execute(consulta, (
-                                        poliza[-5], poliza[-6], hasta_fecha, self.fecha_actual, self.hora_actual,
-                                        usuario_encargado,
-                                        poliza[2], poliza[1], int(socio), False))
-                                conexion.commit()
-                                print("Colilla creada")
-
-                                try:
-                                    with conexion.cursor() as cursor:
-                                        cursor.execute(
-                                            """SELECT * FROM saldo WHERE id_saldo = (SELECT MAX(id_saldo) FROM saldo)""")
-                                        ultimo_dato_insertado = cursor.fetchone()
-                                        print(ultimo_dato_insertado)
-                                    try:
-                                        valor_total = int(poliza[-5]) * int(numero_meses)
-                                        with conexion.cursor() as cursor:
-                                            consulta = "INSERT INTO saldo(socio, valor, fecha, gastos_jefe1, gastos_jefe2, gastos_funeraria, jefe1, jefe2, funeraria, liquidado, gasto) VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-                                            cursor.execute(consulta, (
-                                            socio, valor_total, self.fecha_actual, ultimo_dato_insertado[6],
-                                            ultimo_dato_insertado[7], ultimo_dato_insertado[8],
-                                            ultimo_dato_insertado[9] + ((valor_total) / 2),
-                                            ultimo_dato_insertado[10] + (valor_total / 2),
-                                            ultimo_dato_insertado[11] + valor_total, False, ''))
-                                        conexion.commit()
-                                        print("Saldo cambiado")
-
-                                        try:
-                                            with conexion.cursor() as cursor:
-                                                consulta = "UPDATE polizas SET fecha_desde = %s, fecha_hasta = %s, usuario_ultimo_pago = %s, fecha_ultimo_pago = %s WHERE socio = %s"
-                                                cursor.execute(consulta,
-                                                               (poliza[-6], hasta_fecha, usuario_encargado,
-                                                                self.fecha_actual, socio))
-                                            conexion.commit()
-
-
-                                            pdf_colilla(self.fecha_actual, socio, valor_total, poliza[-6], hasta_fecha,
-                                                        usuario_encargado, poliza[1][0], poliza[2][0])
-
-                                            print("Todos los datos de la colilla se han cambiado correctamente")
-                                            return "Todos los datos de la colilla se han cambiado correctamente"
-                                        except psycopg2.Error as e:
-
-                                            return "Ocurrió un error al editar: " + str(e)
-                                    except psycopg2.Error as e:
-                                        return ("Ocurrió un error al crear el ultimo saldo:" + str(e))
-                                except psycopg2.Error as e:
-                                    return ("Ocurrió un error al seleccionar el ultimo:" + str(e))
-                            except psycopg2.Error as e:
-                                return ("Ocurrió un error al crear la colilla")
+                    consulta = """
+                        SELECT socio, valor_mes, desde_fecha, hasta_fecha, usuario, fecha_pago, documentos, nombres
+                        FROM colillas
+                        WHERE %s = ANY (documentos)
+                        ORDER BY numero_colilla DESC
+                    """
+                    cursor.execute(consulta, (int(documento),))
+                    colillas = cursor.fetchall()
+                    if colillas:
+                        # Obtener todos los socios únicos en los resultados
+                        socios_encontrados = {colilla[0] for colilla in colillas}  # `colilla[0]` es el campo `socio`
+                        
+                        if len(socios_encontrados) == 1:
+                            # Si todos los registros pertenecen al mismo socio
+                            print(colillas)  # Imprime los registros encontrados
+                            return colillas
                         else:
-                            print("Fecha hasta no es menor que 10/01/2025")
-                            return "Fecha hasta no es menor que 10/01/2025"
+                            # Si hay más de un socio en los registros
+                            socios_texto = ', '.join(map(str, socios_encontrados))
+                            mensaje = f"Se encontraron las pólizas en estos socios: {socios_texto}"
+                            print(mensaje)
+                            return mensaje
                     else:
-                        return ("El cliente no existe")
+                        print("No se encontraron registros asociados al documento")
+                        return "No se encontraron registros asociados al documento"
             except psycopg2.Error as e:
-                return "Ocurrio un error al consultar: "+str(e)
+                print("Ocurrió un error al consultar: " + str(e))
+                return "Ocurrió un error al consultar: " + str(e)
         else:
-            return "El socio y número de meses deben ser unicamente números"
+            return "El documento debe ser un número"
+
+
+
+
+
+
+
+
 
     def consultar_colilla_documento(self, documento):
         print(documento)
@@ -162,6 +351,33 @@ class Colillas ():
                 return "Ocurrió un error al consultar: " + str(e)
         else:
             return "No es un número de socio correcto"
+        
+        
+        
+    def consultar_pagos_socio(self, socio):
+        if socio.isdigit():
+            try:
+                with conexion.cursor() as cursor:
+                    cursor.execute(
+                        """
+                        SELECT socio, valor_mes, desde_fecha, hasta_fecha, usuario, fecha_pago, documentos, nombres
+                        FROM colillas 
+                        WHERE socio = %s
+                        ORDER BY numero_colilla DESC
+                        """,
+                        (socio,))
+                    pagos = cursor.fetchall()
+                    if pagos:
+                        print(pagos)  # Imprime todos los registros encontrados
+                        return pagos
+                    else:
+                        print("No se encontraron pagos para el socio")
+                        return 'No se encontró ningún pago para el socio'
+            except psycopg2.Error as e:
+                return "Ocurrió un error al consultar: " + str(e)
+        else:
+            return "No es un número de socio correcto"
+
 
 
     def eliminar_ultimo_pago(self, socio):
@@ -240,7 +456,7 @@ class Colillas ():
                                                             print("Último pago eliminado exitosamente.")
 
 
-                                                            pdf_colilla(penultima_colilla[5],socio,int(valor_restar),penultima_colilla[2] ,penultima_colilla[3], penultima_colilla[4],str(penultima_colilla[6][0]), str(penultima_colilla[7][0]))
+                                                            pdf_colilla(penultima_colilla[5],socio,int(penultima_colilla[1]),penultima_colilla[2] ,penultima_colilla[3], penultima_colilla[4],str(penultima_colilla[6][0]), str(penultima_colilla[7][0]))
                                                             return ("Último pago eliminado exitosamente.")
                                                     except psycopg2.Error as e:
                                                         return "Ocurrió un error al eliminar el registro: " + str(e)

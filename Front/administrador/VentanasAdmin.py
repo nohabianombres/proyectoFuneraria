@@ -81,13 +81,12 @@ class VentanasAdmin ():
         self.ui.agrDocAnt.clicked.connect(self.agregar_lista_documentos_antigua)
         self.ui.agrNomAnt.clicked.connect(self.agregar_lista_nombres_antigua)
         self.ui.agrFecAnt.clicked.connect(self.agregar_lista_fechas_antigua)
-        self.ui.agrParAnt.clicked.connect(self.agregar_lista_parentescos_antigua)
+
 
         self.ui.botAceCreAntPol.clicked.connect(self.funcion_crear_poliza_antigua)
         self.ui.agrDoc.clicked.connect(self.agregar_lista_documentos)
         self.ui.agrNom.clicked.connect(self.agregar_lista_nombres)
         self.ui.agrFec.clicked.connect(self.agregar_lista_fechas)
-        self.ui.agrPar.clicked.connect(self.agregar_lista_parentescos)
         self.ui.botAceCrePol.clicked.connect(self.funcion_crear_poliza)
         self.ui.botAceAgrPer.clicked.connect(self.funcion_agregar_persona)
         self.ui.botAceModPol.clicked.connect(self.funcion_modificar_poliza)
@@ -96,25 +95,21 @@ class VentanasAdmin ():
         self.ui.botNomEdiCrePol.clicked.connect(self.editar_crear_nombre_poliza)
         self.ui.botDocEdiCrePol.clicked.connect(self.editar_crear_documento_poliza)
         self.ui.botFecEdiCrePol.clicked.connect(self.editar_crear_fnto_poliza)
-        self.ui.botParEdiCrePol.clicked.connect(self.editar_crear_parentesco_poliza)
 
         self.ui.botNomEdiCreAntPol.clicked.connect(self.editar_crear_nombre_poliza_antigua)
         self.ui.botDocEdiCreAntPol.clicked.connect(self.editar_crear_documento_poliza_antigua)
         self.ui.botFecEdiCreAntPol.clicked.connect(self.editar_crear_fnto_poliza_antigua)
-        self.ui.botParEdiCreAntPol.clicked.connect(self.editar_crear_parentesco_poliza_antigua)
 
 
         self.ui.botModPol.clicked.connect(self.funcion_guardar_modificar_poliza)
         self.ui.botEdiDatNom.clicked.connect(self.editar_dato_nombre_poliza)
         self.ui.botEdiDatDoc.clicked.connect(self.editar_dato_documento_poliza)
         self.ui.botEdiDatFec.clicked.connect(self.editar_dato_fnto_poliza)
-        self.ui.botEdiDatPar.clicked.connect(self.editar_dato_parentesco_poliza)
         self.ui.botAceConPolDoc.clicked.connect(self.funcion_consultar_poliza_documento)
 
-        self.ui.botCreCol.clicked.connect(self.ventana_ultimo_pago_documento)
-        self.ui.botUltPagSoc.clicked.connect(self.ventana_ultimo_pago_socio)
-        self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
-        self.ui.botUltPagDoc.clicked.connect(self.ventana_crear_colilla)
+        self.ui.botCreCol.clicked.connect(self.ventana_crear_colilla)
+        self.ui.botHisPagSoc.clicked.connect(self.ventana_historial_pagos_socio)
+        self.ui.botHisPagDoc.clicked.connect(self.ventana_historial_pagos_documento)
 
 
         self.ui.botRevGas.clicked.connect(self.venta_revisar_gastos)
@@ -127,7 +122,6 @@ class VentanasAdmin ():
 
         self.ui.botCreFac.clicked.connect(self.venta_crear_factura)
         self.ui.agrDes.clicked.connect(self.agregar_lista_descripciones)
-        self.ui.AgrCan.clicked.connect(self.agregar_lista_cantidades)
         self.ui.agrVal.clicked.connect(self.agregar_lista_valores)
         self.ui.botAceCreFac.clicked.connect(self.funcion_crear_factura_caja)
         self.ui.botAboFac.clicked.connect(self.venta_abonar_caja)
@@ -149,8 +143,8 @@ class VentanasAdmin ():
         self.ui.botAceGasJef2.clicked.connect(self.funcion_gasto_jefe2)
 
         self.ui.botAceCreCol.clicked.connect(self.funcion_crear_colilla)
-        self.ui.botAceUltSoc.clicked.connect(self.funcion_ultimo_socio)
-        self.ui.botAceBusUltDoc.clicked.connect(self.funcion_ultimo_documento)
+        self.ui.botAceHisSoc.clicked.connect(self.funcion_consultar_historial_colillas_socio)
+        self.ui.botAceHisDoc.clicked.connect(self.funcion_consultar_historial_colillas_documento)
 
         self.ui.botGenLiq.clicked.connect(self.ventana_liquidacion)
         self.ui.botAceGen.clicked.connect(self.funcion_generar_liquidacion)
@@ -164,11 +158,11 @@ class VentanasAdmin ():
         self.ui.desInfNoLiq.setMenu(menu_1)
         self.add_menu_inf(informes, menu_1)
 
-        self.ui.botCanUltSoc.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_3))
-        self.ui.botCanUltSoc.clicked.connect(lambda: self.cler_table_edits(self.ui.stackedWidget_3))
+        self.ui.botCanHisSoc.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_3))
+        self.ui.botCanHisSoc.clicked.connect(lambda: self.cler_table_edits(self.ui.stackedWidget_3))
         self.ui.botCanCreCol.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_3))
-        self.ui.botInvAdm_27.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_3))
-        self.ui.botInvAdm_27.clicked.connect(lambda: self.cler_table_edits(self.ui.stackedWidget_3))
+        self.ui.botCanHisDoc.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_3))
+        self.ui.botCanHisDoc.clicked.connect(lambda: self.cler_table_edits(self.ui.stackedWidget_3))
 
 
         self.ui.botCanGasJef1.clicked.connect(lambda: self.clear_line_edits(self.ui.stackedWidget_4))
@@ -362,10 +356,10 @@ class VentanasAdmin ():
                 self.ui.LHasPol.setText((ret_con_pol_doc[0][2].strftime("%Y-%m-%d")))
                 self.ui.LSocConPol.setText(str(ret_con_pol_doc[0][7]))
                 self.ui.LNotConPol.setText(str(ret_con_pol_doc[0][10]))
+                self.ui.LCelConPol.setText(str(ret_con_pol_doc[0][11]))
                 self.ui.tabConPol.clearContents()
                 self.ui.tabConPol.show()
                 if self.ui.tabConPol != None:
-                    fila = 0
                     self.ui.tabConPol.setRowCount(len(ret_con_pol_doc[0][3]))
                     i=0
                     print(len(ret_con_pol_doc[0][3]))
@@ -378,7 +372,6 @@ class VentanasAdmin ():
                             self.ui.tabConPol.setItem(i, 3, QtWidgets.QTableWidgetItem(str(ret_con_pol_doc[0][6][i])))
                         if len(ret_con_pol_doc[0][8]) > i:
                             self.ui.tabConPol.setItem(i, 4, QtWidgets.QTableWidgetItem(ret_con_pol_doc[0][8][i].strftime("%Y-%m-%d")))
-                        self.ui.tabConPol.setItem(i, 5, QtWidgets.QTableWidgetItem(str(ret_con_pol_doc[0][9][i])))
 
                         i = i+1
                     self.ui.tabConPol.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
@@ -392,7 +385,6 @@ class VentanasAdmin ():
                 self.crear_ventana_retorno(socios)
                 self.reset_inactivity_timer()
 
-
     def funcion_consultar_poliza(self):
         poliza = Polizas()
         ret_con_pol = poliza.consultar_poliza_socio(self.ui.LSocConPol.text())
@@ -404,6 +396,7 @@ class VentanasAdmin ():
             self.ui.LDesPol.setText((ret_con_pol[1].strftime("%Y-%m-%d")))
             self.ui.LHasPol.setText((ret_con_pol[2].strftime("%Y-%m-%d")))
             self.ui.LNotConPol.setText(str(ret_con_pol[9]))
+            self.ui.LCelConPol.setText(str(ret_con_pol[10]))
             self.ui.tabConPol.clearContents()
             self.ui.tabConPol.show()
             self.ui.tabConPol.setRowCount(len(ret_con_pol[3]))
@@ -421,15 +414,12 @@ class VentanasAdmin ():
                 if len(ret_con_pol[7]) > fila:
                     self.ui.tabConPol.setItem(fila, 4,QtWidgets.QTableWidgetItem(ret_con_pol[7][fila].strftime("%Y-%m-%d")))
 
-                self.ui.tabConPol.setItem(fila, 5, QtWidgets.QTableWidgetItem(str(ret_con_pol[8][fila])))
                 fila = fila + 1
 
             self.ui.tabConPol.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
             self.ui.tabConPol.horizontalHeader().setStretchLastSection(True)
 
         self.reset_inactivity_timer()
-
-
 
     def ventana_agregar_persona (self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.agregar_persona)
@@ -438,7 +428,7 @@ class VentanasAdmin ():
     def funcion_agregar_persona (self):
         poliza = Polizas()
         self.fun_agr_per = poliza.agregar_persona_poliza(self.ui.LSocAgrPer.text(), self.ui.LDocAgrPer.text(), self.ui.LNomAgrPer.text(),
-                                                         self.ui.LFecAgrPer.text(), self.ui.LParAgrPer.text(), self.ui.LValAgrPer.text())
+                                                         self.ui.LFecAgrPer.text(), self.ui.LValAgrPer.text())
         del poliza
         self.crear_ventana_retorno(self.fun_agr_per)
         self.clear_line_edits(self.ui.stackedWidget_2)
@@ -457,10 +447,11 @@ class VentanasAdmin ():
             self.ui.LValMesModPol.setText(str(ret_con_pol[0]))
             self.ui.LDesdModPol.setText(str(ret_con_pol[1]))
             self.ui.LHasModPol.setText(str(ret_con_pol[2]))
+            self.ui.LCelModPol.setText(str(ret_con_pol[8]))
+
             self.agregar_lista_nombres_modificar(ret_con_pol[3])
             self.agregar_lista_documentos_modificar(ret_con_pol[4])
             self.agregar_lista_fechas_modificar(ret_con_pol[5])
-            self.agregar_lista_parentescos_modificar(ret_con_pol[6])
             self.ui.LNotModPol.setText(str(ret_con_pol[7]))
 
         self.reset_inactivity_timer()
@@ -480,11 +471,6 @@ class VentanasAdmin ():
             self.ui.lisFecModPol.addItem(str(fecha))
         self.reset_inactivity_timer()
 
-    def agregar_lista_parentescos_modificar(self, parentescos):
-        for parentesco in parentescos:
-            self.ui.lisParModPol.addItem(str(parentesco))
-        self.reset_inactivity_timer()
-
     def funcion_eliminar_persona_poliza(self):
         index_nom = self.ui.lisNomModPol.currentRow()
 
@@ -496,8 +482,7 @@ class VentanasAdmin ():
             nombre = self.ui.lisNomModPol.item(index_nom).text()
             documento = self.ui.lisDocModPol.item(index_nom).text()
             fecha = self.ui.lisFecModPol.item(index_nom).text()
-            parentesco = self.ui.lisParModPol.item(index_nom).text()
-            self.ret_eli_per = poliza.eliminar_persona(self.ui.LSocModPol.text(), nombre, documento, fecha, parentesco)
+            self.ret_eli_per = poliza.eliminar_persona(self.ui.LSocModPol.text(), nombre, documento, fecha)
             # Eliminar elemento de la lista de nombres
             self.ui.lisNomModPol.takeItem(index_nom)
 
@@ -505,7 +490,6 @@ class VentanasAdmin ():
             self.ui.lisDocModPol.takeItem(index_nom)
 
             self.ui.lisFecModPol.takeItem(index_nom)
-            self.ui.lisParModPol.takeItem(index_nom)
 
         self.reset_inactivity_timer()
 
@@ -534,28 +518,18 @@ class VentanasAdmin ():
             item.setText(self.ui.LFechaAgregar.text())
         self.reset_inactivity_timer()
 
-
-    def editar_dato_parentesco_poliza(self):
-        sel_items = self.ui.lisParModPol.selectedItems()
-
-        for item in sel_items:
-            item.setText(self.ui.LDatoAgregar.text())
-        self.ui.LDatoAgregar.clear()
-        self.reset_inactivity_timer()
-
     def funcion_guardar_modificar_poliza(self):
         list_nom = [self.ui.lisNomModPol.item(index).text() for index in range(self.ui.lisNomModPol.count())]
         list_doc = [self.ui.lisDocModPol.item(index).text() for index in range(self.ui.lisDocModPol.count())]
         list_fec = [self.ui.lisFecModPol.item(index).text() for index in range(self.ui.lisFecModPol.count())]
-        list_par = [self.ui.lisParModPol.item(index).text() for index in range(self.ui.lisParModPol.count())]
         poliza = Polizas()
-        print('es la invocacion', list_nom, list_doc, list_fec, list_par)
+        print('es la invocacion', list_nom, list_doc, list_fec)
         print(self.ui.LSocModPol.text())
         print(self.ui.LValMesModPol.text())
         self.fun_mod_pol = poliza.modificar_poliza(self.ui.LSocModPol.text(), list_nom,
                                                          list_doc,
-                                                         list_fec, list_par,
-                                                         self.ui.LValMesModPol.text(), self.ui.LNotModPol.toPlainText())
+                                                         list_fec,
+                                                         self.ui.LValMesModPol.text(), self.ui.LNotModPol.toPlainText(), self.ui.LCelModPol.text())
         self.crear_ventana_retorno(self.fun_mod_pol)
         del poliza
         print('sali de la carcel')
@@ -593,14 +567,6 @@ class VentanasAdmin ():
         self.ui.LNomCrePol.clear()
         self.reset_inactivity_timer()
 
-    def agregar_lista_parentescos(self):
-        texto_parentesco = self.ui.LParCrePol.text()
-        texto_parentesco = texto_parentesco if texto_parentesco else ''
-
-        par = QListWidgetItem(str(texto_parentesco))
-        self.ui.LisParCrePol.addItem(par)
-        self.ui.LParCrePol.clear()
-        self.reset_inactivity_timer()
 
     def agregar_lista_fechas(self):
         texto_fecha = self.ui.LFecCrePol.text()
@@ -614,14 +580,13 @@ class VentanasAdmin ():
         list_nom = [self.ui.LisNomCrePol.item(index).text() for index in range(self.ui.LisNomCrePol.count())]
         list_doc = [self.ui.LisDocCrePol.item(index).text() for index in range(self.ui.LisDocCrePol.count())]
         list_fec = [self.ui.LisFecCrePol.item(index).text() for index in range(self.ui.LisFecCrePol.count())]
-        list_par = [self.ui.LisParCrePol.item(index).text() for index in range(self.ui.LisParCrePol.count())]
         poliza = Polizas()
         self.reset_inactivity_timer()
 
         print('error en la funcion')
         self.fun_cre_pol = poliza.crear_poliza(self.ui.LSocCrePol.text(), list_nom, list_doc,
-                                               list_fec, list_par, self.ui.LValCrePol.text(),
-                                                  self.ui.LNumCrePol.text(), self.usuario[2],self.ui.LNotCrePol.toPlainText())
+                                               list_fec, self.ui.LValCrePol.text(),
+                                                  self.ui.LNumCrePol.text(), self.usuario[2],self.ui.LNotCrePol.toPlainText(), self.ui.LCelCrePol.text())
         print('el error esta en la devuelta')
         self.crear_ventana_retorno(self.fun_cre_pol)
 
@@ -661,33 +626,6 @@ class VentanasAdmin ():
         self.reset_inactivity_timer()
 
 
-    def editar_crear_parentesco_poliza(self):
-        sel_items = self.ui.LisParCrePol.selectedItems()
-
-        for item in sel_items:
-            item.setText(self.ui.LParCrePol.text())
-        self.ui.LParCrePol.clear()
-        self.reset_inactivity_timer()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     def ventana_crear_poliza_antigua(self):
         self.ui.stackedWidget_2.setCurrentWidget(self.ui.crear_antigua)
         self.reset_inactivity_timer()
@@ -712,15 +650,6 @@ class VentanasAdmin ():
         self.ui.LNomCreAntPol.clear()
         self.reset_inactivity_timer()
 
-    def agregar_lista_parentescos_antigua(self):
-        texto_parentesco = self.ui.LParCreAntPol.text()
-        texto_parentesco = texto_parentesco if texto_parentesco else ''
-
-        par = QListWidgetItem(str(texto_parentesco))
-        self.ui.LisParCreAntPol.addItem(par)
-        self.ui.LParCreAntPol.clear()
-        self.reset_inactivity_timer()
-
     def agregar_lista_fechas_antigua(self):
         texto_fecha = self.ui.LFecCreAntPol.text()
         texto_fecha = texto_fecha if texto_fecha else ''
@@ -733,13 +662,12 @@ class VentanasAdmin ():
         list_nom = [self.ui.LisNomCreAntPol.item(index).text() for index in range(self.ui.LisNomCreAntPol.count())]
         list_doc = [self.ui.LisDocCreAntPol.item(index).text() for index in range(self.ui.LisDocCreAntPol.count())]
         list_fec = [self.ui.LisFecCreAntPol.item(index).text() for index in range(self.ui.LisFecCreAntPol.count())]
-        list_par = [self.ui.LisParCreAntPol.item(index).text() for index in range(self.ui.LisParCreAntPol.count())]
         poliza = Polizas()
 
         print('error en la funcion')
         self.fun_cre_pol_ant = poliza.crear_poliza_antigua(self.ui.LSocCreAntPol.text(), list_nom, list_doc,
-                                               list_fec, list_par, self.ui.LValCreAntPol.text(),
-                                                  self.ui.LNumCreAntPol.text(), self.usuario[2], self.ui.LFecDesCreAntPol.text(), self.ui.LFecAfiCreAntPol.text() ,self.ui.LNotCrePolAnt.toPlainText())
+                                               list_fec, self.ui.LValCreAntPol.text(),
+                                                  self.ui.LNumCreAntPol.text(), self.usuario[2], self.ui.LFecDesCreAntPol.text(), self.ui.LFecAfiCreAntPol.text() ,self.ui.LNotCrePolAnt.toPlainText(), self.ui.LCelCrePolAnt.text())
         print('el error esta en la devuelta')
         self.crear_ventana_retorno(self.fun_cre_pol_ant)
 
@@ -779,28 +707,6 @@ class VentanasAdmin ():
         self.reset_inactivity_timer()
 
 
-    def editar_crear_parentesco_poliza_antigua(self):
-        sel_items = self.ui.LisParCreAntPol.selectedItems()
-
-        for item in sel_items:
-            item.setText(self.ui.LParCreAntPol.text())
-        self.ui.LParCreAntPol.clear()
-
-        self.reset_inactivity_timer()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     def crear_ventana_retorno(self, retorno):
@@ -810,8 +716,67 @@ class VentanasAdmin ():
         self.ventana_emergente.imprimir_retorno(str(retorno))
         self.reset_inactivity_timer()
 
-    def ventana_ultimo_pago_socio(self):
+    def ventana_historial_pagos_socio(self):
         self.ui.stackedWidget_3.setCurrentWidget(self.ui.buscar_colilla_poliza)
+
+
+
+
+
+
+
+
+    def funcion_consultar_historial_colillas_socio(self):
+        colilla = Colillas()
+        self.fun_his_pag_soc = colilla.consultar_pagos_socio(self.ui.LSocHisPag.text())
+        del colilla
+        
+        if isinstance(self.fun_his_pag_soc, str):
+            self.crear_ventana_retorno(self.fun_his_pag_soc)
+        
+        else:
+            self.ui.tabHisPagSoc.clearContents()
+            self.ui.tabHisPagSoc.show()
+            if self.fun_his_pag_soc != None:
+                fila = 0
+                self.ui.tabHisPagSoc.setRowCount(len(self.fun_his_pag_soc))
+                for elementos in self.fun_his_pag_soc:
+                    self.ui.tabHisPagSoc.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(elementos[0])))
+                    self.ui.tabHisPagSoc.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[1])))
+                    self.ui.tabHisPagSoc.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[7][0])))
+                    self.ui.tabHisPagSoc.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[6][0])))
+                    self.ui.tabHisPagSoc.setItem(fila, 4,
+                                                QtWidgets.QTableWidgetItem(elementos[2].strftime("%Y-%m-%d")))
+                    self.ui.tabHisPagSoc.setItem(fila, 5,
+                                                QtWidgets.QTableWidgetItem(elementos[3].strftime("%Y-%m-%d")))
+                    self.ui.tabHisPagSoc.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[4])))
+                    self.ui.tabHisPagSoc.setItem(fila, 7,
+                                                QtWidgets.QTableWidgetItem(elementos[5].strftime("%Y-%m-%d")))
+                    fila += 1
+    
+                self.ui.tabHisPagSoc.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+                self.ui.tabHisPagSoc.horizontalHeader().setStretchLastSection(True)
+    
+            else:
+                print('no encontre')
+    
+        self.reset_inactivity_timer()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     def funcion_ultimo_socio(self):
         colilla = Colillas()
@@ -852,7 +817,7 @@ class VentanasAdmin ():
         self.reset_inactivity_timer()
 
 
-    def ventana_ultimo_pago_documento(self):
+    def ventana_historial_pagos_documento(self):
         self.ui.stackedWidget_3.setCurrentWidget(self.ui.buscar_colilla_documento)
         self.reset_inactivity_timer()
 
@@ -891,6 +856,61 @@ class VentanasAdmin ():
                 print('no encontre')
         self.reset_inactivity_timer()
 
+
+
+
+
+    def funcion_consultar_historial_colillas_documento(self):
+        colilla = Colillas()
+        self.fun_his_pag_doc = colilla.consultar_pagos_documento(self.ui.LDocHisPag.text())
+        del colilla
+        
+        if isinstance(self.fun_his_pag_doc, str):
+            self.crear_ventana_retorno(self.fun_his_pag_doc)
+        
+        else:
+            self.ui.tabHisPagDoc.clearContents()
+            self.ui.tabHisPagDoc.show()
+            if self.ui.tabHisPagDoc is not None:
+                fila = 0
+                self.ui.tabHisPagDoc.setRowCount(len(self.fun_his_pag_doc))
+                for elementos in self.fun_his_pag_doc:
+                    self.ui.tabHisPagDoc.setItem(fila, 0, QtWidgets.QTableWidgetItem(str(elementos[0])))
+                    self.ui.tabHisPagDoc.setItem(fila, 1, QtWidgets.QTableWidgetItem(str(elementos[1])))
+                    self.ui.tabHisPagDoc.setItem(fila, 2, QtWidgets.QTableWidgetItem(str(elementos[7][0])))
+                    self.ui.tabHisPagDoc.setItem(fila, 3, QtWidgets.QTableWidgetItem(str(elementos[6][0])))
+                    self.ui.tabHisPagDoc.setItem(fila, 4,
+                                                QtWidgets.QTableWidgetItem(elementos[2].strftime("%Y-%m-%d")))
+                    self.ui.tabHisPagDoc.setItem(fila, 5,
+                                                QtWidgets.QTableWidgetItem(elementos[3].strftime("%Y-%m-%d")))
+                    self.ui.tabHisPagDoc.setItem(fila, 6, QtWidgets.QTableWidgetItem(str(elementos[4])))
+                    self.ui.tabHisPagDoc.setItem(fila, 7,
+                                                QtWidgets.QTableWidgetItem(elementos[5].strftime("%Y-%m-%d")))
+                    fila += 1
+    
+                self.ui.tabHisPagDoc.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
+                self.ui.tabHisPagDoc.horizontalHeader().setStretchLastSection(True)
+    
+            else:
+                print('no encontre')
+    
+        self.reset_inactivity_timer()
+
+
+
+
+
+    def ventana_eliminar_ultimo_pago(self):
+        self.ui.stackedWidget_3.setCurrentWidget(self.ui.eliminar_pago)
+        self.reset_inactivity_timer()
+
+    def funcion_eliminar_ultimo_pago(self):
+        colilla = Colillas()
+        self.fun_eli_pag = colilla.eliminar_ultimo_pago(self.ui.LSocEliPag.text())
+        del colilla
+        self.clear_line_edits(self.ui.stackedWidget_3)
+        self.crear_ventana_retorno(self.fun_eli_pag)
+        self.reset_inactivity_timer()
 
     def ventana_crear_colilla(self):
         self.ui.stackedWidget_3.setCurrentWidget(self.ui.crear_colilla)
@@ -1085,16 +1105,14 @@ class VentanasAdmin ():
 
     def funcion_crear_factura_caja (self):
         lis_des = [self.ui.lisDes.item(index).text() for index in range(self.ui.lisDes.count())]
-        lis_can = [self.ui.lisCan.item(index).text() for index in range(self.ui.lisCan.count())]
         lis_val = [self.ui.lisVal.item(index).text() for index in range(self.ui.lisVal.count())]
         factura = Adicionales ()
-        ret_fun_cre_fac = factura.crear_factura_caja(self.ui.LCiuCreFac.text(), self.ui.LNomCreFac.text(), self.ui.LDocCreFac.text(), lis_des, lis_can, lis_val, self.usuario[2], self.ui.LValAboCreFac.text(), self.ui.LNotCreFac.toPlainText())
+        ret_fun_cre_fac = factura.crear_factura_caja(self.ui.LNomCreFac.text(), self.ui.LDocCreFac.text(), lis_des, lis_val, self.usuario[2], self.ui.LValAboCreFac.text(), self.ui.LNotCreFac.toPlainText(), self.ui.LCelCreFac.text())
         del factura
         self.clear_line_edits(self.ui.stackedWidget_6)
         self.clear_list_edits(self.ui.stackedWidget_6)
         self.crear_ventana_retorno(ret_fun_cre_fac)
         self.reset_inactivity_timer()
-
 
     def agregar_lista_descripciones(self):
         des = QListWidgetItem(str(self.ui.LDesCreFac.text()))
@@ -1102,19 +1120,11 @@ class VentanasAdmin ():
         self.ui.LDesCreFac.clear()
         self.reset_inactivity_timer()
 
-    def agregar_lista_cantidades(self):
-        can = QListWidgetItem(self.ui.LCanCreFac.text())
-        self.ui.lisCan.addItem(can)
-        self.ui.LCanCreFac.clear()
-        self.reset_inactivity_timer()
-
     def agregar_lista_valores(self):
         val = QListWidgetItem(self.ui.LValCreFac.text())
         self.ui.lisVal.addItem(val)
         self.ui.LValCreFac.clear()
         self.reset_inactivity_timer()
-
-
 
     def venta_consultar_cartera (self):
         self.ui.stackedWidget_6.setCurrentWidget(self.ui.mostrar_cartera)
@@ -1154,11 +1164,6 @@ class VentanasAdmin ():
 
         self.reset_inactivity_timer()
 
-
-
-
-
-
     def venta_abonar_caja (self):
         self.ui.stackedWidget_6.setCurrentWidget(self.ui.abonar_caja)
         self.reset_inactivity_timer()
@@ -1171,7 +1176,6 @@ class VentanasAdmin ():
         self.crear_ventana_retorno(ret_abo_fac_caj)
         self.reset_inactivity_timer()
 
-
     def venta_consultar_factura (self):
         self.ui.stackedWidget_6.setCurrentWidget(self.ui.consultar_caja)
         self.reset_inactivity_timer()
@@ -1180,6 +1184,7 @@ class VentanasAdmin ():
         facturas = Adicionales ()
         ret_con_fac_caj = facturas.consultar_saldo_facturas_documento(self.ui.LDocConfac.text())
         self.ui.LValTotDoc.setText(str(ret_con_fac_caj[1]))
+        self.ui.LCelConFac.setText(str(ret_con_fac_caj[7]))
         del facturas
         if isinstance(ret_con_fac_caj, str):
             self.crear_ventana_retorno(ret_con_fac_caj)
